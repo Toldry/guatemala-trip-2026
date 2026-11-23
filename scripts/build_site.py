@@ -171,19 +171,7 @@ PAGE = """<!doctype html>
 {redirect}
 </head>
 <body class="{body_class}" data-version="{version}" data-latest="{latest}" data-prefix="{prefix}">
-<header class="site-header">
-  <div class="bar">
-    <a class="brand" href="{prefix}">Guatemala · 13–31 Dec 2026</a>
-    <nav class="tools">
-      <label class="version-picker">Version
-        <select id="version-select" aria-label="Choose a version"></select>
-      </label>
-      <a class="button" href="{prefix}compare/">Compare versions</a>
-      <a class="button ghost" href="https://github.com/Toldry/guatemala-trip-2026" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-  </div>
-  <div id="old-version-banner" class="banner" hidden></div>
-</header>
+<nav class="version-line" aria-label="Versions">{version_line}</nav>
 <div class="layout{layout_class}">
 {sidebar}
 <main class="content">
@@ -191,7 +179,7 @@ PAGE = """<!doctype html>
 </main>
 </div>
 <footer class="site-footer">
-  Built for two hikers · maps from <a href="https://www.naturalearthdata.com" target="_blank" rel="noopener">Natural Earth</a> · photos from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>
+  Built for two hikers · maps from <a href="https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM" target="_blank" rel="noopener">Copernicus DEM</a>, <a href="https://github.com/globalmaps/gmgt10" target="_blank" rel="noopener">Global Map Guatemala</a> and <a href="https://www.naturalearthdata.com" target="_blank" rel="noopener">Natural Earth</a> · photos from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>
 </footer>
 <script src="{prefix}assets/site.js"></script>
 {mermaid}
@@ -222,7 +210,14 @@ CSS = """
   --warn-bg: #fff7ed; --warn-line: #fdba74;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
+.version-line {
+  max-width: 1300px; margin: 0 auto; padding: .5rem 1rem 0;
+  font-size: .85rem; color: var(--muted);
+}
+.version-line a { color: var(--muted); }
+.version-line strong { color: var(--ink); }
+.version-line .old-note { color: #b45309; }
 body {
   margin: 0; color: var(--ink); background: var(--paper);
   font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -284,7 +279,7 @@ pre.mermaid { background: transparent; text-align: center; }
 hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 .site-footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 2rem 1rem; }
 /* embedded in the compare page */
-body.embed .site-header, body.embed .site-footer { display: none; }
+body.embed .version-line, body.embed .site-footer { display: none; }
 body.embed .content { padding-top: .5rem; }
 /* compare page */
 .compare-controls { display: flex; gap: 1rem; flex-wrap: wrap; align-items: end; margin: 1rem 0; }
@@ -309,7 +304,7 @@ body.compare .content { max-width: 1600px; }
   .layout.has-sidebar .inline-toc { display: none; }
   .sidebar { display: block; }
   .sidebar-inner {
-    position: sticky; top: 4.2rem; max-height: calc(100vh - 5rem);
+    position: sticky; top: 1rem; max-height: calc(100vh - 2rem);
     margin-top: 1.5rem; display: flex; flex-direction: column;
     border-right: 1px solid var(--line);
   }
@@ -366,7 +361,7 @@ body.compare .content { max-width: 1600px; }
               height .3s cubic-bezier(.2,.8,.2,1), opacity .3s;
 }
 /* briefly highlight the heading you jumped to */
-h2, h3, h4, h5 { scroll-margin-top: 4.8rem; }
+h2, h3, h4, h5 { scroll-margin-top: 1rem; }
 .flash { animation: flash 1.6s ease; }
 @keyframes flash {
   0% { background: rgba(253,230,138,.9); }
@@ -583,12 +578,32 @@ COMPARE_BODY = """
 """
 
 
+def version_line(prefix, current):
+    """One line of links to every version; the current one in bold."""
+    items = []
+    for meta in VERSIONS:
+        vid = meta["id"]
+        href = prefix if vid == LATEST else f"{prefix}v{vid}/"
+        label = f"v{vid}" + (" (latest)" if vid == LATEST else "")
+        title = html.escape(f'{meta["date"]} · {meta["label"]}')
+        if vid == current:
+            items.append(f'<strong title="{title}">{label}</strong>')
+        else:
+            items.append(f'<a href="{href}" title="{title}">{label}</a>')
+    note = ""
+    if current and current != LATEST:
+        note = (f' <span class="old-note">· you\'re reading an older '
+                f'version</span>')
+    return "Versions: " + " · ".join(items) + note
+
+
 def page(title, body, depth, version, body_class="", redirect=False,
          sidebar=""):
     prefix = "../" * depth
     return PAGE.format(
         title=html.escape(title), prefix=prefix, body=body, version=version,
         sidebar=sidebar, layout_class=" has-sidebar" if sidebar else "",
+        version_line=version_line(prefix, version),
         latest=LATEST, body_class=body_class,
         redirect=REDIRECT if redirect else "",
         mermaid=MERMAID if 'class="mermaid"' in body else "")
