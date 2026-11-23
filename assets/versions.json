@@ -1,32 +1,92 @@
 [
   {
-    "id": 1,
+    "id": "1.0.0",
     "date": "22 Nov 2026",
     "label": "First draft",
     "summary": "Driving loop: Antigua, Atitlán, Chichi festival, Xela, Semuc, Tikal."
   },
   {
-    "id": 2,
+    "id": "2.0.0",
     "date": "23 Nov 2026",
     "label": "For first-timers, flying to Tikal",
     "summary": "An introduction to each place; fly GUA ↔ Flores for Tikal and Yaxhá."
   },
   {
-    "id": 3,
+    "id": "3.0.0",
     "date": "23 Nov 2026",
     "label": "Driving to Tikal and back",
     "summary": "No flights: Semuc Champey, Tikal and Yaxhá by car, then back to GUA."
   },
   {
-    "id": 4,
+    "id": "4.0.0",
     "date": "23 Nov 2026",
     "label": "Flights, swimming, bookings",
-    "summary": "Fits the 21:25 arrival and 02:30 departure; swimming stops, operators, maps and photos."
+    "summary": "Fits the 21:25 arrival and 02:30 departure; swimming, operators, maps."
   },
   {
-    "id": 5,
+    "id": "5.0.0",
     "date": "23 Nov 2026",
     "label": "€ prices, links, safety",
-    "summary": "Q + € prices, links everywhere, crowd and traffic notes, tips, health and safety, 5 new maps."
+    "summary": "Q + € prices, links, crowd notes, health and safety, new maps."
+  },
+  {
+    "id": "5.0.1",
+    "date": "23 Nov 2026",
+    "label": "List fix",
+    "summary": "Nested lists display correctly."
+  },
+  {
+    "id": "5.1.0",
+    "date": "23 Nov 2026",
+    "label": "Medicine kit explained",
+    "summary": "Every medicine explained; jargon spelled out."
+  },
+  {
+    "id": "5.1.1",
+    "date": "23 Nov 2026",
+    "label": "Daily timeline",
+    "summary": "A gridline for every day on the timeline."
+  },
+  {
+    "id": "5.2.0",
+    "date": "23 Nov 2026",
+    "label": "Practical notes per stop",
+    "summary": "Notes box per stop; summary lists link back."
+  },
+  {
+    "id": "5.2.1",
+    "date": "23 Nov 2026",
+    "label": "Car type",
+    "summary": "Small SUV, not a 4×4, and why."
+  },
+  {
+    "id": "5.3.0",
+    "date": "23 Nov 2026",
+    "label": "Car pick-up options",
+    "summary": "Where to pick up the car; Antigua parking."
+  },
+  {
+    "id": "5.3.1",
+    "date": "23 Nov 2026",
+    "label": "Dengue",
+    "summary": "December dengue risk."
+  },
+  {
+    "id": "6.0.0",
+    "date": "23 Nov 2026",
+    "label": "Car from the airport, new maps",
+    "summary": "Car picked up on arrival; 30 m terrain maps."
+  },
+  {
+    "id": "6.1.0",
+    "date": "23 Nov 2026",
+    "label": "Trip cost",
+    "summary": "Low/high cost estimate."
+  },
+  {
+    "id": "6.2.0",
+    "date": "23 Nov 2026",
+    "label": "Cycling",
+    "summary": "Antigua bike ride; two cycling swap options."
   }
 ]

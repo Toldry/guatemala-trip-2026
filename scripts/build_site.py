@@ -1,10 +1,9 @@
 """Build the static HTML site (no Jekyll) for GitHub Pages.
 
-Sources: /home/claude/site-src/versions/v*.md
+Sources: src/versions/<semver>.md (one file per version)
 Output:  the repository root:
-    index.html          latest version (honours ?v=N by redirecting)
-    v1/ ... vN/         each version
-    compare/            side-by-side comparison of any two versions
+    index.html          latest version (honours ?v=X.Y.Z by redirecting)
+    vX.Y.Z/             each version (v1/ … v5/ redirect to X.0.0)
     assets/             css + js, versions.json
 """
 import html
@@ -19,22 +18,39 @@ import markdown
 SRC = Path(__file__).resolve().parent.parent / "src" / "versions"
 OUT = Path(__file__).resolve().parent.parent
 
+def V(vid, date, label, summary):
+    return {"id": vid, "date": date, "label": label, "summary": summary}
+
+
+# Semantic versions: MAJOR = the plan changes, MINOR = content added,
+# PATCH = corrections. Each has src/versions/<id>.md.
 VERSIONS = [
-    {"id": 1, "date": "22 Nov 2026", "label": "First draft",
-     "summary": "Driving loop: Antigua, Atitlán, Chichi festival, Xela, "
-                "Semuc, Tikal."},
-    {"id": 2, "date": "23 Nov 2026", "label": "For first-timers, flying to Tikal",
-     "summary": "An introduction to each place; fly GUA ↔ Flores for Tikal "
-                "and Yaxhá."},
-    {"id": 3, "date": "23 Nov 2026", "label": "Driving to Tikal and back",
-     "summary": "No flights: Semuc Champey, Tikal and Yaxhá by car, then "
-                "back to GUA."},
-    {"id": 4, "date": "23 Nov 2026", "label": "Flights, swimming, bookings",
-     "summary": "Fits the 21:25 arrival and 02:30 departure; swimming stops, "
-                "operators, maps and photos."},
-    {"id": 5, "date": "23 Nov 2026", "label": "€ prices, links, safety",
-     "summary": "Q + € prices, links everywhere, crowd and traffic notes, "
-                "tips, health and safety, 5 new maps."},
+    V("1.0.0", "22 Nov 2026", "First draft",
+      "Driving loop: Antigua, Atitlán, Chichi festival, Xela, Semuc, Tikal."),
+    V("2.0.0", "23 Nov 2026", "For first-timers, flying to Tikal",
+      "An introduction to each place; fly GUA ↔ Flores for Tikal and Yaxhá."),
+    V("3.0.0", "23 Nov 2026", "Driving to Tikal and back",
+      "No flights: Semuc Champey, Tikal and Yaxhá by car, then back to GUA."),
+    V("4.0.0", "23 Nov 2026", "Flights, swimming, bookings",
+      "Fits the 21:25 arrival and 02:30 departure; swimming, operators, maps."),
+    V("5.0.0", "23 Nov 2026", "€ prices, links, safety",
+      "Q + € prices, links, crowd notes, health and safety, new maps."),
+    V("5.0.1", "23 Nov 2026", "List fix", "Nested lists display correctly."),
+    V("5.1.0", "23 Nov 2026", "Medicine kit explained",
+      "Every medicine explained; jargon spelled out."),
+    V("5.1.1", "23 Nov 2026", "Daily timeline",
+      "A gridline for every day on the timeline."),
+    V("5.2.0", "23 Nov 2026", "Practical notes per stop",
+      "Notes box per stop; summary lists link back."),
+    V("5.2.1", "23 Nov 2026", "Car type", "Small SUV, not a 4×4, and why."),
+    V("5.3.0", "23 Nov 2026", "Car pick-up options",
+      "Where to pick up the car; Antigua parking."),
+    V("5.3.1", "23 Nov 2026", "Dengue", "December dengue risk."),
+    V("6.0.0", "23 Nov 2026", "Car from the airport, new maps",
+      "Car picked up on arrival; 30 m terrain maps."),
+    V("6.1.0", "23 Nov 2026", "Trip cost", "Low/high cost estimate."),
+    V("6.2.0", "23 Nov 2026", "Cycling",
+      "Antigua bike ride; two cycling swap options."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
@@ -193,11 +209,13 @@ MERMAID = """<script type="module">
   await mermaid.run({ querySelector: "pre.mermaid" });
 </script>"""
 
-# ?v=N on the root page jumps to that version, before anything renders
+# ?v=6.2.0 (or ?v=5, meaning 5.0.0) on the root page jumps to that version
 REDIRECT = """<script>
   (function () {
     var v = new URLSearchParams(location.search).get("v");
-    if (v && /^\\d+$/.test(v) && v !== "%s") {
+    if (!v) return;
+    if (/^\\d+$/.test(v)) v = v + ".0.0";
+    if (/^\\d+\\.\\d+\\.\\d+$/.test(v) && v !== "%s") {
       location.replace("v" + v + "/" + location.hash);
     }
   })();
@@ -375,47 +393,7 @@ h2, h3, h4, h5 { scroll-margin-top: 1rem; }
 """
 
 JS = r"""
-(function () {
-  var body = document.body;
-  var prefix = body.dataset.prefix || "";
-  var current = parseInt(body.dataset.version || "0", 10);
-  var latest = parseInt(body.dataset.latest || "0", 10);
-  var params = new URLSearchParams(location.search);
-  if (params.get("embed") === "1") body.classList.add("embed");
 
-  fetch(prefix + "assets/versions.json").then(function (r) { return r.json(); })
-    .then(function (versions) {
-      var select = document.getElementById("version-select");
-      if (!select) return;
-      versions.slice().reverse().forEach(function (v) {
-        var option = document.createElement("option");
-        option.value = v.id;
-        option.textContent = "v" + v.id + " · " + v.date + " · " + v.label +
-          (v.id === latest ? " (latest)" : "");
-        if (v.id === current) option.selected = true;
-        select.appendChild(option);
-      });
-      if (!current) {
-        var placeholder = document.createElement("option");
-        placeholder.textContent = "Choose…";
-        placeholder.selected = true;
-        placeholder.disabled = true;
-        select.insertBefore(placeholder, select.firstChild);
-      }
-      select.addEventListener("change", function () {
-        var id = parseInt(select.value, 10);
-        location.href = id === latest ? prefix : prefix + "v" + id + "/";
-      });
-      if (current && current !== latest) {
-        var banner = document.getElementById("old-version-banner");
-        banner.hidden = false;
-        banner.innerHTML = "You're viewing <strong>version " + current +
-          "</strong>, an older version. <a href='" + prefix +
-          "'>Go to the latest (v" + latest + ")</a> · <a href='" + prefix +
-          "compare/?a=" + current + "&b=" + latest + "'>Compare with latest</a>";
-      }
-    });
-})();
 
 // ---- sidebar table of contents: scroll tracking ----
 (function () {
@@ -517,83 +495,22 @@ JS = r"""
 })();
 """
 
-COMPARE_BODY = """
-<h1>Compare versions</h1>
-<p>Pick two versions to read side by side. Each one scrolls independently.</p>
-<div class="compare-controls">
-  <label>Left
-    <select id="left"></select>
-  </label>
-  <label>Right
-    <select id="right"></select>
-  </label>
-  <a class="button" id="swap" href="#">⇄ Swap</a>
-</div>
-<div class="compare-grid">
-  <iframe id="frame-left" title="Left version"></iframe>
-  <iframe id="frame-right" title="Right version"></iframe>
-</div>
-<h2>All versions</h2>
-<ol class="version-list" id="version-list" reversed></ol>
-<script>
-(function () {
-  var params = new URLSearchParams(location.search);
-  fetch("../assets/versions.json").then(function (r) { return r.json(); })
-    .then(function (versions) {
-      var latest = versions[versions.length - 1].id;
-      var left = document.getElementById("left");
-      var right = document.getElementById("right");
-      var list = document.getElementById("version-list");
-      versions.slice().reverse().forEach(function (v) {
-        [left, right].forEach(function (select) {
-          var option = document.createElement("option");
-          option.value = v.id;
-          option.textContent = "v" + v.id + " · " + v.date + " · " + v.label;
-          select.appendChild(option);
-        });
-        var item = document.createElement("li");
-        item.value = v.id;
-        item.innerHTML = "<a href='../v" + v.id + "/'><strong>v" + v.id +
-          " · " + v.label + "</strong></a> (" + v.date + ")" +
-          (v.id === latest ? " <em>latest</em>" : "") + "<br>" + v.summary;
-        list.appendChild(item);
-      });
-      left.value = params.get("a") || Math.max(1, latest - 1);
-      right.value = params.get("b") || latest;
-      function load() {
-        document.getElementById("frame-left").src = "../v" + left.value + "/?embed=1";
-        document.getElementById("frame-right").src = "../v" + right.value + "/?embed=1";
-        history.replaceState(null, "", "?a=" + left.value + "&b=" + right.value);
-      }
-      left.addEventListener("change", load);
-      right.addEventListener("change", load);
-      document.getElementById("swap").addEventListener("click", function (e) {
-        e.preventDefault();
-        var a = left.value; left.value = right.value; right.value = a; load();
-      });
-      load();
-    });
-})();
-</script>
-"""
-
-
 def version_line(prefix, current):
     """One line of links to every version; the current one in bold."""
     items = []
     for meta in VERSIONS:
         vid = meta["id"]
         href = prefix if vid == LATEST else f"{prefix}v{vid}/"
-        label = f"v{vid}" + (" (latest)" if vid == LATEST else "")
-        title = html.escape(f'{meta["date"]} · {meta["label"]}')
+        label = vid + (" (latest)" if vid == LATEST else "")
+        title = html.escape(f'{meta["label"]}: {meta["summary"]}')
         if vid == current:
             items.append(f'<strong title="{title}">{label}</strong>')
         else:
             items.append(f'<a href="{href}" title="{title}">{label}</a>')
     note = ""
     if current and current != LATEST:
-        note = (f' <span class="old-note">· you\'re reading an older '
-                f'version</span>')
+        note = (' <span class="old-note">· you\'re reading an older '
+                f'version; <a href="{prefix}">go to the latest</a></span>')
     return "Versions: " + " · ".join(items) + note
 
 
@@ -609,15 +526,24 @@ def page(title, body, depth, version, body_class="", redirect=False,
         mermaid=MERMAID if 'class="mermaid"' in body else "")
 
 
+OLD_ALIAS = {"v1": "1.0.0", "v2": "2.0.0", "v3": "3.0.0", "v4": "4.0.0",
+             "v5": "5.0.0"}
+STUB = """<!doctype html><meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=../v{vid}/">
+<link rel="canonical" href="../v{vid}/">
+<script>location.replace("../v{vid}/" + location.hash);</script>
+<a href="../v{vid}/">Version {vid}</a>"""
+
+
 def main():
-    # clean old Jekyll artefacts
-    for name in ("_config.yml", "index.md", "_includes", "_data", "compare",
-                 "assets") + tuple(f"v{i}" for i in range(1, 20)):
-        target = OUT / name
-        if target.is_dir():
-            shutil.rmtree(target)
-        elif target.exists():
-            target.unlink()
+    for target in list(OUT.iterdir()):
+        name = target.name
+        if (name in ("_config.yml", "index.md", "_includes", "_data",
+                     "compare", "assets") or re.fullmatch(r"v[\d.]+", name)):
+            if target.is_dir():
+                shutil.rmtree(target)
+            else:
+                target.unlink()
     (OUT / ".nojekyll").write_text("")
     (OUT / "assets").mkdir()
     (OUT / "assets" / "site.css").write_text(CSS.lstrip())
@@ -626,23 +552,23 @@ def main():
         json.dumps(VERSIONS, ensure_ascii=False, indent=2))
 
     for meta in VERSIONS:
-        source = (SRC / f"v{meta['id']}.md").read_text()
-        title = f"v{meta['id']} · Guatemala · 13–31 Dec 2026"
-        folder = OUT / f"v{meta['id']}"
+        vid = meta["id"]
+        source = (SRC / f"{vid}.md").read_text()
+        title = f"{vid} · Guatemala · 13–31 Dec 2026"
+        folder = OUT / f"v{vid}"
         folder.mkdir()
         body, sidebar = render(source, 1)
         (folder / "index.html").write_text(
-            page(title, body, 1, meta["id"], sidebar=sidebar))
-        if meta["id"] == LATEST:
+            page(title, body, 1, vid, sidebar=sidebar))
+        if vid == LATEST:
             body, sidebar = render(source, 0)
             (OUT / "index.html").write_text(
-                page("Guatemala · 13–31 December 2026", body, 0,
-                     meta["id"], redirect=True, sidebar=sidebar))
-
-    (OUT / "compare").mkdir()
-    (OUT / "compare" / "index.html").write_text(
-        page("Compare versions · Guatemala guide", COMPARE_BODY, 1, 0,
-             body_class="compare"))
+                page("Guatemala · 13–31 December 2026", body, 0, vid,
+                     redirect=True, sidebar=sidebar))
+    # keep the old /v1/ … /v5/ links working
+    for old, vid in OLD_ALIAS.items():
+        (OUT / old).mkdir()
+        (OUT / old / "index.html").write_text(STUB.format(vid=vid))
     print("built", [v["id"] for v in VERSIONS])
 
 
