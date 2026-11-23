@@ -100,18 +100,64 @@ def render(md_text, depth):
     md_text = md_text.replace("- [ ] ", "- ☐ ")
     md_text = linkify_bare_urls(md_text)
     md_text = normalise_lists(md_text)
-    body = markdown.markdown(
-        md_text,
+    converter = markdown.Markdown(
         extensions=["tables", "fenced_code", "sane_lists", "md_in_html",
                     "toc"],
         extension_configs={"toc": {"slugify": slugify}},
         output_format="html5")
+    body = converter.convert(md_text)
+    toc_html = sidebar_toc(converter.toc_tokens)
+    # the in-page "Contents" list is only needed when there's no sidebar
+    body = re.sub(r"(<p><strong>Contents</strong></p>\s*<ul>.*?</ul>\s*</li>\s*</ul>)",
+                  r'<div class="inline-toc">\1</div>', body, count=1,
+                  flags=re.S)
     body = body.replace("<img ", '<img loading="lazy" ')
     body = re.sub(r'<a href="(https?://[^"]+)"',
                   r'<a href="\1" target="_blank" rel="noopener"', body)
     body = body.replace("<table>", '<div class="table-wrap"><table>')
     body = body.replace("</table>", "</table></div>")
-    return body
+    return body, toc_html
+
+
+def sidebar_toc(tokens):
+    """Nested <nav> list of h2-h4 headings for the sticky sidebar."""
+    flat = []
+
+    def walk(items):
+        for item in items:
+            flat.append((item["level"], item["id"], item["name"]))
+            walk(item["children"])
+    walk(tokens)
+    while flat and flat[0][0] != 2:
+        flat.pop(0)
+    flat = [entry for entry in flat if 2 <= entry[0] <= 4]
+    if not flat:
+        return ""
+    out, depth = [], 1
+    out.append('<ul class="toc-l2">')
+    previous = 2
+    for level, anchor, name in flat:
+        if level > previous:
+            for lv in range(previous + 1, level + 1):
+                out.append(f'<ul class="toc-l{lv}">')
+        elif level < previous:
+            for _ in range(previous - level):
+                out.append("</li></ul>")
+            out.append("</li>")
+        elif out[-1] != '<ul class="toc-l2">':
+            out.append("</li>")
+        out.append(f'<li><a href="#{anchor}" data-level="{level}">{name}</a>')
+        previous = level
+    for _ in range(previous - 2):
+        out.append("</li></ul>")
+    out.append("</li></ul>")
+    return ('<aside class="sidebar" aria-label="Contents">'
+            '<div class="sidebar-inner">'
+            '<div class="toc-head"><span>Contents</span>'
+            '<span class="toc-progress"><span id="toc-progress-bar"></span>'
+            '</span></div>'
+            '<nav class="toc" id="toc"><span class="toc-marker" '
+            'id="toc-marker"></span>' + "".join(out) + "</nav></div></aside>")
 
 
 # ------------------------------------------------------------ template
@@ -138,9 +184,12 @@ PAGE = """<!doctype html>
   </div>
   <div id="old-version-banner" class="banner" hidden></div>
 </header>
+<div class="layout{layout_class}">
+{sidebar}
 <main class="content">
 {body}
 </main>
+</div>
 <footer class="site-footer">
   Built for two hikers · maps from <a href="https://www.naturalearthdata.com" target="_blank" rel="noopener">Natural Earth</a> · photos from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>
 </footer>
@@ -185,7 +234,7 @@ a:hover { color: var(--accent); }
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
 .bar {
-  max-width: 1100px; margin: 0 auto; padding: .55rem 1rem;
+  max-width: 1300px; margin: 0 auto; padding: .55rem 1rem;
   display: flex; gap: 1rem; align-items: center; justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -248,6 +297,86 @@ body.embed .content { padding-top: .5rem; }
 body.compare .content { max-width: 1600px; }
 .version-list { padding-left: 1.2rem; }
 @media (max-width: 900px) { .compare-grid { grid-template-columns: 1fr; } }
+
+/* ---- sidebar table of contents (wide screens) ---- */
+.sidebar { display: none; }
+@media (min-width: 1200px) {
+  .layout.has-sidebar {
+    display: grid; grid-template-columns: 300px minmax(0, 920px);
+    gap: 2.5rem; max-width: 1300px; margin: 0 auto; padding: 0 1rem;
+  }
+  .layout.has-sidebar .content { margin: 0; }
+  .layout.has-sidebar .inline-toc { display: none; }
+  .sidebar { display: block; }
+  .sidebar-inner {
+    position: sticky; top: 4.2rem; max-height: calc(100vh - 5rem);
+    margin-top: 1.5rem; display: flex; flex-direction: column;
+    border-right: 1px solid var(--line);
+  }
+  body.embed .layout.has-sidebar { display: block; }
+  body.embed .sidebar { display: none; }
+  body.embed .inline-toc { display: block; }
+}
+.toc-head {
+  display: flex; flex-direction: column; gap: .4rem; padding: 0 1rem .6rem .2rem;
+  font-size: .78rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+}
+.toc-progress {
+  display: block; height: 3px; background: var(--line); border-radius: 3px;
+  overflow: hidden;
+}
+#toc-progress-bar {
+  display: block; height: 100%; width: 0; border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  transition: width .15s linear;
+}
+.toc {
+  position: relative; overflow-y: auto; overscroll-behavior: contain;
+  padding: .2rem .6rem 2rem 0; scrollbar-width: thin;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 .8rem,
+                              #000 calc(100% - 1.6rem), transparent 100%);
+}
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc a {
+  position: relative; display: block; padding: .22rem .5rem .22rem .9rem;
+  border-radius: 6px; color: #475569; text-decoration: none;
+  font-size: .86rem; line-height: 1.35;
+  transition: color .2s, background-color .2s;
+}
+.toc a:hover { color: var(--accent); background: rgba(194,65,12,.06); }
+.toc a[data-level="2"] {
+  font-weight: 700; color: #0f3d3e; margin-top: .7rem; font-size: .9rem;
+}
+.toc .toc-l2 > li:first-child > a { margin-top: 0; }
+.toc a[data-level="3"] { padding-left: 1.4rem; }
+.toc a[data-level="4"] { padding-left: 2.3rem; font-size: .8rem; color: #64748b; }
+/* day-level entries fold away unless their chapter is the one being read */
+.toc .toc-l4 {
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height .4s ease, opacity .3s ease;
+}
+.toc li.open > .toc-l4 { max-height: 40rem; opacity: 1; }
+.toc a.active { color: var(--accent); font-weight: 600; }
+.toc a.in-path:not(.active) { color: #0f3d3e; }
+.toc-marker {
+  position: absolute; left: 0; top: 0; width: 3px; height: 0;
+  border-radius: 3px; background: var(--accent); opacity: 0;
+  transition: transform .3s cubic-bezier(.2,.8,.2,1),
+              height .3s cubic-bezier(.2,.8,.2,1), opacity .3s;
+}
+/* briefly highlight the heading you jumped to */
+h2, h3, h4, h5 { scroll-margin-top: 4.8rem; }
+.flash { animation: flash 1.6s ease; }
+@keyframes flash {
+  0% { background: rgba(253,230,138,.9); }
+  100% { background: transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .toc-marker, .toc .toc-l4, #toc-progress-bar { transition: none; }
+  .flash { animation: none; }
+}
 """
 
 JS = r"""
@@ -291,6 +420,105 @@ JS = r"""
           "compare/?a=" + current + "&b=" + latest + "'>Compare with latest</a>";
       }
     });
+})();
+
+// ---- sidebar table of contents: scroll tracking ----
+(function () {
+  var toc = document.getElementById("toc");
+  if (!toc) return;
+  var marker = document.getElementById("toc-marker");
+  var progress = document.getElementById("toc-progress-bar");
+  var links = Array.prototype.slice.call(toc.querySelectorAll("a[href^='#']"));
+  var targets = links.map(function (a) {
+    return document.getElementById(decodeURIComponent(a.hash.slice(1)));
+  });
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var activeIndex = -1;
+
+  function headerOffset() {
+    var header = document.querySelector(".site-header");
+    return (header ? header.offsetHeight : 0) + 24;
+  }
+
+  function placeMarker(link) {
+    if (!link) { marker.style.opacity = 0; return; }
+    var navBox = toc.getBoundingClientRect();
+    var box = link.getBoundingClientRect();
+    var top = box.top - navBox.top + toc.scrollTop;
+    marker.style.transform = "translateY(" + top + "px)";
+    marker.style.height = box.height + "px";
+    marker.style.opacity = 1;
+  }
+
+  function keepVisible(link) {
+    var navBox = toc.getBoundingClientRect();
+    var box = link.getBoundingClientRect();
+    var margin = navBox.height * 0.3;
+    var delta = 0;
+    if (box.top < navBox.top + margin) delta = box.top - navBox.top - margin;
+    else if (box.bottom > navBox.bottom - margin)
+      delta = box.bottom - navBox.bottom + margin;
+    if (delta) toc.scrollBy({ top: delta, behavior: reduced ? "auto" : "smooth" });
+  }
+
+  function setActive(index) {
+    if (index === activeIndex) return;
+    activeIndex = index;
+    links.forEach(function (a) { a.classList.remove("active", "in-path"); });
+    toc.querySelectorAll("li.open").forEach(function (li) { li.classList.remove("open"); });
+    if (index < 0) { placeMarker(null); return; }
+    var link = links[index];
+    link.classList.add("active");
+    // open the chapter that holds the active entry, and mark its ancestors
+    var li = link.parentElement;
+    var level = link.dataset.level;
+    var chapter = level === "4" ? li.parentElement.closest("li") : li;
+    if (chapter && chapter.querySelector(":scope > .toc-l4")) chapter.classList.add("open");
+    var ancestor = li.parentElement.closest("li");
+    while (ancestor && toc.contains(ancestor)) {
+      var a = ancestor.querySelector(":scope > a");
+      if (a) a.classList.add("in-path");
+      ancestor = ancestor.parentElement.closest("li");
+    }
+    // wait for the fold animation before measuring
+    placeMarker(link);
+    setTimeout(function () { placeMarker(link); keepVisible(link); }, 420);
+  }
+
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = headerOffset() + 8;
+    var index = -1;
+    for (var i = 0; i < targets.length; i++) {
+      if (targets[i] && targets[i].getBoundingClientRect().top <= line) index = i;
+      else if (targets[i]) break;
+    }
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    if (max > 0 && window.scrollY >= max - 2) index = targets.length - 1;
+    setActive(index);
+    var fraction = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+    progress.style.width = (fraction * 100).toFixed(1) + "%";
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener("resize", function () {
+    placeMarker(links[activeIndex]);
+  });
+  update();
+
+  // flash the heading you jump to, from the sidebar or any in-page link
+  document.addEventListener("click", function (event) {
+    var a = event.target.closest("a[href^='#']");
+    if (!a) return;
+    var target = document.getElementById(decodeURIComponent(a.hash.slice(1)));
+    if (!target) return;
+    target.classList.remove("flash");
+    void target.offsetWidth;
+    target.classList.add("flash");
+  });
 })();
 """
 
@@ -355,10 +583,12 @@ COMPARE_BODY = """
 """
 
 
-def page(title, body, depth, version, body_class="", redirect=False):
+def page(title, body, depth, version, body_class="", redirect=False,
+         sidebar=""):
     prefix = "../" * depth
     return PAGE.format(
         title=html.escape(title), prefix=prefix, body=body, version=version,
+        sidebar=sidebar, layout_class=" has-sidebar" if sidebar else "",
         latest=LATEST, body_class=body_class,
         redirect=REDIRECT if redirect else "",
         mermaid=MERMAID if 'class="mermaid"' in body else "")
@@ -385,12 +615,14 @@ def main():
         title = f"v{meta['id']} · Guatemala · 13–31 Dec 2026"
         folder = OUT / f"v{meta['id']}"
         folder.mkdir()
+        body, sidebar = render(source, 1)
         (folder / "index.html").write_text(
-            page(title, render(source, 1), 1, meta["id"]))
+            page(title, body, 1, meta["id"], sidebar=sidebar))
         if meta["id"] == LATEST:
+            body, sidebar = render(source, 0)
             (OUT / "index.html").write_text(
-                page("Guatemala · 13–31 December 2026", render(source, 0), 0,
-                     meta["id"], redirect=True))
+                page("Guatemala · 13–31 December 2026", body, 0,
+                     meta["id"], redirect=True, sidebar=sidebar))
 
     (OUT / "compare").mkdir()
     (OUT / "compare" / "index.html").write_text(
