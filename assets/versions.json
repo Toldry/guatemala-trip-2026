@@ -88,5 +88,11 @@
     "date": "23 Nov 2026",
     "label": "Cycling",
     "summary": "Antigua bike ride; two cycling swap options."
+  },
+  {
+    "id": "6.3.0",
+    "date": "23 Nov 2026",
+    "label": "Daily distances",
+    "summary": "Walking and cycling km per day, low–high."
   }
 ]

@@ -51,6 +51,8 @@ VERSIONS = [
     V("6.1.0", "23 Nov 2026", "Trip cost", "Low/high cost estimate."),
     V("6.2.0", "23 Nov 2026", "Cycling",
       "Antigua bike ride; two cycling swap options."),
+    V("6.3.0", "23 Nov 2026", "Daily distances",
+      "Walking and cycling km per day, low–high."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
