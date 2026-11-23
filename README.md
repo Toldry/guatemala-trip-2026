@@ -22,7 +22,7 @@ Plain static HTML; there's no Jekyll (`.nojekyll`).
 | `maps/` | Annotated maps and the altitude chart |
 | `src/versions/v*.md` | Text of each version (input for the build) |
 | `scripts/build_site.py` | Builds the HTML (`pip install markdown`) |
-| `scripts/make_maps.py` | Draws the maps from Natural Earth data |
+| `scripts/make_maps.py` | Draws the maps: Copernicus 30 m DEM terrain, Global Map Guatemala roads/rivers/towns, Natural Earth borders. Expects the DEM tiles in `/home/claude/dem` and a clone of `globalmaps/gmgt10` in `/home/claude/gmgt10` |
 
 To add a version: write `src/versions/vN.md`, add an entry to `VERSIONS`
 in `scripts/build_site.py`, then run `python scripts/build_site.py`.

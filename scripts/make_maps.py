@@ -1,8 +1,11 @@
 """Annotated route maps for the Guatemala guide.
 
-Data: Natural Earth (public domain) vectors, plus the Natural Earth
-shaded-relief raster bundled in the basemap-data package.
-Rendering: matplotlib + geopandas (all open source).
+Data:
+- Terrain: Copernicus DEM GLO-30 (30 m), hillshaded here.
+- Roads, trails, rivers, lakes, towns: Global Map Guatemala 1.0
+  (1:1 million, (c) ISCGM / Instituto Geografico Nacional, non-commercial).
+- Borders, coastline, neighbouring countries: Natural Earth (public domain).
+Rendering: matplotlib + geopandas + rasterio (all open source).
 """
 import math
 from pathlib import Path
@@ -14,9 +17,16 @@ import numpy as np
 from matplotlib.lines import Line2D
 from matplotlib.patches import FancyBboxPatch
 from PIL import Image
+import rasterio
+from rasterio.enums import Resampling
+from rasterio.merge import merge as merge_rasters
+import networkx as nx
+from scipy.spatial import cKDTree
 
 DATA_DIR = Path("/home/claude/guide/data")
 OUT_DIR = Path("/home/claude/guide/maps")
+DEM_DIR = Path("/home/claude/dem")
+GLOBAL_MAP_DIR = Path("/home/claude/gmgt10")
 RELIEF_PATH = Path(
     "/usr/local/lib/python3.13/site-packages/mpl_toolkits/"
     "basemap_data/shadedrelief.jpg"
@@ -92,6 +102,7 @@ PLACES = {
     "El Estor": (-89.345, 15.530),
     "Livingston": (-88.750, 15.828),
     "Cerro de la Cruz": (-90.730, 14.565),
+    "San Lucas Sacatepéquez": (-90.657, 14.609),
 }
 
 VOLCANOES = {
@@ -109,7 +120,7 @@ VOLCANOES = {
 
 # Route legs: waypoints follow the main roads (approximate, smoothed).
 ROUTE_LEGS = [
-    ("transfer", ["GUA", "Antigua"]),
+    ("transfer", ["GUA", "San Lucas Sacatepéquez", "Antigua"]),
     ("highlands", ["Antigua", "Chimaltenango", "Los Encuentros",
                    "Santa Clara turnoff", "Santa Clara La Laguna",
                    "San Juan La Laguna"]),
@@ -205,7 +216,96 @@ def load_layers(bounds):
             DATA_DIR / "ne_10m_admin_1_states_provinces_lines.geojson",
             bbox=bbox),
     }
+    for key, name in (("gm_roads", "roadl"), ("gm_trails", "traill"),
+                      ("gm_rivers", "watrcrsl"), ("gm_lakes", "inwatera"),
+                      ("gm_towns", "builtupa")):
+        layers[key] = gpd.read_file(GLOBAL_MAP_DIR / f"{name}.shp",
+                                    bbox=bbox)
     return layers
+
+
+def load_dem(bounds, target_width_px=2600):
+    """Mosaic Copernicus 30 m tiles over bounds, at about the needed res."""
+    min_lon, min_lat, max_lon, max_lat = bounds
+    res = max((max_lon - min_lon) / target_width_px, 1 / 3600)
+    datasets = []
+    for lat in range(math.floor(min_lat), math.floor(max_lat) + 1):
+        for lon in range(math.floor(min_lon), math.floor(max_lon) + 1):
+            name = (f"Copernicus_DSM_COG_10_N{lat:02d}_00_"
+                    f"W{-lon:03d}_00_DEM.tif")
+            path = DEM_DIR / name
+            if path.exists():
+                datasets.append(rasterio.open(path))
+    mosaic, transform = merge_rasters(
+        datasets, bounds=(min_lon, min_lat, max_lon, max_lat),
+        res=(res, res), nodata=0, resampling=Resampling.average)
+    for ds in datasets:
+        ds.close()
+    elevation = mosaic[0].astype(float)
+    extent = (transform.c, transform.c + transform.a * elevation.shape[1],
+              transform.f + transform.e * elevation.shape[0], transform.f)
+    return elevation, extent, res
+
+
+def hillshade(elevation, res_deg, mid_lat, exaggeration=1.0):
+    """Multi-directional hillshade, 0 (dark) .. 1 (lit)."""
+    dy = res_deg * 110_574
+    dx = res_deg * 111_320 * math.cos(math.radians(mid_lat))
+    gy, gx = np.gradient(elevation * exaggeration, dy, dx)
+    slope = np.arctan(np.hypot(gx, gy))
+    aspect = np.arctan2(-gx, gy)
+    altitude = math.radians(45)
+    shade = np.zeros_like(elevation)
+    weights = {225: 0.15, 270: 0.25, 315: 0.45, 360: 0.15}
+    for azimuth, weight in weights.items():
+        az = math.radians(azimuth)
+        shade += weight * (np.sin(altitude) * np.cos(slope)
+                           + np.cos(altitude) * np.sin(slope)
+                           * np.cos(az - aspect - math.pi / 2))
+    return np.clip(shade, 0, 1)
+
+
+HYPSO = [  # elevation (m), colour: soft greens low, warm tans high, pale top
+    (0, (0.82, 0.88, 0.76)), (300, (0.86, 0.90, 0.78)),
+    (900, (0.92, 0.91, 0.80)), (1600, (0.94, 0.90, 0.80)),
+    (2400, (0.91, 0.86, 0.77)), (3200, (0.88, 0.83, 0.77)),
+    (4300, (0.96, 0.95, 0.93)),
+]
+
+
+def draw_terrain(ax, bounds, strength=1.0, contours=None):
+    """Hypsometric tint x hillshade from the 30 m DEM, plus contours."""
+    min_lon, min_lat, max_lon, max_lat = bounds
+    span = max_lon - min_lon
+    elevation, extent, res = load_dem(bounds)
+    mid_lat = (min_lat + max_lat) / 2
+    exaggeration = 1.0 if span < 1 else 2.5 if span < 3 else 4.0
+    shade = hillshade(elevation, res, mid_lat, exaggeration)
+    levels = np.array([h for h, _ in HYPSO], dtype=float)
+    colours = np.array([c for _, c in HYPSO])
+    tint = np.stack([np.interp(elevation, levels, colours[:, i])
+                     for i in range(3)], axis=-1)
+    flat_light = np.sin(math.radians(45))
+    relief = 1 + strength * 0.9 * (shade - flat_light)
+    rgb = np.clip(tint * relief[..., None], 0, 1)
+    sea = elevation <= 0.5
+    rgb[sea] = np.array([0x9f, 0xc8, 0xe2]) / 255
+    ax.imshow(rgb, extent=extent, origin="upper", zorder=1.5,
+              interpolation="bilinear")
+    if contours:
+        step, index_step = contours
+        smooth = elevation
+        top = math.ceil(np.nanmax(smooth) / step) * step
+        minor = [h for h in range(step, top + 1, step) if h % index_step]
+        major = list(range(index_step, top + 1, index_step))
+        xs = np.linspace(extent[0], extent[1], elevation.shape[1])
+        ys = np.linspace(extent[3], extent[2], elevation.shape[0])
+        ax.contour(xs, ys, smooth, levels=minor, colors="#8b6f4e",
+                   linewidths=0.25, alpha=0.45, zorder=1.6)
+        cs = ax.contour(xs, ys, smooth, levels=major, colors="#7a5c3c",
+                        linewidths=0.6, alpha=0.6, zorder=1.6)
+        ax.clabel(cs, fmt=lambda v: f"{int(v):,} m", fontsize=6,
+                  colors="#6b4f35", inline_spacing=2)
 
 
 def draw_relief(ax, bounds, alpha):
@@ -237,29 +337,59 @@ def draw_relief(ax, bounds, alpha):
 
 
 def base_map(ax, bounds, layers, relief_alpha=0.0, show_roads=True,
-             detail_rivers=True):
+             detail_rivers=True, contours=None):
+    """Terrain from the 30 m DEM plus Global Map detail.
+
+    relief_alpha is kept for the callers' sake: any value > 0 means
+    "full terrain"; its size sets the hillshade strength.
+    """
     min_lon, min_lat, max_lon, max_lat = bounds
-    ax.set_facecolor(COLOR_WATER)
-    layers["countries"].plot(ax=ax, color=COLOR_NEIGHBOR, edgecolor="none",
-                             zorder=1)
-    gtm = layers["countries"][layers["countries"]["ADM0_A3"] == "GTM"]
-    gtm.plot(ax=ax, color=COLOR_LAND, edgecolor="none", zorder=1.2)
-    if relief_alpha:
-        draw_relief(ax, bounds, relief_alpha)
+    span = max_lon - min_lon
+    close_up = span < 1.2
+    ax.set_facecolor("#9fc8e2")
+    draw_terrain(ax, bounds, strength=min(1.0, 0.55 + relief_alpha),
+                 contours=contours)
+    # neighbouring countries: washed out so Guatemala stands forward
+    others = layers["countries"][layers["countries"]["ADM0_A3"] != "GTM"]
+    others.plot(ax=ax, color="white", alpha=0.45, edgecolor="none",
+                zorder=2)
     layers["admin1"][layers["admin1"]["ADM0_A3"] == "GTM"].plot(
-        ax=ax, color="#cfc8b6", linewidth=0.5, linestyle=(0, (4, 3)),
+        ax=ax, color="#9c917c", linewidth=0.5, linestyle=(0, (4, 3)),
         zorder=3)
-    layers["countries"].boundary.plot(ax=ax, color=COLOR_BORDER,
-                                      linewidth=1.0, zorder=3.2)
-    rivers = layers["rivers_na"] if detail_rivers else layers["rivers"]
-    rivers.plot(ax=ax, color="#7fb3d5", linewidth=0.8, zorder=3.5)
-    layers["rivers"].plot(ax=ax, color="#7fb3d5", linewidth=0.9, zorder=3.5)
-    for key in ("lakes", "lakes_na"):
-        layers[key].plot(ax=ax, color=COLOR_WATER, edgecolor="#6fa4c7",
-                         linewidth=0.6, zorder=4)
+    layers["countries"].boundary.plot(ax=ax, color="#6b6457",
+                                      linewidth=1.1, zorder=3.2)
+    # rivers: perennial solid, seasonal dashed; finer on close-ups
+    rivers = layers["gm_rivers"]
+    perennial = rivers[rivers["hyc"] != 6]
+    seasonal = rivers[rivers["hyc"] == 6]
+    river_width = 0.7 if close_up else 0.45
+    perennial.plot(ax=ax, color="#5b9bd5", linewidth=river_width,
+                   zorder=3.5)
+    if close_up:
+        seasonal.plot(ax=ax, color="#7fb3d5", linewidth=0.35,
+                      linestyle=(0, (3, 2)), zorder=3.5)
+    layers["gm_lakes"].plot(ax=ax, color="#a9cfe6", edgecolor="#5b9bd5",
+                            linewidth=0.6, zorder=4)
+    # towns as built-up areas
+    layers["gm_towns"].plot(ax=ax, color="#d6c7b0", edgecolor="#a8957a",
+                            linewidth=0.4, alpha=0.9, zorder=4.2)
     if show_roads:
-        layers["roads"].plot(ax=ax, color=COLOR_ROAD, linewidth=0.8,
-                             zorder=4.5)
+        roads = layers["gm_roads"]
+        paved = roads[roads["rst_descri"] == "Paved"]
+        unpaved = roads[roads["rst_descri"] != "Paved"]
+        if close_up:
+            layers["gm_trails"].plot(ax=ax, color="#8a6d4b", linewidth=0.4,
+                                     linestyle=(0, (2, 1.5)), alpha=0.8,
+                                     zorder=4.3)
+            unpaved.plot(ax=ax, color="#a39276", linewidth=0.45, alpha=0.8,
+                         zorder=4.4)
+        else:
+            unpaved.plot(ax=ax, color="#a39276", linewidth=0.25, alpha=0.6,
+                         zorder=4.4)
+        paved.plot(ax=ax, color="white", linewidth=2.2 if close_up else 1.2,
+                   zorder=4.6)
+        paved.plot(ax=ax, color="#e3a25b", linewidth=1.2 if close_up
+                   else 0.6, zorder=4.65)
     ax.set_xlim(min_lon, max_lon)
     ax.set_ylim(min_lat, max_lat)
     mid_lat = (min_lat + max_lat) / 2
@@ -273,10 +403,56 @@ def base_map(ax, bounds, layers, relief_alpha=0.0, show_roads=True,
         spine.set_linewidth(1.2)
 
 
+_ROAD_GRAPH = {}
+
+
+def road_graph():
+    """Graph of the Global Map road network; paved roads are preferred."""
+    if "graph" not in _ROAD_GRAPH:
+        roads = gpd.read_file(GLOBAL_MAP_DIR / "roadl.shp")
+        graph = nx.Graph()
+        paved_nodes = set()
+        cos_lat = math.cos(math.radians(15.5))
+        for geom, paved in zip(roads.geometry, roads["rst_descri"] == "Paved"):
+            pts = [(round(c[0], 5), round(c[1], 5)) for c in geom.coords]
+            for a, b in zip(pts[:-1], pts[1:]):
+                length = math.hypot((a[0] - b[0]) * cos_lat, a[1] - b[1])
+                graph.add_edge(a, b, weight=length * (1 if paved else 2.5))
+                if paved:
+                    paved_nodes.update((a, b))
+        main = max(nx.connected_components(graph), key=len)
+        graph = graph.subgraph(main).copy()
+        # snap waypoints onto paved roads: the trip uses main roads
+        paved = [n for n in graph.nodes if n in paved_nodes]
+        every = list(graph.nodes)
+        _ROAD_GRAPH.update(graph=graph, paved=paved,
+                           paved_tree=cKDTree(paved), every=every,
+                           every_tree=cKDTree(every))
+    return _ROAD_GRAPH
+
+
+def road_route(names):
+    """Polyline following the road network through the named waypoints."""
+    data = road_graph()
+    out = []
+    waypoints = [coordinates(n) for n in names]
+    def snap(point):
+        # prefer a paved road within ~3 km, else the nearest road of any kind
+        distance, i = data["paved_tree"].query(point)
+        if distance < 0.027:
+            return data["paved"][i]
+        return data["every"][data["every_tree"].query(point)[1]]
+
+    for start, end in zip(waypoints[:-1], waypoints[1:]):
+        path = nx.shortest_path(data["graph"], snap(start), snap(end),
+                                weight="weight")
+        out.extend([start] + list(path) + [end])
+    return np.array(out)
+
+
 def draw_routes(ax, line_width=3.2, side_trips=True):
     for segment, names in ROUTE_LEGS:
-        points = [coordinates(n) for n in names]
-        smooth = catmull_rom(points)
+        smooth = road_route(names)
         ax.plot(smooth[:, 0], smooth[:, 1], color="white",
                 linewidth=line_width + 2.4, solid_capstyle="round",
                 zorder=6)
@@ -375,10 +551,15 @@ def title_box(ax, title, subtitle, position=(0.015, 0.985)):
 def credits(ax, extra="", overview=False):
     ax.set_xlabel("")
     ax.set_ylabel("")
-    ax.text(0.745 if overview else 0.995, 0.004,
-            "Data: Natural Earth (public domain). Routes approximate. "
-            "Made with matplotlib & geopandas." + extra,
-            transform=ax.transAxes, fontsize=6.5, ha="right", va="bottom",
+    ax.text(0.745 if overview else 0.995, 0.006,
+            "Terrain: Copernicus DEM GLO-30, © DLR e.V. 2010–2014 & Airbus "
+            "2014–2018, provided under COPERNICUS by the EU and ESA.\n"
+            "Roads, rivers, towns: Global Map of Guatemala © ISCGM / IGN "
+            "Guatemala. Borders: Natural Earth.\nRoutes follow the 1:1M "
+            "road network, approximately. Made with matplotlib, geopandas "
+            "& rasterio." + extra,
+            transform=ax.transAxes, fontsize=6, ha="right", va="bottom",
+            linespacing=1.15,
             color="#555", zorder=13, path_effects=halo(2))
 
 
@@ -454,7 +635,7 @@ def overview_map():
         Line2D([0], [0], color=SEGMENT_COLORS["return"], lw=3.5,
                label="Return via Río Dulce (29–30 Dec)"),
         Line2D([0], [0], color=SEGMENT_COLORS["transfer"], lw=3.5,
-               label="Night shuttle, airport → Antigua"),
+               label="Airport → Antigua (13 Dec, night)"),
         Line2D([0], [0], color="#444", lw=1.6, ls=(0, (1.5, 2)),
                label="Hike or side trip"),
         Line2D([0], [0], marker="o", color="#0284c7", lw=0, markersize=10,
@@ -469,7 +650,7 @@ def overview_map():
                        frameon=True, framealpha=0.92, edgecolor="#999",
                        title="Legend", title_fontsize=9.5)
     legend.set_zorder(14)
-    scale_bar(ax, bounds, 100, position=(0.03, 0.035))
+    scale_bar(ax, bounds, 100, position=(0.03, 0.075))
     north_arrow(ax)
     credits(ax, overview=True)
 
@@ -648,7 +829,7 @@ def atitlan_map():
     bounds = (-91.37, 14.55, -91.08, 14.80)
     layers = load_layers(bounds)
     fig, ax = plt.subplots(figsize=(10, 8.4), dpi=200)
-    base_map(ax, bounds, layers, relief_alpha=0.0, show_roads=False)
+    base_map(ax, bounds, layers, relief_alpha=0.4, contours=(100, 500))
     draw_volcanoes(ax, names={"San Pedro\n3,020 m", "Tolimán\n3,158 m",
                               "Atitlán\n3,537 m"},
                    fontsize=10,
@@ -668,7 +849,7 @@ def atitlan_map():
          (0.006, -0.004, "left"), False),
         ("Sololá", "Sololá", "town", (0.005, 0.004, "left"), False),
         ("Santa Clara La Laguna", "Santa Clara", "town",
-         (-0.005, 0.006, "right"), False),
+         (0.0, 0.017, "center"), False),
     ]
     for name, label, kind, (dx, dy, ha), bold in villages:
         place_dot(ax, name, label, dx=dx, dy=dy, ha=ha, kind=kind,
@@ -691,7 +872,7 @@ def atitlan_map():
                         (-91.262, 14.716)])
     ax.plot(boat[:, 0], boat[:, 1], color="#0369a1", lw=1.8,
             ls=(0, (4, 2)), zorder=7)
-    ax.text(-91.271, 14.712, "lancha\n~10 min", fontsize=8,
+    ax.text(-91.268, 14.700, "lancha\n~10 min", fontsize=8,
             color="#0369a1", ha="center", zorder=8, path_effects=halo(2))
     badges = [
         ("Indian Nose", "18 Dec · 04:00 start", (-0.05, 0.03)),
@@ -705,8 +886,7 @@ def atitlan_map():
             fontsize=11, color="#1e5a85", ha="center", style="italic",
             zorder=8, path_effects=halo(2))
     title_box(ax, "Lake Atitlán · 17–20 December",
-              "Lake outline at Natural Earth 1:10m resolution; "
-              "trails schematic")
+              "Your base for three nights; trails schematic")
     scale_bar(ax, bounds, 5, position=(0.05, 0.05))
     north_arrow(ax, position=(0.95, 0.86))
     credits(ax)
@@ -761,7 +941,7 @@ def antigua_map():
     bounds = (-91.02, 14.30, -90.42, 14.74)
     layers = load_layers(bounds)
     fig, ax = plt.subplots(figsize=(11, 8.4), dpi=200)
-    base_map(ax, bounds, layers, relief_alpha=0.45)
+    base_map(ax, bounds, layers, relief_alpha=0.45, contours=(100, 500))
     draw_routes(ax, line_width=3.4, side_trips=False)
     trail = catmull_rom([coordinates("Antigua"),
                          coordinates("La Soledad (Acatenango trailhead)"),
@@ -786,7 +966,7 @@ def antigua_map():
         place_dot(ax, name, label, dx=dx, dy=dy, ha=ha, kind=kind,
                   fontsize=10, bold=name == "Antigua")
     for name, text, (dx, dy) in (
-        ("GUA", "13 Dec · land 21:25 → night shuttle", (0.0, -0.13)),
+        ("GUA", "13 Dec · land 21:25, pick up car → Antigua", (-0.02, -0.13)),
         ("Antigua", "13–14 & 16 Dec · Antigua", (0.13, 0.10)),
         ("Acatenango\n3,976 m", "15–16 Dec · overnight hike,\ncamp ~3,600 m facing Fuego",
          (-0.02, 0.17)),
@@ -818,7 +998,7 @@ def xela_map():
     bounds = (-92.12, 14.62, -91.30, 15.16)
     layers = load_layers(bounds)
     fig, ax = plt.subplots(figsize=(11, 7.8), dpi=200)
-    base_map(ax, bounds, layers, relief_alpha=0.4)
+    base_map(ax, bounds, layers, relief_alpha=0.4, contours=(100, 500))
     departments = gpd.read_file(
         DATA_DIR / "ne_10m_admin_1_states_provinces.geojson",
         bbox=(bounds[0] - 1, bounds[1] - 1, bounds[2] + 1, bounds[3] + 1))
@@ -881,7 +1061,7 @@ def peten_map():
     bounds = (-90.02, 16.82, -89.28, 17.32)
     layers = load_layers(bounds)
     fig, ax = plt.subplots(figsize=(11, 7.8), dpi=200)
-    base_map(ax, bounds, layers, relief_alpha=0.25)
+    base_map(ax, bounds, layers, relief_alpha=0.25, contours=(20, 100))
     draw_routes(ax, line_width=3.6, side_trips=False)
     for name, label, kind, (dx, dy, ha) in (
         ("Flores", "Flores (island)", "town", (-0.012, 0.012, "right")),
@@ -910,7 +1090,7 @@ def peten_map():
     caution(ax, -89.892, 16.929,
             "Flores/Santa Elena: tuk-tuks,\ntraffic, busy waterfront",
             kind="traffic", dx=0.03, dy=-0.10)
-    caution_legend(ax, loc="lower right")
+    caution_legend(ax, loc="lower right", anchor=(0.995, 0.09))
     ax.text(-89.80, 17.005, "Lake Petén Itzá", fontsize=10, color="#1e5a85",
             style="italic", ha="center", zorder=8, path_effects=halo(2))
     title_box(ax, "Tikal, Yaxhá & Lake Petén Itzá · 27–29 December",
@@ -928,7 +1108,7 @@ def izabal_map():
     bounds = (-89.48, 15.38, -88.68, 15.88)
     layers = load_layers(bounds)
     fig, ax = plt.subplots(figsize=(11, 7.4), dpi=200)
-    base_map(ax, bounds, layers, relief_alpha=0.3)
+    base_map(ax, bounds, layers, relief_alpha=0.3, contours=(50, 250))
     draw_routes(ax, line_width=3.6)
     for name, label, kind, (dx, dy, ha) in (
         ("Río Dulce", "Río Dulce town", "swim", (0.014, 0.014, "left")),
