@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare versions · Guatemala guide</title>
+<link rel="stylesheet" href="../assets/site.css">
+
+</head>
+<body class="compare" data-version="0" data-latest="5" data-prefix="../">
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="../">Guatemala · 13–31 Dec 2026</a>
+    <nav class="tools">
+      <label class="version-picker">Version
+        <select id="version-select" aria-label="Choose a version"></select>
+      </label>
+      <a class="button" href="../compare/">Compare versions</a>
+      <a class="button ghost" href="https://github.com/Toldry/guatemala-trip-2026" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+  <div id="old-version-banner" class="banner" hidden></div>
+</header>
+<main class="content">
+
+<h1>Compare versions</h1>
+<p>Pick two versions to read side by side. Each one scrolls independently.</p>
+<div class="compare-controls">
+  <label>Left
+    <select id="left"></select>
+  </label>
+  <label>Right
+    <select id="right"></select>
+  </label>
+  <a class="button" id="swap" href="#">⇄ Swap</a>
+</div>
+<div class="compare-grid">
+  <iframe id="frame-left" title="Left version"></iframe>
+  <iframe id="frame-right" title="Right version"></iframe>
+</div>
+<h2>All versions</h2>
+<ol class="version-list" id="version-list" reversed></ol>
+<script>
+(function () {
+  var params = new URLSearchParams(location.search);
+  fetch("../assets/versions.json").then(function (r) { return r.json(); })
+    .then(function (versions) {
+      var latest = versions[versions.length - 1].id;
+      var left = document.getElementById("left");
+      var right = document.getElementById("right");
+      var list = document.getElementById("version-list");
+      versions.slice().reverse().forEach(function (v) {
+        [left, right].forEach(function (select) {
+          var option = document.createElement("option");
+          option.value = v.id;
+          option.textContent = "v" + v.id + " · " + v.date + " · " + v.label;
+          select.appendChild(option);
+        });
+        var item = document.createElement("li");
+        item.value = v.id;
+        item.innerHTML = "<a href='../v" + v.id + "/'><strong>v" + v.id +
+          " · " + v.label + "</strong></a> (" + v.date + ")" +
+          (v.id === latest ? " <em>latest</em>" : "") + "<br>" + v.summary;
+        list.appendChild(item);
+      });
+      left.value = params.get("a") || Math.max(1, latest - 1);
+      right.value = params.get("b") || latest;
+      function load() {
+        document.getElementById("frame-left").src = "../v" + left.value + "/?embed=1";
+        document.getElementById("frame-right").src = "../v" + right.value + "/?embed=1";
+        history.replaceState(null, "", "?a=" + left.value + "&b=" + right.value);
+      }
+      left.addEventListener("change", load);
+      right.addEventListener("change", load);
+      document.getElementById("swap").addEventListener("click", function (e) {
+        e.preventDefault();
+        var a = left.value; left.value = right.value; right.value = a; load();
+      });
+      load();
+    });
+})();
+</script>
+
+</main>
+<footer class="site-footer">
+  Built for two hikers · maps from <a href="https://www.naturalearthdata.com" target="_blank" rel="noopener">Natural Earth</a> · photos from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>
+</footer>
+<script src="../assets/site.js"></script>
+
+</body>
+</html>

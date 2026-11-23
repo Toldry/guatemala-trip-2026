@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "date": "22 Nov 2026",
+    "label": "First draft",
+    "summary": "Driving loop: Antigua, Atitlán, Chichi festival, Xela, Semuc, Tikal."
+  },
+  {
+    "id": 2,
+    "date": "23 Nov 2026",
+    "label": "For first-timers, flying to Tikal",
+    "summary": "An introduction to each place; fly GUA ↔ Flores for Tikal and Yaxhá."
+  },
+  {
+    "id": 3,
+    "date": "23 Nov 2026",
+    "label": "Driving to Tikal and back",
+    "summary": "No flights: Semuc Champey, Tikal and Yaxhá by car, then back to GUA."
+  },
+  {
+    "id": 4,
+    "date": "23 Nov 2026",
+    "label": "Flights, swimming, bookings",
+    "summary": "Fits the 21:25 arrival and 02:30 departure; swimming stops, operators, maps and photos."
+  },
+  {
+    "id": 5,
+    "date": "23 Nov 2026",
+    "label": "€ prices, links, safety",
+    "summary": "Q + € prices, links everywhere, crowd and traffic notes, tips, health and safety, 5 new maps."
+  }
+]

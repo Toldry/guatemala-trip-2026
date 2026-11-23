@@ -84,6 +84,14 @@ PLACES = {
     "Finca El Paraíso": (-89.208, 15.591),
     "La Ruidosa": (-88.840, 15.475),
     "Teculután": (-89.715, 14.990),
+    "La Soledad (Acatenango trailhead)": (-90.835, 14.526),
+    "Santiaguito": (-91.570, 14.742),
+    "Mundo Maya airport": (-89.866, 16.915),
+    "Santa Elena": (-89.880, 16.920),
+    "Ecolodge El Sombrero": (-89.420, 17.058),
+    "El Estor": (-89.345, 15.530),
+    "Livingston": (-88.750, 15.828),
+    "Cerro de la Cruz": (-90.730, 14.565),
 }
 
 VOLCANOES = {
@@ -365,6 +373,8 @@ def title_box(ax, title, subtitle, position=(0.015, 0.985)):
 
 
 def credits(ax, extra="", overview=False):
+    ax.set_xlabel("")
+    ax.set_ylabel("")
     ax.text(0.745 if overview else 0.995, 0.004,
             "Data: Natural Earth (public domain). Routes approximate. "
             "Made with matplotlib & geopandas." + extra,
@@ -705,9 +715,306 @@ def atitlan_map():
     plt.close(fig)
 
 
+# ------------------------------------------------------------ extras
+COLOR_CROWD = "#ea580c"
+COLOR_TRAFFIC = "#57534e"
+
+
+def caution(ax, lon, lat, text, kind="crowd", dx=0.0, dy=0.0, ha="left",
+            fontsize=8.5):
+    """Orange (crowds) or grey (traffic/asphalt) warning label."""
+    color = COLOR_CROWD if kind == "crowd" else COLOR_TRAFFIC
+    marker = "D" if kind == "crowd" else "s"
+    ax.plot(lon, lat, marker=marker, markersize=8, color=color,
+            markeredgecolor="white", markeredgewidth=1.0, zorder=9.2)
+    ax.annotate(text, xy=(lon, lat), xytext=(lon + dx, lat + dy),
+                fontsize=fontsize, color="white", ha=ha, va="center",
+                zorder=10,
+                bbox=dict(boxstyle="round,pad=0.3", fc=color, ec="white",
+                          lw=1, alpha=0.95),
+                arrowprops=dict(arrowstyle="-", color=color, lw=1.1)
+                if (dx or dy) else None)
+
+
+def caution_legend(ax, extra=(), loc="lower right", anchor=None):
+    items = [
+        Line2D([0], [0], marker="D", color=COLOR_CROWD, lw=0, markersize=9,
+               markeredgecolor="white", label="Expect crowds"),
+        Line2D([0], [0], marker="s", color=COLOR_TRAFFIC, lw=0,
+               markersize=9, markeredgecolor="white",
+               label="Traffic / busy roads"),
+        Line2D([0], [0], marker="o", color="#0284c7", lw=0, markersize=10,
+               markeredgecolor="white", label="Swimming"),
+        Line2D([0], [0], marker="^", color="#6b4f3a", lw=0, markersize=10,
+               markeredgecolor="white", label="Volcano / hike"),
+        *extra,
+    ]
+    kwargs = dict(handles=items, loc=loc, fontsize=8.5, frameon=True,
+                  framealpha=0.93, edgecolor="#999")
+    if anchor:
+        kwargs["bbox_to_anchor"] = anchor
+    legend = ax.legend(**kwargs)
+    legend.set_zorder(14)
+
+
+def antigua_map():
+    bounds = (-91.02, 14.30, -90.42, 14.74)
+    layers = load_layers(bounds)
+    fig, ax = plt.subplots(figsize=(11, 8.4), dpi=200)
+    base_map(ax, bounds, layers, relief_alpha=0.45)
+    draw_routes(ax, line_width=3.4, side_trips=False)
+    trail = catmull_rom([coordinates("Antigua"),
+                         coordinates("La Soledad (Acatenango trailhead)"),
+                         coordinates("Acatenango\n3,976 m")])
+    ax.plot(trail[:, 0], trail[:, 1], color="#444", lw=1.8,
+            ls=(0, (1.5, 2)), zorder=6.6)
+    draw_volcanoes(ax, names={"Acatenango\n3,976 m", "Fuego\n3,763 m",
+                              "Agua\n3,760 m", "Pacaya\n2,552 m"},
+                   fontsize=9.5,
+                   offsets={"Acatenango\n3,976 m": (-0.012, 0.03, "right"),
+                            "Fuego\n3,763 m": (-0.012, -0.004, "right"),
+                            "Agua\n3,760 m": (0.012, -0.004, "left"),
+                            "Pacaya\n2,552 m": (0.012, -0.004, "left")})
+    for name, label, kind, (dx, dy, ha) in (
+        ("Antigua", "Antigua (1,530 m)", "town", (0.012, 0.02, "left")),
+        ("GUA", "GUA airport", "airport", (0.012, -0.02, "left")),
+        ("Guatemala City", "Guatemala City", "town", (0.012, 0.015, "left")),
+        ("Chimaltenango", "Chimaltenango", "town", (0.012, 0.01, "left")),
+        ("La Soledad (Acatenango trailhead)", "La Soledad\ntrailhead",
+         "town", (-0.012, 0.0, "right")),
+    ):
+        place_dot(ax, name, label, dx=dx, dy=dy, ha=ha, kind=kind,
+                  fontsize=10, bold=name == "Antigua")
+    for name, text, (dx, dy) in (
+        ("GUA", "13 Dec · land 21:25 → night shuttle", (0.0, -0.13)),
+        ("Antigua", "13–14 & 16 Dec · Antigua", (0.13, 0.10)),
+        ("Acatenango\n3,976 m", "15–16 Dec · overnight hike,\ncamp ~3,600 m facing Fuego",
+         (-0.02, 0.17)),
+    ):
+        lon, lat = coordinates(name)
+        day_badge(ax, lon, lat, text, "#9a3412", dx=dx, dy=dy, size=9)
+    caution(ax, -90.868, 14.512,
+            "Acatenango base camps: hundreds\nof hikers on peak-season nights",
+            dx=-0.11, dy=-0.09, ha="center")
+    caution(ax, -90.726, 14.545,
+            "Antigua centre: busy at weekends;\ncobbled, few cars", dx=0.10,
+            dy=-0.07, ha="left")
+    caution(ax, -90.60, 14.62,
+            "Guatemala City ↔ Antigua road:\nheavy traffic, avoid rush hour",
+            kind="traffic", dx=0.03, dy=0.07, ha="left")
+    caution_legend(ax, loc="lower left", anchor=(0.01, 0.08))
+    title_box(ax, "Antigua & the volcano trio · 13–17 December",
+              "Fuego erupts every few minutes; Acatenango is the "
+              "dormant neighbour you climb")
+    scale_bar(ax, bounds, 10, position=(0.04, 0.035))
+    north_arrow(ax, position=(0.96, 0.88))
+    credits(ax)
+    fig.savefig(OUT_DIR / "map-04-antigua.png", bbox_inches="tight",
+                pad_inches=0.08)
+    plt.close(fig)
+
+
+def xela_map():
+    bounds = (-92.12, 14.62, -91.30, 15.16)
+    layers = load_layers(bounds)
+    fig, ax = plt.subplots(figsize=(11, 7.8), dpi=200)
+    base_map(ax, bounds, layers, relief_alpha=0.4)
+    departments = gpd.read_file(
+        DATA_DIR / "ne_10m_admin_1_states_provinces.geojson",
+        bbox=(bounds[0] - 1, bounds[1] - 1, bounds[2] + 1, bounds[3] + 1))
+    san_marcos = departments[(departments["adm0_a3"] == "GTM")
+                             & (departments["name"] == "San Marcos")]
+    san_marcos.plot(ax=ax, facecolor="#dc2626", alpha=0.10,
+                    edgecolor="#b91c1c", linewidth=1.6, hatch="///",
+                    zorder=3.6)
+    ax.text(-92.03, 14.80,
+            "SAN MARCOS DEPT.\nUS advisory (Mar 2026):\nLevel 4 · Do Not Travel",
+            fontsize=9.5, color="#991b1b", fontweight="bold", ha="center",
+            zorder=8, path_effects=halo(3))
+    draw_routes(ax, line_width=3.4)
+    draw_volcanoes(ax, names={"Tajumulco\n4,220 m", "Santa María\n3,772 m",
+                              "Chicabal\n2,712 m"}, fontsize=9.5,
+                   offsets={"Tajumulco\n4,220 m": (0.012, 0.035, "left"),
+                            "Santa María\n3,772 m": (-0.01, 0.035, "right"),
+                            "Chicabal\n2,712 m": (-0.012, -0.012, "right")})
+    for name, label, kind, (dx, dy, ha) in (
+        ("Xela", "Xela (2,330 m)", "town", (0.012, 0.02, "left")),
+        ("Fuentes Georginas", "Fuentes Georginas\nhot springs", "swim",
+         (0.014, -0.012, "left")),
+        ("Laguna Chicabal", "Laguna Chicabal", "town",
+         (-0.012, 0.016, "right")),
+        ("Zunil", "Zunil", "town", (0.012, 0.0, "left")),
+        ("San Marcos", "San Marcos", "town", (0.012, -0.012, "left")),
+        ("Tuichán (trailhead)", "Tuichán\ntrailhead", "town",
+         (0.012, -0.01, "left")),
+        ("Cuatro Caminos", "Cuatro Caminos", "town", (0.0, 0.022, "center")),
+        ("Santiaguito", "Santiaguito\n(active dome)", "town",
+         (-0.012, -0.02, "right")),
+    ):
+        place_dot(ax, name, label, dx=dx, dy=dy, ha=ha, kind=kind,
+                  fontsize=9.5, bold=name == "Xela")
+    for name, text, (dx, dy) in (
+        ("Laguna Chicabal", "21 Dec · 08:00–13:00 only", (-0.05, 0.10)),
+        ("Fuentes Georginas", "21 Dec · afternoon soak", (0.02, -0.08)),
+        ("Tajumulco\n4,220 m", "22–23 Dec · Plan A: Tajumulco", (0.30, 0.03)),
+        ("Santa María\n3,772 m", "Plan B: Santa María\n(Quetzaltenango Dept.)",
+         (-0.17, -0.07)),
+    ):
+        lon, lat = coordinates(name)
+        day_badge(ax, lon, lat, text, "#9a3412", dx=dx, dy=dy, size=8.8)
+    caution(ax, -91.505, 14.86, "Xela: city traffic, asphalt", kind="traffic",
+            dx=0.08, dy=-0.09)
+    caution(ax, -91.442, 14.905, "Cuatro Caminos: busy\nhighway junction",
+            kind="traffic", dx=-0.16, dy=0.08, ha="center")
+    caution_legend(ax, loc="upper right", anchor=(0.995, 0.86))
+    title_box(ax, "Around Xela · 20–24 December",
+              "Hatched area: San Marcos Department, where Tajumulco stands")
+    scale_bar(ax, bounds, 10, position=(0.04, 0.035))
+    north_arrow(ax, position=(0.97, 0.97))
+    credits(ax)
+    fig.savefig(OUT_DIR / "map-05-xela.png", bbox_inches="tight",
+                pad_inches=0.08)
+    plt.close(fig)
+
+
+def peten_map():
+    bounds = (-90.02, 16.82, -89.28, 17.32)
+    layers = load_layers(bounds)
+    fig, ax = plt.subplots(figsize=(11, 7.8), dpi=200)
+    base_map(ax, bounds, layers, relief_alpha=0.25)
+    draw_routes(ax, line_width=3.6, side_trips=False)
+    for name, label, kind, (dx, dy, ha) in (
+        ("Flores", "Flores (island)", "town", (-0.012, 0.012, "right")),
+        ("Santa Elena", "Santa Elena", "town", (-0.012, -0.012, "right")),
+        ("Mundo Maya airport", "Mundo Maya\nairport (FRS)", "airport",
+         (0.012, -0.018, "left")),
+        ("El Remate", "El Remate\nlake swim", "swim", (0.014, 0.012, "left")),
+        ("Ixlú", "Ixlú junction", "town", (0.012, -0.014, "left")),
+        ("Tikal", "Tikal", "sight", (0.014, 0.0, "left")),
+        ("Yaxhá", "Yaxhá", "sight", (0.014, 0.01, "left")),
+        ("Ecolodge El Sombrero", "Ecolodge\nEl Sombrero", "town",
+         (0.012, -0.016, "left")),
+    ):
+        place_dot(ax, name, label, dx=dx, dy=dy, ha=ha, kind=kind,
+                  fontsize=10, bold=kind != "town")
+    for name, text, (dx, dy) in (
+        ("El Remate", "27 Dec · swim, sleep", (-0.20, 0.10)),
+        ("Tikal", "28 Dec · 06:00 opening → 12:30", (-0.27, 0.0)),
+        ("Yaxhá", "28 Dec · sunset (guide)\nsleep at El Sombrero", (0.06, 0.12)),
+    ):
+        lon, lat = coordinates(name)
+        day_badge(ax, lon, lat, text, "#14532d", dx=dx, dy=dy, size=9)
+    caution(ax, -89.623, 17.222,
+            "Tikal Gran Plaza: tour groups\n09:30–14:00, holiday week",
+            dx=0.20, dy=0.05)
+    caution(ax, -89.892, 16.929,
+            "Flores/Santa Elena: tuk-tuks,\ntraffic, busy waterfront",
+            kind="traffic", dx=0.03, dy=-0.10)
+    caution_legend(ax, loc="lower right")
+    ax.text(-89.80, 17.005, "Lake Petén Itzá", fontsize=10, color="#1e5a85",
+            style="italic", ha="center", zorder=8, path_effects=halo(2))
+    title_box(ax, "Tikal, Yaxhá & Lake Petén Itzá · 27–29 December",
+              "Lowland rainforest; arrive at Tikal at opening to beat "
+              "heat and crowds")
+    scale_bar(ax, bounds, 10, position=(0.04, 0.035))
+    north_arrow(ax, position=(0.96, 0.86))
+    credits(ax)
+    fig.savefig(OUT_DIR / "map-06-peten.png", bbox_inches="tight",
+                pad_inches=0.08)
+    plt.close(fig)
+
+
+def izabal_map():
+    bounds = (-89.48, 15.38, -88.68, 15.88)
+    layers = load_layers(bounds)
+    fig, ax = plt.subplots(figsize=(11, 7.4), dpi=200)
+    base_map(ax, bounds, layers, relief_alpha=0.3)
+    draw_routes(ax, line_width=3.6)
+    for name, label, kind, (dx, dy, ha) in (
+        ("Río Dulce", "Río Dulce town", "swim", (0.014, 0.014, "left")),
+        ("Castillo de San Felipe", "Castillo de\nSan Felipe (1652)", "sight",
+         (-0.012, -0.022, "right")),
+        ("Finca El Paraíso", "Finca El Paraíso\nhot waterfall", "swim",
+         (0.0, 0.035, "center")),
+        ("El Estor", "El Estor", "town", (-0.012, 0.0, "right")),
+        ("Livingston", "Livingston\n(boat only)", "town",
+         (-0.012, 0.0, "right")),
+        ("La Ruidosa", "La Ruidosa junction", "town", (0.012, 0.0, "left")),
+    ):
+        place_dot(ax, name, label, dx=dx, dy=dy, ha=ha, kind=kind,
+                  fontsize=10, bold=kind != "town")
+    for name, text, (dx, dy) in (
+        ("Finca El Paraíso", "29 Dec · swim, closes 17:00", (-0.02, 0.14)),
+        ("La Ruidosa", "30 Dec · → GUA, leave by 10:00", (-0.05, -0.05)),
+    ):
+        lon, lat = coordinates(name)
+        day_badge(ax, lon, lat, text, "#1e3a8a", dx=dx, dy=dy, size=9)
+    caution(ax, -88.996, 15.659,
+            "Río Dulce town: trucks on the\nbridge highway, noisy & busy",
+            kind="traffic", dx=0.12, dy=0.10)
+    caution(ax, -89.208, 15.591,
+            "El Paraíso: local crowds\non weekends & holidays", dx=-0.05,
+            dy=-0.12, ha="center")
+    caution_legend(ax, loc="lower left", anchor=(0.01, 0.08))
+    ax.text(-89.25, 15.50, "Lake Izabal", fontsize=11, color="#1e5a85",
+            style="italic", ha="center", zorder=8, path_effects=halo(2))
+    title_box(ax, "Río Dulce & Lake Izabal · 29–30 December",
+              "Where Guatemala's biggest lake drains to the Caribbean")
+    scale_bar(ax, bounds, 10, position=(0.04, 0.035))
+    north_arrow(ax, position=(0.96, 0.86))
+    credits(ax)
+    fig.savefig(OUT_DIR / "map-07-izabal.png", bbox_inches="tight",
+                pad_inches=0.08)
+    plt.close(fig)
+
+
+def altitude_chart():
+    days = list(range(13, 31))
+    sleep = [1530, 1530, 3600, 1530, 1560, 1560, 1560, 2330, 2330, 4000,
+             2330, 1320, 400, 400, 120, 220, 10, 1500]
+    high = [1530, 1530, 3600, 3976, 2000, 2550, 3020, 2330, 2712, 4000,
+            4220, 2330, 1320, 400, 400, 230, 220, 1500]
+    labels = ["Antigua", "Antigua", "Acatenango camp", "Antigua",
+              "Atitlán", "Atitlán", "Atitlán", "Xela", "Xela",
+              "Tajumulco camp", "Xela", "Cobán", "Lanquín", "Lanquín",
+              "El Remate", "Yaxhá", "Río Dulce", "GUA"]
+    fig, ax = plt.subplots(figsize=(12, 5.2), dpi=200)
+    ax.bar(days, high, color="#d6d3d1", width=0.7,
+           label="Highest point reached that day")
+    ax.plot(days, sleep, color="#c2410c", lw=2.8, marker="o",
+            label="Where you sleep", zorder=3)
+    for day, alt, name in zip(days, sleep, labels):
+        ax.text(day, alt + 120, name, rotation=60, fontsize=8, ha="left",
+                va="bottom", color="#7c2d12")
+    for day, alt in zip(days, high):
+        if alt >= 3000:
+            ax.text(day, alt + 60, f"{alt:,} m", ha="center", fontsize=8,
+                    fontweight="bold", color="#44403c")
+    ax.axhline(2500, color="#9ca3af", lw=1, ls="--")
+    ax.text(30.4, 2540, "2,500 m: altitude sickness\npossible above here",
+            fontsize=8, color="#6b7280", ha="right", va="bottom")
+    ax.set_xticks(days)
+    ax.set_xticklabels([f"{d}" for d in days])
+    ax.set_xlabel("December 2026")
+    ax.set_ylabel("Altitude (m)")
+    ax.set_ylim(0, 5200)
+    ax.spines[["top", "right"]].set_visible(False)
+    ax.legend(loc="upper right", frameon=False)
+    ax.set_title("Altitude day by day (approximate)", loc="left",
+                 fontsize=14, fontweight="bold")
+    fig.savefig(OUT_DIR / "chart-08-altitude.png", bbox_inches="tight",
+                pad_inches=0.1)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     overview_map()
     highlands_map()
     north_map()
+    antigua_map()
+    xela_map()
+    peten_map()
+    izabal_map()
+    altitude_chart()
     print("done")
