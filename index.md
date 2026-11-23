@@ -84,9 +84,9 @@ gantt
 ## 2. What changed in this version
 
 - **Your flight leaves at 02:30 on 31 Dec, so the trip really ends on the evening of 30 Dec.** Plan to be at the airport by about 23:30 on the 30th, with the car already returned. I moved the long drive home to the 29th–30th and split it with a night in Río Dulce. That still leaves you about 6 hours of buffer.
-- **You land at 21:25 on 13 Dec.** I've replaced the first-night drive with a pre-booked night shuttle (§4). You also don't need a car until the 17th, because the Acatenango tours include transport. Picking up the car in Antigua on the 17th saves 4 rental days and 4 nights of parking.
-- **Chichicastenango is now a half-day stop on Sunday the 20th**, not an overnight stay (§6). That frees a full day for Laguna Chicabal and the hot springs.
-- **More swimming:** a cliff-jump platform at Lake Atitlán, hot springs near Xela, river tubing in Lanquín, the Semuc Champey pools, Lake Petén Itzá, and a hot waterfall on Lake Izabal (§11).
+- **You land at 21:25 on 13 Dec.** I've replaced the first-night drive with a pre-booked night shuttle ([§4](#4-antigua--acatenango-1317-dec)). You also don't need a car until the 17th, because the Acatenango tours include transport. Picking up the car in Antigua on the 17th saves 4 rental days and 4 nights of parking.
+- **Chichicastenango is now a half-day stop on Sunday the 20th**, not an overnight stay ([§6](#6-chichicastenango-20-dec)). That frees a full day for Laguna Chicabal and the hot springs.
+- **More swimming:** a cliff-jump platform at Lake Atitlán, hot springs near Xela, river tubing in Lanquín, the Semuc Champey pools, Lake Petén Itzá, and a hot waterfall on Lake Izabal ([§11](#11-swimming-spots-on-the-route)).
 - **Spanish:** because you both speak it well, many of the guides below can be hired on the spot in Spanish for much less than a pre-booked English tour. Each chapter has a 🇪🇸 tip.
 
 ---
@@ -148,7 +148,7 @@ Side-by-side comparison of 12 operators: https://www.thoroughlytravel.com/acaten
 **Linguistics:** Fuego's Kaqchikel name is *Chi Q'aq'*, "where the fire is".
 
 ### Thu 17 Dec — pick up the car → Lake Atitlán
-Collect the car in Antigua (§12 lists the rental options) and drive about 3 hours via the CA-1 highway and Santa Clara La Laguna down to **San Juan La Laguna**. If you arrive by 15:00, you have time for a first swim.
+Collect the car in Antigua ([§12](#12-booking-checklist) lists the rental options) and drive about 3 hours via the CA-1 highway and Santa Clara La Laguna down to **San Juan La Laguna**. If you arrive by 15:00, you have time for a first swim.
 
 ---
 
@@ -200,7 +200,7 @@ Leave San Juan by about 07:00 and drive ~2.5 h. Spend 09:30–13:30 at the marke
 
 ![Map of the highlands section](maps/map-02-highlands.png)
 
-**What it is.** Xela ("SHEH-la") is Guatemala's second city, at 2,330 m. It's cooler and much less touristy than Antigua, and full of Spanish schools and serious hiking operators. The nickname comes from its K'iche' name, *Xelajú*, usually glossed "under the ten (mountains)". Its official name, Quetzaltenango, is Nahuatl (§3).
+**What it is.** Xela ("SHEH-la") is Guatemala's second city, at 2,330 m. It's cooler and much less touristy than Antigua, and full of Spanish schools and serious hiking operators. The nickname comes from its K'iche' name, *Xelajú*, usually glossed "under the ten (mountains)". Its official name, Quetzaltenango, is Nahuatl ([§3](#3-guatemala-in-brief)).
 
 ### Mon 21 Dec — Laguna Chicabal + Fuentes Georginas 🏊
 
@@ -345,20 +345,20 @@ Search page: https://www.booking.com/pool/city/gt/rio-dulce.html
 
 **Book now** (peak season, Christmas week):
 
-- [ ] **Acatenango, 15–16 Dec**: OX / Wicho & Charlie's / Soy Tours (§4)
-- [ ] **Airport night transfer, 13 Dec, 21:25 arrival**: Gray Line shared or private (§4)
+- [ ] **Acatenango, 15–16 Dec**: OX / Wicho & Charlie's / Soy Tours ([§4](#4-antigua--acatenango-1317-dec))
+- [ ] **Airport night transfer, 13 Dec, 21:25 arrival**: Gray Line shared or private ([§4](#4-antigua--acatenango-1317-dec))
 - [ ] **Rental car, 17 → 30 Dec, picked up in Antigua and returned to GUA airport.** National, Alamo and Enterprise share an Antigua office at 1a Avenida Norte 9B and have desks at the airport, so a one-way rental within the same company is the simplest option. Delivery within 3–15 miles costs about US$20.
   - https://www.nationalcar.com/en/car-rental-locations/gt/antigua-k606.html
   - https://www.alamo.com/en/car-rental-locations/gt/antigua-k607.html
   - https://www.enterprise.com/en/car-rental-locations/gt/antigua-k60p.html
   - Ask for a **high-clearance SUV or 4×4**. Check the one-way fee, the airport return hours, and that **CDW insurance** is included; the company requires it unless you show written credit-card cover.
-- [ ] **Tajumulco, 22–23 Dec**: Quetzaltrekkers or Adrenalina (§7); confirm access
+- [ ] **Tajumulco, 22–23 Dec**: Quetzaltrekkers or Adrenalina ([§7](#7-xela--tajumulco-2024-dec)); confirm access
 - [ ] **Lodging:** Antigua (13, 14 and 16 Dec — keep your bags at the hotel during Acatenango), San Juan La Laguna (17–19), Xela (20, 21 and 23 — leave bags at the hotel during Tajumulco), Cobán (24), Lanquín (25–26), El Remate (27), El Sombrero at Yaxhá (28), Río Dulce (29). Search https://www.booking.com, https://www.hostelworld.com or https://www.airbnb.com.
 
 **Book 1–2 weeks ahead:**
 - [ ] **Tikal ticket for 28 Dec** at https://boletos.culturaguate.gob.gt/en/ (foreigner category)
-- [ ] **Yaxhá sunset guide or tour** (§9)
-- [ ] **Semuc / K'anba** with your Lanquín hostel (§8)
+- [ ] **Yaxhá sunset guide or tour** ([§9](#9-tikal--yaxhá-2729-dec))
+- [ ] **Semuc / K'anba** with your Lanquín hostel ([§8](#8-cobán-lanquín--semuc-champey-2427-dec))
 
 **Pay on the spot, in cash (Spanish helps):** Indian Nose, San Pedro volcano, Cerro Tzankujil, Chicabal, Fuentes Georginas, Lanquín caves, Finca El Paraíso.
 

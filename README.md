@@ -35,5 +35,5 @@ cd .. && python scripts/make_maps.py
 The script currently has absolute paths for the data and output folders
 (`DATA_DIR`, `OUT_DIR`, `RELIEF_PATH`); adjust them at the top of the file.
 
-Photos are hot-linked from Wikimedia Commons; credits are in section 14 of
-the guide.
+Photos are hot-linked from Wikimedia Commons; credits are in
+[section 14 of the guide](https://toldry.github.io/guatemala-trip-2026/#14-photo--data-credits).
