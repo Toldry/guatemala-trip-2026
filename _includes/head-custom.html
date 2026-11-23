@@ -1,0 +1,20 @@
+<style>
+  .main-content img { max-width: 100%; height: auto; border-radius: 4px; }
+  .main-content table { display: block; overflow-x: auto; }
+  pre.mermaid { background: transparent; border: 0; }
+</style>
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  // Kramdown renders ```mermaid fences as highlighted code blocks;
+  // swap them for <pre class="mermaid"> so Mermaid can draw them.
+  document.querySelectorAll("div.language-mermaid, pre > code.language-mermaid")
+    .forEach((block) => {
+      const container = block.closest("div.language-mermaid") || block.parentElement;
+      const diagram = document.createElement("pre");
+      diagram.className = "mermaid";
+      diagram.textContent = block.textContent;
+      container.replaceWith(diagram);
+    });
+  mermaid.initialize({ startOnLoad: false, theme: "neutral" });
+  await mermaid.run({ querySelector: "pre.mermaid" });
+</script>

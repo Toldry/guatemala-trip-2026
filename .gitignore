@@ -1,0 +1,4 @@
+data/
+_site/
+.jekyll-cache/
+__pycache__/
