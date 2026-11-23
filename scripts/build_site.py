@@ -71,12 +71,35 @@ def linkify_bare_urls(text):
     return "\n".join(out)
 
 
+LIST_ITEM = re.compile(r"^(\s*)([-*+]|\d+\.) ")
+
+
+def normalise_lists(text):
+    """Python-Markdown needs 4-space nesting and a blank line before lists."""
+    out = []
+    in_code = False
+    for line in text.split("\n"):
+        if line.startswith("```") or line.startswith("<pre"):
+            in_code = not in_code if line.startswith("```") else in_code
+        match = LIST_ITEM.match(line)
+        if match and not in_code:
+            indent = len(match.group(1))
+            line = " " * (indent * 2) + line.lstrip()
+            previous = out[-1] if out else ""
+            if previous.strip() and not LIST_ITEM.match(previous) \
+                    and not previous.startswith(" ") and indent == 0:
+                out.append("")
+        out.append(line)
+    return "\n".join(out)
+
+
 def render(md_text, depth):
     prefix = "../" * depth
     md_text = re.sub(r'\{\{\s*"/(maps/[^"]+)"\s*\|\s*relative_url\s*\}\}',
                      lambda m: prefix + m.group(1), md_text)
     md_text = md_text.replace("- [ ] ", "- ☐ ")
     md_text = linkify_bare_urls(md_text)
+    md_text = normalise_lists(md_text)
     body = markdown.markdown(
         md_text,
         extensions=["tables", "fenced_code", "sane_lists", "md_in_html",
