@@ -112,5 +112,11 @@
     "date": "24 Nov 2026",
     "label": "Swimwear note removed",
     "summary": "Removed the Atitlán swimwear note."
+  },
+  {
+    "id": "6.6.0",
+    "date": "24 Nov 2026",
+    "label": "Works offline",
+    "summary": "Installable app; guide and calendar links work offline."
   }
 ]

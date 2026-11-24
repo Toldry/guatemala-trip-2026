@@ -1,3 +1,26 @@
+// ---- links with #section (e.g. from calendar events): re-align after
+// images above the section have loaded and shifted the layout ----
+(function () {
+  if (!location.hash) return;
+  function align() {
+    var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (el && Math.abs(el.getBoundingClientRect().top) > 40) {
+      el.scrollIntoView({ block: "start" });
+    }
+  }
+  window.addEventListener("load", function () {
+    align(); setTimeout(align, 600); setTimeout(align, 1500);
+  });
+})();
+
+// ---- offline: register the service worker (scope = site root) ----
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    var prefix = document.body.dataset.prefix || "";
+    navigator.serviceWorker.register(prefix + "sw.js").catch(function () {});
+  });
+}
+
 // ---- sidebar table of contents: scroll tracking ----
 (function () {
   var toc = document.getElementById("toc");
