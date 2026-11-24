@@ -1,0 +1,538 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//guatemala-trip-2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Guatemala 2026
+X-WR-TIMEZONE:America/Guatemala
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:sleep-2026-12-13@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261215
+SUMMARY:🛏 Antigua
+LOCATION:Antigua Guatemala
+DESCRIPTION:2 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#21-antigua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-13
+ 17-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-15@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:🛏 Acatenango camp (~3\,600 m)
+LOCATION:Volcán Acatenango
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#21-antigua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-13
+ 17-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-16@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:🛏 Antigua
+LOCATION:Antigua Guatemala
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#21-antigua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-13
+ 17-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-17@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261220
+SUMMARY:🛏 San Juan La Laguna
+LOCATION:San Juan La Laguna
+DESCRIPTION:3 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#22-lake-atitlán-1720-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-20@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261222
+SUMMARY:🛏 Xela
+LOCATION:Quetzaltenango
+DESCRIPTION:2 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#24-xela--tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-22@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY:🛏 Tajumulco camp (~4\,000 m)
+LOCATION:Volcán Tajumulco
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#24-xela--tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-23@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:🛏 Xela
+LOCATION:Quetzaltenango
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#24-xela--tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-24@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:🛏 Cobán
+LOCATION:Cobán\, Alta Verapaz
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#25-cobán-lanquín--semuc-champey-2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc
+ -champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-25@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261227
+SUMMARY:🛏 Lanquín
+LOCATION:Lanquín\, Alta Verapaz
+DESCRIPTION:2 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#25-cobán-lanquín--semuc-champey-2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc
+ -champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-27@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:🛏 El Remate
+LOCATION:El Remate\, Petén
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#26-tikal--yaxhá-2729-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#26-tikal--yaxhá-2729-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-28@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261229
+SUMMARY:🛏 Ecolodge El Sombrero\, Yaxhá
+LOCATION:Yaxhá\, Petén
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#26-tikal--yaxhá-2729-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#26-tikal--yaxhá-2729-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-29@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261230
+SUMMARY:🛏 Río Dulce
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:1 night(s).\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/#27-río-dulce--the-drive-home-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#27-río-dulce--the-drive-
+ home-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-2125@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261214T032500Z
+DTEND:20261214T055900Z
+SUMMARY:✈ Land at GUA\, pick up car\, drive to Antigua
+LOCATION:La Aurora International Airport
+DESCRIPTION:Drive ~1 h\; tell the hotel you arrive ~midnight.\n\nGuide: htt
+ ps://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-13
+ 17-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-0900@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261214T150000Z
+DTEND:20261214T180000Z
+SUMMARY:🚲 Antigua bike ride (Old Town Outfitters)
+LOCATION:Old Town Outfitters\, 7a Calle Poniente 23\, Antigua
+DESCRIPTION:Golden Arches or Las Tierras Altas.\n\nGuide: https://toldry.gi
+ thub.io/guatemala-trip-2026/#21-antigua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-13
+ 17-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-0800@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261215T140000Z
+DTEND:20261215T230000Z
+SUMMARY:⛰ Acatenango: hike to camp
+LOCATION:Antigua Guatemala
+DESCRIPTION:Pick-up time depends on the operator: check the booking.\n\nGui
+ de: https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-1
+ 317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-13
+ 17-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-0400@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261216T100000Z
+DTEND:20261216T190000Z
+SUMMARY:⛰ Acatenango summit at sunrise\, descend
+LOCATION:Volcán Acatenango
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#21-antigua
+ --acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#21-antigua--acatenango-13
+ 17-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-0800@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261217T140000Z
+DTEND:20261217T180000Z
+SUMMARY:🚗 Drive Antigua → Lake Atitlán (~3 h)
+LOCATION:San Juan La Laguna
+DESCRIPTION:Check for bloqueos on the CA-1 the evening before.\n\nGuide: ht
+ tps://toldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-0400@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261218T100000Z
+DTEND:20261218T140000Z
+SUMMARY:🌄 Indian Nose sunrise hike
+LOCATION:Rostro Maya\, Santa Clara La Laguna
+DESCRIPTION:Only with a community guide or tour. Cash.\n\nGuide: https://to
+ ldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-1300@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261218T190000Z
+DTEND:20261218T230000Z
+SUMMARY:🏊 Cerro Tzankujil\, swim
+LOCATION:Cerro Tzankujil\, San Marcos La Laguna
+DESCRIPTION:Q20 each\, cash. Last lanchas ~17:00–18:00.\n\nGuide: https:/
+ /toldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-0600@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261219T120000Z
+DTEND:20261219T210000Z
+SUMMARY:⛰ San Pedro volcano (or 🚲 lake-villages ride)
+LOCATION:Volcán San Pedro\, San Pedro La Laguna
+DESCRIPTION:Swap option: bike ride instead.\n\nGuide: https://toldry.github
+ .io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#22-lake-atitlán-1720-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-0700@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261220T130000Z
+DTEND:20261220T153000Z
+SUMMARY:🚗 Drive San Juan → Chichicastenango (~2.5 h)
+LOCATION:Chichicastenango
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#23-chichic
+ astenango-20-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#23-chichicastenango-20-de
+ c
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-0930@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261220T153000Z
+DTEND:20261220T193000Z
+SUMMARY:🛍 Chichicastenango Sunday market
+LOCATION:Chichicastenango
+DESCRIPTION:No photos inside Santo Tomás church.\n\nGuide: https://toldry.
+ github.io/guatemala-trip-2026/#23-chichicastenango-20-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#23-chichicastenango-20-de
+ c
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-1330@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261220T193000Z
+DTEND:20261220T213000Z
+SUMMARY:🚗 Drive Chichicastenango → Xela (~2 h)
+LOCATION:Quetzaltenango
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#24-xela--t
+ ajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-0800@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261221T140000Z
+DTEND:20261221T180000Z
+SUMMARY:⛰ Laguna Chicabal
+LOCATION:Laguna Chicabal\, San Martín Sacatepéquez
+DESCRIPTION:Open 08:00–13:00. No swimming (sacred). Q20.\n\nGuide: https:
+ //toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-1330@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261221T193000Z
+DTEND:20261221T230000Z
+SUMMARY:♨ Hot springs: Fuentes Georginas / Las Cumbres
+LOCATION:Zunil
+DESCRIPTION:Fuentes Georginas Q60 + Q25 parking\, cash.\n\nGuide: https://t
+ oldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-1800@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261222T000000Z
+DTEND:20261222T010000Z
+SUMMARY:📋 Tajumulco briefing (Quetzaltrekkers)
+LOCATION:Quetzaltenango
+DESCRIPTION:Only if booked with Quetzaltrekkers.\n\nGuide: https://toldry.g
+ ithub.io/guatemala-trip-2026/#24-xela--tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-0500@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261222T110000Z
+DTEND:20261222T230000Z
+SUMMARY:⛰ Tajumulco: hike to camp
+LOCATION:Volcán Tajumulco
+DESCRIPTION:Departure time per operator.\n\nGuide: https://toldry.github.io
+ /guatemala-trip-2026/#24-xela--tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-0400@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261223T100000Z
+DTEND:20261223T200000Z
+SUMMARY:⛰ Tajumulco summit at sunrise\, back to Xela
+LOCATION:Volcán Tajumulco
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#24-xela--t
+ ajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#24-xela--tajumulco-2024-d
+ ec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-0600@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261224T120000Z
+DTEND:20261224T200000Z
+SUMMARY:🚗 Drive Xela → Cobán (~8 h)
+LOCATION:Cobán
+DESCRIPTION:Heavy Christmas Eve traffic around Guatemala City.\n\nGuide: ht
+ tps://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc-cham
+ pey-2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc
+ -champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-0900@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261225T150000Z
+DTEND:20261225T170000Z
+SUMMARY:🚗 Drive Cobán → Lanquín (~2 h)
+LOCATION:Lanquín
+DESCRIPTION:Draw cash in Cobán first.\n\nGuide: https://toldry.github.io/g
+ uatemala-trip-2026/#25-cobán-lanquín--semuc-champey-2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc
+ -champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-1300@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261225T190000Z
+DTEND:20261225T230000Z
+SUMMARY:🏊 Lanquín caves + river tubing
+LOCATION:Grutas de Lanquín
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#25-cobán-
+ lanquín--semuc-champey-2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc
+ -champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-0800@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261226T140000Z
+DTEND:20261226T220000Z
+SUMMARY:🏊 Semuc Champey + K'anba cave
+LOCATION:Semuc Champey
+DESCRIPTION:Leave the car in Lanquín\; hostel 4×4 pickup.\n\nGuide: https
+ ://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc-champey
+ -2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc
+ -champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-0630@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261227T123000Z
+DTEND:20261227T190000Z
+SUMMARY:🚗 Drive Lanquín → El Remate (~6.5 h)
+LOCATION:El Remate\, Petén
+DESCRIPTION:Car ferry at Sayaxché. Draw cash in Flores.\n\nGuide: https://
+ toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc-champey-24
+ 27-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#25-cobán-lanquín--semuc
+ -champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-0600@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261228T120000Z
+DTEND:20261228T190000Z
+SUMMARY:🏛 Tikal (gate opens 06:00)
+LOCATION:Tikal National Park
+DESCRIPTION:Ticket bought online in advance.\n\nGuide: https://toldry.githu
+ b.io/guatemala-trip-2026/#26-tikal--yaxhá-2729-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#26-tikal--yaxhá-2729-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-1430@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261228T203000Z
+DTEND:20261229T000000Z
+SUMMARY:🌅 Yaxhá at sunset (with guide)
+LOCATION:Yaxhá National Park
+DESCRIPTION:Park closes 17:00\; sunset needs a guide. Q80 entry.\n\nGuide: 
+ https://toldry.github.io/guatemala-trip-2026/#26-tikal--yaxhá-2729-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#26-tikal--yaxhá-2729-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-0700@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261229T130000Z
+DTEND:20261229T180000Z
+SUMMARY:🚗 Drive Yaxhá → Río Dulce (~4.5 h)
+LOCATION:Río Dulce
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#27-río-du
+ lce--the-drive-home-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#27-río-dulce--the-drive-
+ home-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1300@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261229T190000Z
+DTEND:20261229T223000Z
+SUMMARY:🏊 Finca El Paraíso hot waterfall
+LOCATION:Finca El Paraíso\, El Estor road
+DESCRIPTION:Closes 17:00. Q15–Q20\, cash.\n\nGuide: https://toldry.github
+ .io/guatemala-trip-2026/#27-río-dulce--the-drive-home-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#27-río-dulce--the-drive-
+ home-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-1000@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261230T160000Z
+DTEND:20261230T220000Z
+SUMMARY:🚗 Drive Río Dulce → GUA (~5–6 h)
+LOCATION:Guatemala City
+DESCRIPTION:Leave by 10:00 at the latest.\n\nGuide: https://toldry.github.i
+ o/guatemala-trip-2026/#27-río-dulce--the-drive-home-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#27-río-dulce--the-drive-
+ home-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-2100@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261231T030000Z
+DTEND:20261231T033000Z
+SUMMARY:🚗 Return the rental car
+LOCATION:La Aurora International Airport
+DESCRIPTION:Confirm desk hours / key drop.\n\nGuide: https://toldry.github.
+ io/guatemala-trip-2026/#27-río-dulce--the-drive-home-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#27-río-dulce--the-drive-
+ home-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-2330@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261231T053000Z
+DTEND:20261231T055900Z
+SUMMARY:✈ Be at the terminal
+LOCATION:La Aurora International Airport
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#27-río-du
+ lce--the-drive-home-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#27-río-dulce--the-drive-
+ home-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-0230@guatemala-trip-2026
+DTSTAMP:20261124T094004Z
+DTSTART:20261231T083000Z
+DTEND:20261231T090000Z
+SUMMARY:✈ Flight departs
+LOCATION:La Aurora International Airport
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/#27-río-du
+ lce--the-drive-home-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/#27-río-dulce--the-drive-
+ home-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

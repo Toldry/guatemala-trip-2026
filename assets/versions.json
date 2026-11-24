@@ -94,5 +94,17 @@
     "date": "23 Nov 2026",
     "label": "Daily distances",
     "summary": "Walking and cycling km per day, low–high."
+  },
+  {
+    "id": "6.4.0",
+    "date": "24 Nov 2026",
+    "label": "Calendar feed",
+    "summary": "trip.ics to subscribe to in Google Calendar."
+  },
+  {
+    "id": "6.5.0",
+    "date": "24 Nov 2026",
+    "label": "Naturism",
+    "summary": "Clothing-optional options near the route."
   }
 ]

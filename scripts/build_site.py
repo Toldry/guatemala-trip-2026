@@ -53,6 +53,10 @@ VERSIONS = [
       "Antigua bike ride; two cycling swap options."),
     V("6.3.0", "23 Nov 2026", "Daily distances",
       "Walking and cycling km per day, low–high."),
+    V("6.4.0", "24 Nov 2026", "Calendar feed",
+      "trip.ics to subscribe to in Google Calendar."),
+    V("6.5.0", "24 Nov 2026", "Naturism",
+      "Clothing-optional options near the route."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
@@ -537,6 +541,68 @@ STUB = """<!doctype html><meta charset="utf-8">
 <a href="../v{vid}/">Version {vid}</a>"""
 
 
+def build_ics():
+    """trip.ics: all-day 'where you sleep' blocks + timed events, in UTC."""
+    import datetime as dt
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "calendar_data", SRC.parent / "calendar.py")
+    cal = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(cal)
+    offset = dt.timedelta(hours=6)  # Guatemala is UTC-6 all year
+    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+    def esc(text):
+        return (text.replace("\\", "\\\\").replace(";", "\\;")
+                .replace(",", "\\,").replace("\n", "\\n"))
+
+    def fold(line):
+        raw = line.encode("utf-8")
+        out = []
+        while len(raw) > 75:
+            cut = 75 if not out else 74
+            while (raw[cut] & 0xC0) == 0x80:  # don't split a UTF-8 char
+                cut -= 1
+            out.append(raw[:cut].decode("utf-8"))
+            raw = raw[cut:]
+        out.append(raw.decode("utf-8"))
+        return "\r\n ".join(out)
+
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0",
+             "PRODID:-//guatemala-trip-2026//EN", "CALSCALE:GREGORIAN",
+             "METHOD:PUBLISH", "X-WR-CALNAME:Guatemala 2026",
+             "X-WR-TIMEZONE:America/Guatemala",
+             "REFRESH-INTERVAL;VALUE=DURATION:PT6H",
+             "X-PUBLISHED-TTL:PT6H"]
+
+    def event(uid, start_lines, summary, location, note, anchor):
+        url = cal.GUIDE + anchor
+        description = (note + "\n\n" if note else "") + "Guide: " + url
+        lines.extend(["BEGIN:VEVENT", f"UID:{uid}@guatemala-trip-2026",
+                      f"DTSTAMP:{stamp}", *start_lines,
+                      f"SUMMARY:{esc(summary)}",
+                      f"LOCATION:{esc(location)}",
+                      f"DESCRIPTION:{esc(description)}",
+                      f"URL:{url}", "TRANSP:TRANSPARENT", "END:VEVENT"])
+
+    for start, nights, place, location, anchor in cal.SLEEP:
+        day = dt.date.fromisoformat(start)
+        end = day + dt.timedelta(days=nights)
+        event(f"sleep-{start}", [f"DTSTART;VALUE=DATE:{day:%Y%m%d}",
+                                 f"DTEND;VALUE=DATE:{end:%Y%m%d}"],
+              f"🛏 {place}", location, f"{nights} night(s).", anchor)
+    for date, begin, finish, title, location, note, anchor in cal.TIMED:
+        def utc(clock):
+            local = dt.datetime.fromisoformat(f"{date}T{clock}")
+            return (local + offset).strftime("%Y%m%dT%H%M%SZ")
+        event(f"{date}-{begin.replace(':', '')}",
+              [f"DTSTART:{utc(begin)}", f"DTEND:{utc(finish)}"],
+              title, location, note, anchor)
+    lines.append("END:VCALENDAR")
+    (OUT / "trip.ics").write_bytes(
+        ("\r\n".join(fold(l) for l in lines) + "\r\n").encode("utf-8"))
+
+
 def main():
     for target in list(OUT.iterdir()):
         name = target.name
@@ -571,6 +637,7 @@ def main():
     for old, vid in OLD_ALIAS.items():
         (OUT / old).mkdir()
         (OUT / old / "index.html").write_text(STUB.format(vid=vid))
+    build_ics()
     print("built", [v["id"] for v in VERSIONS])
 
 
