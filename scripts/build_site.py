@@ -57,6 +57,8 @@ VERSIONS = [
       "trip.ics to subscribe to in Google Calendar."),
     V("6.5.0", "24 Nov 2026", "Naturism",
       "Clothing-optional options near the route."),
+    V("6.5.1", "24 Nov 2026", "Swimwear note removed",
+      "Removed the Atitlán swimwear note."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
