@@ -62,6 +62,29 @@ A Yaris sedan with NPP comes to about $1,140 (estimated).
   is too weak for this route.
 - Costa Car SUVs ($498): desk closed at 22:00, $2,500 deposit — rejected.
 
+### Tabarini quote (received 25 Nov 2026)
+
+VW T-Cross 1.0 TSI automatic, 17 days, all in GTQ, IVA and unlimited km included:
+
+| Item | GTQ | per day |
+|---|---|---|
+| Base rate | 6,375 | 375 |
+| Mandatory insurance (CDW, theft, TPL, medical) | 2,125 | 125 |
+| Deductible reducer | 1,700 | 100 |
+| **Total quoted** | **10,200** (≈ $1,325 at ~Q7.7/$) | 600 |
+
+- The Q10,200 already includes the reducer: excess **Q9,500** (≈ $1,235); without
+  it Q8,500 total and Q15,500 excess. No zero-deductible option. Tyres and glass not covered.
+- Deposit = hold on credit card equal to the excess.
+- 23-year-old allowed for an extra fee (amount not stated). Additional-driver fee
+  and airport fee not stated.
+- Contradiction: email says pay at pickup; quote conditions say "pago anticipado"
+  and "conductor como mínimo 25 años".
+- Head unit described as a 7" "pantalla Android"; email says Android Auto. Verify.
+- Rough comparison: Tabarini ≈ $1,325 + extras vs National NPP ≈ $1,539 + $190
+  second driver ≈ $1,730 + young-driver fee. Tabarini ~$400 cheaper but leaves
+  ~$1,235 excess plus tyres/glass.
+
 ### Insurance conclusions
 
 - HaFenix (Phoenix) rental excess add-on: $8/day, refunds the excess up to
@@ -79,7 +102,7 @@ A Yaris sedan with NPP comes to about $1,140 (estimated).
 |---|---|---|
 | National/Alamo/Enterprise franchise | servicioalcliente@grupoanc.com, +502 2217 2100 | drafted (young-driver fee, NPP includes TPL?, deposit, Android Auto, late flight) |
 | SIXT | reservations@sixt.gt (min age 21, underage fee) | drafted (all-inclusive quote) |
-| Tabarini | tabarini@tabarini.com, +502 2444 4200 | drafted (all-inclusive quote) |
+| Tabarini | tabarini@tabarini.com, +502 2444 4200 | quote received 25 Nov (Luis Paredes), follow-up pending |
 | Avis | +502 2324 9000 (phone only) | — |
 | Budget | +502 3041 4653 (phone only) | — |
 | Hertz GUA | +502 2314 4495, 24 h (phone only) | — |
