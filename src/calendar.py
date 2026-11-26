@@ -5,7 +5,9 @@ TIMED: fixed-time events (date, start, end, title, location, note).
 Anchors point into the guide: sleep blocks link to the stop's section, timed
 events to their day's section (each day in Part 2 has a "day's plan" that
 these events mirror; keep the two in step). Free time is an event too,
-titled "Free: ...", so every day shows what is planned.
+titled "Free: ...", so every day shows what is planned. Alternatives for the
+same slot are separate events titled "Option 1: ...", "Option 2: ...", with
+overlapping times (each gets its own UID).
 """
 
 GUIDE = "https://toldry.github.io/guatemala-trip-2026/"
@@ -73,7 +75,9 @@ TIMED = [
     # Tue 15
     ("2026-12-15", "08:00", "15:00", "⛰ Acatenango: pick-up, hike up to camp",
      "Antigua Guatemala", "Pick-up time depends on the operator: check the booking.", D15),
-    ("2026-12-15", "15:00", "17:30", "⛰ Optional Fuego ridge, or rest at camp",
+    ("2026-12-15", "15:00", "17:30", "Option 1: 🛌 Rest at camp",
+     "Volcán Acatenango", "", D15),
+    ("2026-12-15", "15:00", "17:30", "Option 2: ⛰ Fuego ridge add-on",
      "Volcán Acatenango", "Only if you booked the add-on.", D15),
     ("2026-12-15", "17:30", "21:00", "🌋 Evening at camp: dinner, watch Fuego erupt",
      "Volcán Acatenango", "Early night: summit start ~04:00.", D15),
@@ -107,8 +111,11 @@ TIMED = [
      "Cerro Tzankujil, San Marcos La Laguna", "Q20 each, cash. Last lanchas ~17:00–18:00.", D18),
     ("2026-12-18", "18:00", "21:00", "🍽 Dinner in San Juan", "San Juan La Laguna", "", D18),
     # Sat 19
-    ("2026-12-19", "06:00", "15:00", "⛰ San Pedro volcano (or 🚲 lake-villages ride)",
-     "Volcán San Pedro, San Pedro La Laguna", "Swap option: bike ride instead.", D19),
+    ("2026-12-19", "06:00", "15:00", "Option 1: ⛰ San Pedro volcano",
+     "Volcán San Pedro, San Pedro La Laguna",
+     "Tuk-tuk to the park office ~06:00. Q100 entry + guide Q150–Q200.", D19),
+    ("2026-12-19", "08:00", "14:00", "Option 2: 🚲 Lake-villages bike ride",
+     "San Juan La Laguna", "San Juan → San Pablo → San Marcos, swim stop.", D19),
     ("2026-12-19", "15:30", "17:00", "🏊 Cool-down swim in the lake", "San Juan La Laguna", "", D19),
     ("2026-12-19", "18:00", "21:00", "🧳 Dinner, pay the lodge in cash, pack",
      "San Juan La Laguna", "Check bloqueos on the CA-1. Leave at 07:00.", D19),
@@ -128,20 +135,26 @@ TIMED = [
     ("2026-12-21", "08:00", "12:00", "⛰ Laguna Chicabal",
      "Laguna Chicabal, San Martín Sacatepéquez", "Open 08:00–13:00. No swimming (sacred). Q20.", D21),
     ("2026-12-21", "12:00", "13:30", "🚗 Drive to Zunil, lunch on the way", "Zunil", "", D21),
-    ("2026-12-21", "13:30", "17:00", "♨ Hot springs: Fuentes Georginas / Las Cumbres",
-     "Zunil", "Fuentes Georginas Q60 + Q25 parking, cash.", D21),
+    ("2026-12-21", "13:30", "17:00", "Option 1: ♨ Fuentes Georginas hot springs",
+     "Fuentes Georginas, Zunil", "Q60 + Q25 parking, cash.", D21),
+    ("2026-12-21", "13:30", "17:00", "Option 2: ♨ Private steam sauna, Las Cumbres",
+     "Las Cumbres, Zunil", "About Q75 each per hour.", D21),
     ("2026-12-21", "18:00", "19:00", "📋 Tajumulco briefing (Quetzaltrekkers)",
      "Quetzaltenango", "Only if booked with Quetzaltrekkers.", D21),
     ("2026-12-21", "19:00", "21:00", "🍽 Dinner; pack for Tajumulco",
      "Quetzaltenango", "Leave the big bags at the hotel.", D21),
     # Tue 22
-    ("2026-12-22", "05:00", "14:00", "⛰ Tajumulco: transport + hike up to camp",
+    ("2026-12-22", "05:00", "14:00", "Option 1: ⛰ Tajumulco: transport + hike up to camp",
      "Volcán Tajumulco", "Departure time per operator.", D22),
-    ("2026-12-22", "14:00", "20:00", "⛺ Afternoon and evening at camp: rest, stay warm",
+    ("2026-12-22", "14:00", "20:00", "Option 1: ⛺ Evening at Tajumulco camp",
      "Volcán Tajumulco", "Nothing else planned. Early night.", D22),
+    ("2026-12-22", "09:00", "18:00", "Option 2: 🛌 Free day in Xela (Tajumulco off)",
+     "Quetzaltenango", "Rest; pack for the pre-dawn Santa María hike.", D22),
     # Wed 23
-    ("2026-12-23", "04:00", "14:00", "⛰ Tajumulco summit at sunrise, back to Xela",
+    ("2026-12-23", "04:00", "14:00", "Option 1: ⛰ Tajumulco summit at sunrise, back to Xela",
      "Volcán Tajumulco", "", D23),
+    ("2026-12-23", "02:30", "11:00", "Option 2: ⛰ Volcán Santa María sunrise hike",
+     "Volcán Santa María, Quetzaltenango", "Start time per operator.", D23),
     ("2026-12-23", "14:00", "18:00", "🛌 Free: rest in Xela (shower, nap, laundry)",
      "Quetzaltenango", "Nothing planned.", D23),
     ("2026-12-23", "18:00", "21:00", "🍽 Dinner, fill the tank, check bloqueos",
@@ -175,10 +188,14 @@ TIMED = [
     ("2026-12-27", "06:30", "13:00", "🚗 Drive Lanquín → El Remate (~6.5 h)",
      "El Remate, Petén", "Car ferry at Sayaxché. Draw cash in Flores.", D27),
     ("2026-12-27", "13:00", "14:00", "🛏 Check in, lunch", "El Remate, Petén", "", D27),
-    ("2026-12-27", "14:00", "17:30", "🏊 Free: swim in Lake Petén Itzá (or 🚲 lakeshore ride)",
+    ("2026-12-27", "14:00", "17:30", "Option 1: 🏊 Free: swim in Lake Petén Itzá",
      "El Remate, Petén", "Back before dark (~17:30).", D27),
-    ("2026-12-27", "18:00", "21:00", "🍽 Quiet dinner in El Remate (or Flores)",
+    ("2026-12-27", "14:00", "17:30", "Option 2: 🚲 Free: lakeshore bike ride",
+     "El Remate, Petén", "Bikes from the hotel, Q35–Q80/day. Back before dark.", D27),
+    ("2026-12-27", "18:00", "21:00", "Option 1: 🍽 Quiet dinner in El Remate",
      "El Remate, Petén", "Early night: leave for Tikal ~05:20.", D27),
+    ("2026-12-27", "18:00", "21:00", "Option 2: 🍽 Evening in Flores",
+     "Flores, Petén", "30 min away. Early night: leave for Tikal ~05:20.", D27),
     # Mon 28
     ("2026-12-28", "05:20", "06:00", "🚗 Drive El Remate → Tikal (~35 min)",
      "Tikal National Park", "", D28),
@@ -198,8 +215,10 @@ TIMED = [
     ("2026-12-29", "17:00", "21:00", "🛌 Free: evening at the river lodge",
      "Río Dulce", "Swim from the dock, dinner on the river.", D29),
     # Wed 30
-    ("2026-12-30", "08:00", "09:45", "🏊 Free, optional: dock swim or Castillo de San Felipe",
-     "Castillo de San Felipe de Lara, Río Dulce", "", D30),
+    ("2026-12-30", "08:00", "09:45", "Option 1: 🏊 Free: morning swim from the dock",
+     "Río Dulce", "", D30),
+    ("2026-12-30", "08:00", "09:45", "Option 2: 🏰 Free: Castillo de San Felipe",
+     "Castillo de San Felipe de Lara, Río Dulce", "Opens 08:00.", D30),
     ("2026-12-30", "10:00", "16:00", "🚗 Drive Río Dulce → GUA (~5–6 h)",
      "Guatemala City", "Leave by 10:00 at the latest.", D30),
     ("2026-12-30", "16:00", "21:00", "🍽 Refuel, dinner, optional day-use room (Zona 13)",
@@ -215,5 +234,6 @@ TIMED = [
      "La Aurora International Airport", "Nothing else planned in Guatemala.", D31),
 ]
 
-_uids = [f"{e[0]}-{e[1]}" for e in TIMED]
-assert len(_uids) == len(set(_uids)), "two events share a date and start time"
+_uids = [(e[0], e[1], e[3].split(":")[0] if e[3].startswith("Option") else "")
+         for e in TIMED]
+assert len(_uids) == len(set(_uids)), "two events share a date, start time and option"

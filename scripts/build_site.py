@@ -63,6 +63,8 @@ VERSIONS = [
       "Installable app; guide and calendar links work offline."),
     V("6.7.0", "26 Nov 2026", "A plan for every day",
       "Every day 13–31 Dec has its own section and calendar events."),
+    V("6.8.0", "26 Nov 2026", "Options side by side",
+      "Alternative plans shown as Option 1 / Option 2, in the guide and calendar."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
@@ -792,7 +794,9 @@ def build_ics():
         def utc(clock):
             local = dt.datetime.fromisoformat(f"{date}T{clock}")
             return (local + offset).strftime("%Y%m%dT%H%M%SZ")
-        event(f"{date}-{begin.replace(':', '')}",
+        option = re.match(r"Option (\d+):", title)
+        suffix = f"-opt{option.group(1)}" if option else ""
+        event(f"{date}-{begin.replace(':', '')}{suffix}",
               [f"DTSTART:{utc(begin)}", f"DTEND:{utc(finish)}"],
               title, location, note, anchor)
     lines.append("END:VCALENDAR")

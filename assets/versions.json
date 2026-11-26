@@ -124,5 +124,11 @@
     "date": "26 Nov 2026",
     "label": "A plan for every day",
     "summary": "Every day 13–31 Dec has its own section and calendar events."
+  },
+  {
+    "id": "6.8.0",
+    "date": "26 Nov 2026",
+    "label": "Options side by side",
+    "summary": "Alternative plans shown as Option 1 / Option 2, in the guide and calendar."
   }
 ]
