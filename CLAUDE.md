@@ -26,6 +26,8 @@ Guatemala City airport (GUA). Published at https://toldry.github.io/guatemala-tr
   titled `X.Y.Z: <what changed>`.
 - Rebuild with `python3 scripts/build_site.py` and check the output before committing.
 - Push with `git -c push.negotiate=true push origin main`.
+- **Push straight to `main`; don't open pull requests.** The owner gave blanket
+  permission for this (26 Nov 2026).
 - Commit trailer must credit `Co-Authored-By: Toldry <toldry@gmail.com>`.
 - Metric units. Plain-text URLs in chat replies.
 
