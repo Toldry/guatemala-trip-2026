@@ -148,5 +148,11 @@
     "date": "26 Nov 2026",
     "label": "Day room on 30 Dec",
     "summary": "A day room before the 02:30 flight, with or without the car."
+  },
+  {
+    "id": "6.11.1",
+    "date": "26 Nov 2026",
+    "label": "Lodging blocks as booked",
+    "summary": "Calendar lodging blocks run from check-in to check-out day."
   }
 ]

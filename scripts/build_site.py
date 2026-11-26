@@ -71,6 +71,8 @@ VERSIONS = [
       "Optional morning kayak or paddleboard on Lake Atitlán, 18 Dec."),
     V("6.11.0", "26 Nov 2026", "Day room on 30 Dec",
       "A day room before the 02:30 flight, with or without the car."),
+    V("6.11.1", "26 Nov 2026", "Lodging blocks as booked",
+      "Calendar lodging blocks run from check-in to check-out day."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
@@ -792,10 +794,15 @@ def build_ics():
 
     for start, nights, place, location, anchor in cal.SLEEP:
         day = dt.date.fromisoformat(start)
-        end = day + dt.timedelta(days=nights)
+        checkout = day + dt.timedelta(days=nights)
+        # The block runs from check-in day to check-out day inclusive, so a
+        # travel day shows both places. DTEND is exclusive, hence +1 day.
+        end = checkout + dt.timedelta(days=1)
         event(f"sleep-{start}", [f"DTSTART;VALUE=DATE:{day:%Y%m%d}",
                                  f"DTEND;VALUE=DATE:{end:%Y%m%d}"],
-              f"🛏 {place}", location, f"{nights} night(s).", anchor)
+              f"🛏 {place}", location,
+              f"{nights} night(s): check in {day:%a %d %b}, "
+              f"check out {checkout:%a %d %b}.", anchor)
     for date, begin, finish, title, location, note, anchor in cal.TIMED:
         def utc(clock):
             local = dt.datetime.fromisoformat(f"{date}T{clock}")
