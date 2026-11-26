@@ -166,5 +166,11 @@
     "date": "26 Nov 2026",
     "label": "Heading fix",
     "summary": "A naturism paragraph no longer shows as a heading."
+  },
+  {
+    "id": "7.1.0",
+    "date": "26 Nov 2026",
+    "label": "Car-free alternative",
+    "summary": "A public-transport version of the trip, with its own page and calendar."
   }
 ]

@@ -77,6 +77,8 @@ VERSIONS = [
       "Chichi dropped; 20 Dec is a lake morning, then straight to Xela."),
     V("7.0.1", "26 Nov 2026", "Heading fix",
       "A naturism paragraph no longer shows as a heading."),
+    V("7.1.0", "26 Nov 2026", "Car-free alternative",
+      "A public-transport version of the trip, with its own page and calendar."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
@@ -570,12 +572,13 @@ def version_line(prefix, current):
 
 
 def page(title, body, depth, version, body_class="", redirect=False,
-         sidebar=""):
+         sidebar="", nav=None):
     prefix = "../" * depth
     return PAGE.format(
         title=html.escape(title), prefix=prefix, body=body, version=version,
         sidebar=sidebar, layout_class=" has-sidebar" if sidebar else "",
-        version_line=version_line(prefix, version),
+        version_line=(nav if nav is not None
+                      else version_line(prefix, version)),
         latest=LATEST, body_class=body_class,
         redirect=REDIRECT if redirect else "",
         mermaid=MERMAID if 'class="mermaid"' in body else "")
@@ -741,7 +744,8 @@ def build_pwa(latest_html):
     used = sorted(set(re.findall(r'src="(maps/web/[^"]+)"', latest_html)))
     precache = ["./", "assets/site.css", "assets/site.js",
                 "assets/icon-192.png", "assets/icon-512.png",
-                "manifest.webmanifest", "trip.ics", *used]
+                "manifest.webmanifest", "trip.ics", *used,
+                PT_DIR + "/", PT_ICS]
     photos = sorted(set(html.unescape(u) for u in re.findall(
         r'<img[^>]+src="(https://[^"]+)"', latest_html)))
     import hashlib
@@ -752,12 +756,17 @@ def build_pwa(latest_html):
     (OUT / "sw.js").write_text(sw)
 
 
-def build_ics():
-    """trip.ics: all-day 'where you sleep' blocks + timed events, in UTC."""
+def build_ics(source="calendar.py", output="trip.ics", name="Guatemala 2026",
+              uid_domain="guatemala-trip-2026"):
+    """An .ics feed: all-day 'where you sleep' blocks + timed events, in UTC.
+
+    trip.ics comes from src/calendar.py (the main guide); the car-free page
+    has its own feed from src/calendar_public_transport.py.
+    """
     import datetime as dt
     import importlib.util
     spec = importlib.util.spec_from_file_location(
-        "calendar_data", SRC.parent / "calendar.py")
+        "calendar_data", SRC.parent / source)
     cal = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(cal)
     offset = dt.timedelta(hours=6)  # Guatemala is UTC-6 all year
@@ -781,7 +790,7 @@ def build_ics():
 
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0",
              "PRODID:-//guatemala-trip-2026//EN", "CALSCALE:GREGORIAN",
-             "METHOD:PUBLISH", "X-WR-CALNAME:Guatemala 2026",
+             "METHOD:PUBLISH", f"X-WR-CALNAME:{name}",
              "X-WR-TIMEZONE:America/Guatemala",
              "REFRESH-INTERVAL;VALUE=DURATION:PT6H",
              "X-PUBLISHED-TTL:PT6H"]
@@ -789,7 +798,7 @@ def build_ics():
     def event(uid, start_lines, summary, location, note, anchor):
         url = cal.GUIDE + anchor
         description = (note + "\n\n" if note else "") + "Guide: " + url
-        lines.extend(["BEGIN:VEVENT", f"UID:{uid}@guatemala-trip-2026",
+        lines.extend(["BEGIN:VEVENT", f"UID:{uid}@{uid_domain}",
                       f"DTSTAMP:{stamp}", *start_lines,
                       f"SUMMARY:{esc(summary)}",
                       f"LOCATION:{esc(location)}",
@@ -817,8 +826,32 @@ def build_ics():
               [f"DTSTART:{utc(begin)}", f"DTEND:{utc(finish)}"],
               title, location, note, anchor)
     lines.append("END:VCALENDAR")
-    (OUT / "trip.ics").write_bytes(
+    (OUT / output).write_bytes(
         ("\r\n".join(fold(l) for l in lines) + "\r\n").encode("utf-8"))
+
+
+# ------------------------------------------------------------ car-free page
+PT_DIR = "public-transport"
+PT_ICS = "public-transport.ics"
+PT_NAV = ('<a href="../">← Main guide (with a car), version {latest}</a> · '
+          '<strong>Car-free alternative</strong> · '
+          '<a href="../{ics}">calendar feed</a>')
+
+
+def build_public_transport():
+    """public-transport/index.html + public-transport.ics, from
+    src/public-transport.md and src/calendar_public_transport.py."""
+    source = (SRC.parent / "public-transport.md").read_text()
+    body, sidebar = render(source, 1)
+    folder = OUT / PT_DIR
+    if folder.exists():
+        shutil.rmtree(folder)
+    folder.mkdir()
+    (folder / "index.html").write_text(page(
+        "Guatemala without a car · 13–31 December 2026", body, 1, LATEST,
+        sidebar=sidebar, nav=PT_NAV.format(latest=LATEST, ics=PT_ICS)))
+    build_ics("calendar_public_transport.py", PT_ICS,
+              "Guatemala 2026 (no car)", "guatemala-trip-2026-no-car")
 
 
 def main():
@@ -856,6 +889,7 @@ def main():
         (OUT / old).mkdir()
         (OUT / old / "index.html").write_text(STUB.format(vid=vid))
     build_ics()
+    build_public_transport()
     build_pwa((OUT / "index.html").read_text())
     print("built", [v["id"] for v in VERSIONS])
 

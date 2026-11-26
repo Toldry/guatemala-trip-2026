@@ -1,0 +1,1522 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//guatemala-trip-2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Guatemala 2026 (no car)
+X-WR-TIMEZONE:America/Guatemala
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:sleep-2026-12-13@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261216
+SUMMARY:🛏 Antigua
+LOCATION:Antigua Guatemala
+DESCRIPTION:2 night(s): check in Sun 13 Dec\, check out Tue 15 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#21-antig
+ ua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#21-antig
+ ua--acatenango-1317-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-15@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261217
+SUMMARY:🛏 Acatenango camp (~3\,600 m)
+LOCATION:Volcán Acatenango
+DESCRIPTION:1 night(s): check in Tue 15 Dec\, check out Wed 16 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#21-antig
+ ua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#21-antig
+ ua--acatenango-1317-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-16@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261218
+SUMMARY:🛏 Antigua
+LOCATION:Antigua Guatemala
+DESCRIPTION:1 night(s): check in Wed 16 Dec\, check out Thu 17 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#21-antig
+ ua--acatenango-1317-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#21-antig
+ ua--acatenango-1317-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-17@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261221
+SUMMARY:🛏 San Juan La Laguna
+LOCATION:San Juan La Laguna
+DESCRIPTION:3 night(s): check in Thu 17 Dec\, check out Sun 20 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#22-lake-
+ atitlán-1720-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#22-lake-
+ atitlán-1720-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-20@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261223
+SUMMARY:🛏 Xela
+LOCATION:Quetzaltenango
+DESCRIPTION:2 night(s): check in Sun 20 Dec\, check out Tue 22 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#23-xela-
+ -tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#23-xela-
+ -tajumulco-2024-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-22@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261224
+SUMMARY:🛏 Tajumulco camp (~4\,000 m)
+LOCATION:Volcán Tajumulco
+DESCRIPTION:1 night(s): check in Tue 22 Dec\, check out Wed 23 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#23-xela-
+ -tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#23-xela-
+ -tajumulco-2024-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-23@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261225
+SUMMARY:🛏 Xela
+LOCATION:Quetzaltenango
+DESCRIPTION:1 night(s): check in Wed 23 Dec\, check out Thu 24 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#23-xela-
+ -tajumulco-2024-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#23-xela-
+ -tajumulco-2024-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-24@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261226
+SUMMARY:🛏 Cobán
+LOCATION:Cobán\, Alta Verapaz
+DESCRIPTION:1 night(s): check in Thu 24 Dec\, check out Fri 25 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#24-cobá
+ n-lanquín--semuc-champey-2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#24-cobá
+ n-lanquín--semuc-champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-25@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261228
+SUMMARY:🛏 Lanquín
+LOCATION:Lanquín\, Alta Verapaz
+DESCRIPTION:2 night(s): check in Fri 25 Dec\, check out Sun 27 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#24-cobá
+ n-lanquín--semuc-champey-2427-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#24-cobá
+ n-lanquín--semuc-champey-2427-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-27@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261230
+SUMMARY:🛏 Flores
+LOCATION:Flores\, Petén
+DESCRIPTION:2 night(s): check in Sun 27 Dec\, check out Tue 29 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#25-flore
+ s--tikal-2729-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#25-flore
+ s--tikal-2729-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sleep-2026-12-29@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261231
+SUMMARY:🛏 Río Dulce
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:1 night(s): check in Tue 29 Dec\, check out Wed 30 Dec.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#26-río-
+ dulce--back-to-the-airport-2931-dec
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#26-río-
+ dulce--back-to-the-airport-2931-dec
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-2125@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261214T032500Z
+DTEND:20261214T043000Z
+SUMMARY:✈ Land at GUA\, immigration\, bags
+LOCATION:La Aurora International Airport
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#sun-13-dec--land-2125-transfer-to-antigua
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-13-d
+ ec--land-2125-transfer-to-antigua
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-2230-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261214T043000Z
+DTEND:20261214T054500Z
+SUMMARY:Option 1: 🚐 Private transfer GUA → Antigua
+LOCATION:Antigua Guatemala
+DESCRIPTION:~US$72 for the car incl. night surcharge. Driver waits in arriv
+ als.\n\nGuide: https://toldry.github.io/guatemala-trip-2026/public-transpo
+ rt/#sun-13-dec--land-2125-transfer-to-antigua
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-13-d
+ ec--land-2125-transfer-to-antigua
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-13-2230-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261214T043000Z
+DTEND:20261214T055900Z
+SUMMARY:Option 2: 🚐 Gray Line shared shuttle GUA → Antigua
+LOCATION:Antigua Guatemala
+DESCRIPTION:~US$16 each\, min. 2 at night. May wait for other flights.\n\nG
+ uide: https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-1
+ 3-dec--land-2125-transfer-to-antigua
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-13-d
+ ec--land-2125-transfer-to-antigua
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-0900@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261214T150000Z
+DTEND:20261214T180000Z
+SUMMARY:🚲 Antigua bike ride (Old Town Outfitters)
+LOCATION:Old Town Outfitters\, 7a Calle Poniente 23\, Antigua
+DESCRIPTION:Golden Arches or Las Tierras Altas.\n\nGuide: https://toldry.gi
+ thub.io/guatemala-trip-2026/public-transport/#mon-14-dec--antigua-with-a-m
+ orning-bike-ride-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-14-d
+ ec--antigua-with-a-morning-bike-ride-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-1200@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261214T180000Z
+DTEND:20261214T193000Z
+SUMMARY:🍽 Lunch in Antigua
+LOCATION:Antigua Guatemala
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#mon-14-dec--antigua-with-a-morning-bike-ride-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-14-d
+ ec--antigua-with-a-morning-bike-ride-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-1330@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261214T193000Z
+DTEND:20261214T223000Z
+SUMMARY:🚶 Free: wander Antigua (Arco\, La Merced\, market)
+LOCATION:Arco de Santa Catalina\, Antigua
+DESCRIPTION:Pick up any rented Acatenango gear.\n\nGuide: https://toldry.gi
+ thub.io/guatemala-trip-2026/public-transport/#mon-14-dec--antigua-with-a-m
+ orning-bike-ride-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-14-d
+ ec--antigua-with-a-morning-bike-ride-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-1630@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261214T223000Z
+DTEND:20261214T234500Z
+SUMMARY:⛰ Cerro de la Cruz viewpoint
+LOCATION:Cerro de la Cruz\, Antigua
+DESCRIPTION:Sunset ~17:35. Daylight only.\n\nGuide: https://toldry.github.i
+ o/guatemala-trip-2026/public-transport/#mon-14-dec--antigua-with-a-morning
+ -bike-ride-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-14-d
+ ec--antigua-with-a-morning-bike-ride-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-14-1830@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261215T003000Z
+DTEND:20261215T030000Z
+SUMMARY:🍽 Dinner\; pack for Acatenango
+LOCATION:Antigua Guatemala
+DESCRIPTION:Leave the big bags with the hotel. Tuk-tuk after 22:00.\n\nGuid
+ e: https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-14-d
+ ec--antigua-with-a-morning-bike-ride-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-14-d
+ ec--antigua-with-a-morning-bike-ride-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-0800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261215T140000Z
+DTEND:20261215T210000Z
+SUMMARY:⛰ Acatenango: pick-up\, hike up to camp
+LOCATION:Antigua Guatemala
+DESCRIPTION:Operator transport. Pick-up time: check the booking.\n\nGuide: 
+ https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-15-dec-
+ -acatenango-day-1-hike-up-to-camp-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-15-d
+ ec--acatenango-day-1-hike-up-to-camp-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-1500-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261215T210000Z
+DTEND:20261215T233000Z
+SUMMARY:Option 1: 🛌 Rest at camp
+LOCATION:Volcán Acatenango
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#tue-15-dec--acatenango-day-1-hike-up-to-camp-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-15-d
+ ec--acatenango-day-1-hike-up-to-camp-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-1500-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261215T210000Z
+DTEND:20261215T233000Z
+SUMMARY:Option 2: ⛰ Fuego ridge add-on
+LOCATION:Volcán Acatenango
+DESCRIPTION:Only if you booked the add-on.\n\nGuide: https://toldry.github.
+ io/guatemala-trip-2026/public-transport/#tue-15-dec--acatenango-day-1-hike
+ -up-to-camp-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-15-d
+ ec--acatenango-day-1-hike-up-to-camp-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-15-1730@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261215T233000Z
+DTEND:20261216T030000Z
+SUMMARY:🌋 Evening at camp: dinner\, watch Fuego erupt
+LOCATION:Volcán Acatenango
+DESCRIPTION:Early night: summit start ~04:00.\n\nGuide: https://toldry.gith
+ ub.io/guatemala-trip-2026/public-transport/#tue-15-dec--acatenango-day-1-h
+ ike-up-to-camp-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-15-d
+ ec--acatenango-day-1-hike-up-to-camp-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-0400@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261216T100000Z
+DTEND:20261216T190000Z
+SUMMARY:⛰ Acatenango summit at sunrise\, ride back to Antigua
+LOCATION:Volcán Acatenango
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#wed-16-dec--acatenango-day-2-summit-at-sunrise-back-to-antigua-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-16-d
+ ec--acatenango-day-2-summit-at-sunrise-back-to-antigua-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-1300@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261216T190000Z
+DTEND:20261216T230000Z
+SUMMARY:🛌 Free: rest in Antigua (shower\, nap\, lunch)
+LOCATION:Antigua Guatemala
+DESCRIPTION:Nothing planned.\n\nGuide: https://toldry.github.io/guatemala-t
+ rip-2026/public-transport/#wed-16-dec--acatenango-day-2-summit-at-sunrise-
+ back-to-antigua-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-16-d
+ ec--acatenango-day-2-summit-at-sunrise-back-to-antigua-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-1700@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261216T230000Z
+DTEND:20261217T000000Z
+SUMMARY:💵 ATM: cash for the lake\; confirm tomorrow's shuttle
+LOCATION:Antigua Guatemala
+DESCRIPTION:No ATMs in San Juan or Santa Clara. Shuttle pickup 08:30.\n\nGu
+ ide: https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-16
+ -dec--acatenango-day-2-summit-at-sunrise-back-to-antigua-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-16-d
+ ec--acatenango-day-2-summit-at-sunrise-back-to-antigua-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-16-1830@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261217T003000Z
+DTEND:20261217T030000Z
+SUMMARY:🍽 Easy dinner\, early night
+LOCATION:Antigua Guatemala
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#wed-16-dec--acatenango-day-2-summit-at-sunrise-back-to-antigua-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-16-d
+ ec--acatenango-day-2-summit-at-sunrise-back-to-antigua-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-0830@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261217T143000Z
+DTEND:20261217T180000Z
+SUMMARY:🚐 Shuttle Antigua → San Pedro La Laguna (~3–3.5 h)
+LOCATION:San Pedro La Laguna
+DESCRIPTION:US$22–25 each. Hotel pickup.\n\nGuide: https://toldry.github.
+ io/guatemala-trip-2026/public-transport/#thu-17-dec--shuttle-to-lake-atitl
+ án-then-wander-san-juan
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-17-d
+ ec--shuttle-to-lake-atitlán-then-wander-san-juan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-1200@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261217T180000Z
+DTEND:20261217T181500Z
+SUMMARY:🛺 Tuk-tuk San Pedro → San Juan
+LOCATION:San Juan La Laguna
+DESCRIPTION:≈ Q10–Q20. Agree the price first.\n\nGuide: https://toldry.
+ github.io/guatemala-trip-2026/public-transport/#thu-17-dec--shuttle-to-lak
+ e-atitlán-then-wander-san-juan
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-17-d
+ ec--shuttle-to-lake-atitlán-then-wander-san-juan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-1215@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261217T181500Z
+DTEND:20261217T193000Z
+SUMMARY:🛏 Check in\, lunch
+LOCATION:San Juan La Laguna
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#thu-17-dec--shuttle-to-lake-atitlán-then-wander-san-juan
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-17-d
+ ec--shuttle-to-lake-atitlán-then-wander-san-juan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-1330@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261217T193000Z
+DTEND:20261217T233000Z
+SUMMARY:🚶 Free: wander San Juan La Laguna\, enjoy the lake
+LOCATION:San Juan La Laguna
+DESCRIPTION:Nothing booked. Ideas: weaving cooperatives\, painters' galleri
+ es\, coffee\, Mirador Kaqasiiwaan at sunset\, a first swim.\n\nGuide: http
+ s://toldry.github.io/guatemala-trip-2026/public-transport/#thu-17-dec--shu
+ ttle-to-lake-atitlán-then-wander-san-juan
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-17-d
+ ec--shuttle-to-lake-atitlán-then-wander-san-juan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-17-1800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261218T000000Z
+DTEND:20261218T030000Z
+SUMMARY:🍽 Dinner\; book a 04:00 tuk-tuk for Indian Nose
+LOCATION:San Juan La Laguna
+DESCRIPTION:Early night.\n\nGuide: https://toldry.github.io/guatemala-trip-
+ 2026/public-transport/#thu-17-dec--shuttle-to-lake-atitlán-then-wander-sa
+ n-juan
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-17-d
+ ec--shuttle-to-lake-atitlán-then-wander-san-juan
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-0400@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261218T100000Z
+DTEND:20261218T140000Z
+SUMMARY:🌄 Indian Nose sunrise hike
+LOCATION:Rostro Maya\, Santa Clara La Laguna
+DESCRIPTION:Only with a community guide or tour. Cash.\n\nGuide: https://to
+ ldry.github.io/guatemala-trip-2026/public-transport/#fri-18-dec--indian-no
+ se-at-sunrise-then-swimming-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-d
+ ec--indian-nose-at-sunrise-then-swimming-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-0800-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261218T140000Z
+DTEND:20261218T183000Z
+SUMMARY:Option 1: 🛌 Free: breakfast\, nap\, slow morning
+LOCATION:San Juan La Laguna
+DESCRIPTION:Nothing planned.\n\nGuide: https://toldry.github.io/guatemala-t
+ rip-2026/public-transport/#fri-18-dec--indian-nose-at-sunrise-then-swimmin
+ g-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-d
+ ec--indian-nose-at-sunrise-then-swimming-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-0900-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261218T150000Z
+DTEND:20261218T170000Z
+SUMMARY:Option 2: 🛶 Kayak or paddleboard on the lake
+LOCATION:San Pedro La Laguna
+DESCRIPTION:Mornings are calmer. ~US$10/h single\, $20 double.\n\nGuide: ht
+ tps://toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-dec--i
+ ndian-nose-at-sunrise-then-swimming-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-d
+ ec--indian-nose-at-sunrise-then-swimming-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-1230@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261218T183000Z
+DTEND:20261218T190000Z
+SUMMARY:⛵ Lancha San Juan → San Marcos
+LOCATION:San Juan La Laguna dock
+DESCRIPTION:Q20–Q25 each.\n\nGuide: https://toldry.github.io/guatemala-tr
+ ip-2026/public-transport/#fri-18-dec--indian-nose-at-sunrise-then-swimming-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-d
+ ec--indian-nose-at-sunrise-then-swimming-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-1300@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261218T190000Z
+DTEND:20261218T230000Z
+SUMMARY:🏊 Cerro Tzankujil\, swim
+LOCATION:Cerro Tzankujil\, San Marcos La Laguna
+DESCRIPTION:Q20 each\, cash. Last lanchas ~17:00–18:00.\n\nGuide: https:/
+ /toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-dec--indian
+ -nose-at-sunrise-then-swimming-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-d
+ ec--indian-nose-at-sunrise-then-swimming-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-1800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261219T000000Z
+DTEND:20261219T030000Z
+SUMMARY:🍽 Dinner in San Juan
+LOCATION:San Juan La Laguna
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#fri-18-dec--indian-nose-at-sunrise-then-swimming-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-18-d
+ ec--indian-nose-at-sunrise-then-swimming-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-0600-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261219T120000Z
+DTEND:20261219T210000Z
+SUMMARY:Option 1: ⛰ San Pedro volcano
+LOCATION:Volcán San Pedro\, San Pedro La Laguna
+DESCRIPTION:Tuk-tuk to the park office ~06:00. Q100 entry + guide Q150–Q2
+ 00.\n\nGuide: https://toldry.github.io/guatemala-trip-2026/public-transpor
+ t/#sat-19-dec--volcán-san-pedro-3020-m-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sat-19-d
+ ec--volcán-san-pedro-3020-m-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-0800-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261219T140000Z
+DTEND:20261219T200000Z
+SUMMARY:Option 2: 🚲 Lake-villages bike ride
+LOCATION:San Juan La Laguna
+DESCRIPTION:San Juan → San Pablo → San Marcos\, swim stop.\n\nGuide: ht
+ tps://toldry.github.io/guatemala-trip-2026/public-transport/#sat-19-dec--v
+ olcán-san-pedro-3020-m-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sat-19-d
+ ec--volcán-san-pedro-3020-m-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-1530@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261219T213000Z
+DTEND:20261219T230000Z
+SUMMARY:🏊 Cool-down swim in the lake
+LOCATION:San Juan La Laguna
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#sat-19-dec--volcán-san-pedro-3020-m-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sat-19-d
+ ec--volcán-san-pedro-3020-m-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-19-1800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261220T000000Z
+DTEND:20261220T030000Z
+SUMMARY:🧳 Dinner\, pay the lodge in cash\, pack
+LOCATION:San Juan La Laguna
+DESCRIPTION:Confirm tomorrow's shuttle time to Xela.\n\nGuide: https://told
+ ry.github.io/guatemala-trip-2026/public-transport/#sat-19-dec--volcán-san
+ -pedro-3020-m-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sat-19-d
+ ec--volcán-san-pedro-3020-m-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-0800-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261220T140000Z
+DTEND:20261220T173000Z
+SUMMARY:Option 1: 🏊 Free: last lake morning\, swim
+LOCATION:San Juan La Laguna
+DESCRIPTION:Or the kayak\, if you skipped it on the 18th.\n\nGuide: https:/
+ /toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-dec--a-last
+ -lake-morning-then-shuttle-to-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-d
+ ec--a-last-lake-morning-then-shuttle-to-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-0900-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261220T150000Z
+DTEND:20261220T163000Z
+SUMMARY:Option 2: 🧶 Free: weaving or coffee session
+LOCATION:San Juan La Laguna
+DESCRIPTION:MayAchik' workshops from Q65.\n\nGuide: https://toldry.github.i
+ o/guatemala-trip-2026/public-transport/#sun-20-dec--a-last-lake-morning-th
+ en-shuttle-to-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-d
+ ec--a-last-lake-morning-then-shuttle-to-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-1130@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261220T173000Z
+DTEND:20261220T181500Z
+SUMMARY:🛏 Check out (cash)\, early lunch\, tuk-tuk to San Pedro
+LOCATION:San Pedro La Laguna
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#sun-20-dec--a-last-lake-morning-then-shuttle-to-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-d
+ ec--a-last-lake-morning-then-shuttle-to-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-1230@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261220T183000Z
+DTEND:20261220T210000Z
+SUMMARY:🚐 Shuttle San Pedro → Xela (~2–2.5 h)
+LOCATION:Quetzaltenango
+DESCRIPTION:US$33–40 each. Departure time per operator.\n\nGuide: https:/
+ /toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-dec--a-last
+ -lake-morning-then-shuttle-to-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-d
+ ec--a-last-lake-morning-then-shuttle-to-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-1500@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261220T210000Z
+DTEND:20261221T003000Z
+SUMMARY:🚶 Free: check in\, wander Xela's centre
+LOCATION:Parque Centro América\, Quetzaltenango
+DESCRIPTION:Optional: visit your Tajumulco operator.\n\nGuide: https://told
+ ry.github.io/guatemala-trip-2026/public-transport/#sun-20-dec--a-last-lake
+ -morning-then-shuttle-to-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-d
+ ec--a-last-lake-morning-then-shuttle-to-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-1830@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261221T003000Z
+DTEND:20261221T030000Z
+SUMMARY:🍽 Dinner in Xela
+LOCATION:Quetzaltenango
+DESCRIPTION:Taxi after ~21:00.\n\nGuide: https://toldry.github.io/guatemala
+ -trip-2026/public-transport/#sun-20-dec--a-last-lake-morning-then-shuttle-
+ to-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-20-d
+ ec--a-last-lake-morning-then-shuttle-to-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-0645-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261221T124500Z
+DTEND:20261221T134500Z
+SUMMARY:Option 1: 🐔 Chicken bus Xela → Laguna Chicabal stop
+LOCATION:San Martín Sacatepéquez
+DESCRIPTION:Towards Colomba/Coatepeque\, Q5–Q15. Ask for 'la parada de la
+  laguna'.\n\nGuide: https://toldry.github.io/guatemala-trip-2026/public-tr
+ ansport/#mon-21-dec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-d
+ ec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-0715-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261221T131500Z
+DTEND:20261221T135500Z
+SUMMARY:Option 2: 🚕 Taxi Xela → Laguna Chicabal
+LOCATION:San Martín Sacatepéquez
+DESCRIPTION:≈ Q300–Q400 return with waiting (estimate).\n\nGuide: https
+ ://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-dec--lagu
+ na-chicabal-by-bus-then-a-calm-afternoon-in-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-d
+ ec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-0800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261221T140000Z
+DTEND:20261221T183000Z
+SUMMARY:⛰ Laguna Chicabal
+LOCATION:Laguna Chicabal\, San Martín Sacatepéquez
+DESCRIPTION:Open 08:00–13:00. No swimming (sacred). Q20.\n\nGuide: https:
+ //toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-dec--lagun
+ a-chicabal-by-bus-then-a-calm-afternoon-in-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-d
+ ec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-1230@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261221T183000Z
+DTEND:20261221T193000Z
+SUMMARY:🚌 Back to Xela\, lunch
+LOCATION:Quetzaltenango
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#mon-21-dec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-d
+ ec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-1330@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261221T193000Z
+DTEND:20261221T233000Z
+SUMMARY:🛌 Free: calm afternoon in Xela
+LOCATION:Parque Centro América\, Quetzaltenango
+DESCRIPTION:Nothing planned. Hot springs are on the 23rd.\n\nGuide: https:/
+ /toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-dec--laguna
+ -chicabal-by-bus-then-a-calm-afternoon-in-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-d
+ ec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-1800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261222T000000Z
+DTEND:20261222T010000Z
+SUMMARY:📋 Tajumulco briefing (Quetzaltrekkers)
+LOCATION:Quetzaltenango
+DESCRIPTION:Only if booked with Quetzaltrekkers.\n\nGuide: https://toldry.g
+ ithub.io/guatemala-trip-2026/public-transport/#mon-21-dec--laguna-chicabal
+ -by-bus-then-a-calm-afternoon-in-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-d
+ ec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-21-1900@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261222T010000Z
+DTEND:20261222T030000Z
+SUMMARY:🍽 Dinner\; pack for Tajumulco
+LOCATION:Quetzaltenango
+DESCRIPTION:Leave the big bags at the hotel.\n\nGuide: https://toldry.githu
+ b.io/guatemala-trip-2026/public-transport/#mon-21-dec--laguna-chicabal-by-
+ bus-then-a-calm-afternoon-in-xela
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-21-d
+ ec--laguna-chicabal-by-bus-then-a-calm-afternoon-in-xela
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-0500-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261222T110000Z
+DTEND:20261222T200000Z
+SUMMARY:Option 1: ⛰ Tajumulco: transport + hike up to camp
+LOCATION:Volcán Tajumulco
+DESCRIPTION:Operator transport. Departure time per operator.\n\nGuide: http
+ s://toldry.github.io/guatemala-trip-2026/public-transport/#tue-22-dec--taj
+ umulco-day-1-hike-up-to-camp-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-22-d
+ ec--tajumulco-day-1-hike-up-to-camp-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-1400-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261222T200000Z
+DTEND:20261223T020000Z
+SUMMARY:Option 1: ⛺ Evening at Tajumulco camp
+LOCATION:Volcán Tajumulco
+DESCRIPTION:Nothing else planned. Early night.\n\nGuide: https://toldry.git
+ hub.io/guatemala-trip-2026/public-transport/#tue-22-dec--tajumulco-day-1-h
+ ike-up-to-camp-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-22-d
+ ec--tajumulco-day-1-hike-up-to-camp-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-22-0900-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261222T150000Z
+DTEND:20261223T000000Z
+SUMMARY:Option 2: 🛌 Free day in Xela (Tajumulco off)
+LOCATION:Quetzaltenango
+DESCRIPTION:Rest\; pack for the pre-dawn Santa María hike.\n\nGuide: https
+ ://toldry.github.io/guatemala-trip-2026/public-transport/#tue-22-dec--taju
+ mulco-day-1-hike-up-to-camp-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-22-d
+ ec--tajumulco-day-1-hike-up-to-camp-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-0400-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261223T100000Z
+DTEND:20261223T200000Z
+SUMMARY:Option 1: ⛰ Tajumulco summit at sunrise\, back to Xela
+LOCATION:Volcán Tajumulco
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-23-d
+ ec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-0230-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261223T083000Z
+DTEND:20261223T170000Z
+SUMMARY:Option 2: ⛰ Volcán Santa María sunrise hike
+LOCATION:Volcán Santa María\, Quetzaltenango
+DESCRIPTION:Start time per operator.\n\nGuide: https://toldry.github.io/gua
+ temala-trip-2026/public-transport/#wed-23-dec--tajumulco-day-2-summit-at-s
+ unrise-then-hot-springs-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-23-d
+ ec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-1400@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261223T200000Z
+DTEND:20261223T203000Z
+SUMMARY:🚿 Quick shower at the hotel
+LOCATION:Quetzaltenango
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-23-d
+ ec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-1430-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261223T203000Z
+DTEND:20261224T000000Z
+SUMMARY:Option 1: ♨ Fuentes Georginas by shuttle
+LOCATION:Fuentes Georginas\, Zunil
+DESCRIPTION:Collectivo shuttle at 14:30\, ~US$25 each incl. entry.\n\nGuide
+ : https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-23-de
+ c--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-23-d
+ ec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-1430-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261223T203000Z
+DTEND:20261223T233000Z
+SUMMARY:Option 2: ♨ Las Cumbres steam sauna\, by bus to Zunil
+LOCATION:Las Cumbres\, Zunil
+DESCRIPTION:Bus Q5–Q10\; sauna ~Q75 each per hour. Back before dark.\n\nG
+ uide: https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-2
+ 3-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-23-d
+ ec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-23-1800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261224T000000Z
+DTEND:20261224T030000Z
+SUMMARY:🍽 Dinner\; confirm tomorrow's transport
+LOCATION:Quetzaltenango
+DESCRIPTION:Shuttle pickup 07:00 (Option 1) or bus at 05:00 (Option 2).\n\n
+ Guide: https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-
+ 23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-23-d
+ ec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-0700-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261224T130000Z
+DTEND:20261224T230000Z
+SUMMARY:Option 1: 🚐 Shuttle Xela → Cobán (~10 h)
+LOCATION:Cobán
+DESCRIPTION:Adrenalina's Xela → Lanquín shuttle\, US$75 each\; get off i
+ n Cobán.\n\nGuide: https://toldry.github.io/guatemala-trip-2026/public-tr
+ ansport/#thu-24-dec--xela--cobán-by-shuttle-or-two-buses
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-24-d
+ ec--xela--cobán-by-shuttle-or-two-buses
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-0500-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261224T110000Z
+DTEND:20261224T150000Z
+SUMMARY:Option 2: 🚌 Álamo bus Xela → Guatemala City
+LOCATION:Guatemala City
+DESCRIPTION:~Q105 each.\n\nGuide: https://toldry.github.io/guatemala-trip-2
+ 026/public-transport/#thu-24-dec--xela--cobán-by-shuttle-or-two-buses
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-24-d
+ ec--xela--cobán-by-shuttle-or-two-buses
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-0900-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261224T150000Z
+DTEND:20261224T160000Z
+SUMMARY:Option 2: 🚕 Uber to the Monja Blanca terminal
+LOCATION:Monja Blanca terminal\, Guatemala City
+DESCRIPTION:≈ Q50–Q80.\n\nGuide: https://toldry.github.io/guatemala-tri
+ p-2026/public-transport/#thu-24-dec--xela--cobán-by-shuttle-or-two-buses
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-24-d
+ ec--xela--cobán-by-shuttle-or-two-buses
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-1000-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261224T160000Z
+DTEND:20261224T210000Z
+SUMMARY:Option 2: 🚌 Monja Blanca bus Guatemala City → Cobán
+LOCATION:Cobán
+DESCRIPTION:Q105–Q125 each\, roughly hourly. Christmas Eve: be early.\n\n
+ Guide: https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-
+ 24-dec--xela--cobán-by-shuttle-or-two-buses
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-24-d
+ ec--xela--cobán-by-shuttle-or-two-buses
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-1530-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261224T213000Z
+DTEND:20261224T233000Z
+SUMMARY:Option 2: 🚶 Free: wander Cobán\, El Calvario\, ATM
+LOCATION:Templo El Calvario\, Cobán
+DESCRIPTION:With Option 1\, just draw cash on arrival.\n\nGuide: https://to
+ ldry.github.io/guatemala-trip-2026/public-transport/#thu-24-dec--xela--cob
+ án-by-shuttle-or-two-buses
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-24-d
+ ec--xela--cobán-by-shuttle-or-two-buses
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-24-1900@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261225T010000Z
+DTEND:20261225T055900Z
+SUMMARY:🎄 Nochebuena: tamales\, midnight fireworks
+LOCATION:Cobán
+DESCRIPTION:Ask the hotel ahead about dinner\; many places close.\n\nGuide:
+  https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-24-dec
+ --xela--cobán-by-shuttle-or-two-buses
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-24-d
+ ec--xela--cobán-by-shuttle-or-two-buses
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-0730@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261225T133000Z
+DTEND:20261225T150000Z
+SUMMARY:☕ Free: slow Christmas breakfast in Cobán
+LOCATION:Cobán
+DESCRIPTION:El Calvario if you arrived late yesterday.\n\nGuide: https://to
+ ldry.github.io/guatemala-trip-2026/public-transport/#fri-25-dec--cobán--l
+ anquín-by-microbus-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-d
+ ec--cobán--lanquín-by-microbus-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-0900-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261225T150000Z
+DTEND:20261225T173000Z
+SUMMARY:Option 1: 🚐 Microbus Cobán → Lanquín (~2–2.5 h)
+LOCATION:Lanquín
+DESCRIPTION:From the market\, Q40–Q50 each. Fewer on Christmas Day.\n\nGu
+ ide: https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25
+ -dec--cobán--lanquín-by-microbus-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-d
+ ec--cobán--lanquín-by-microbus-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-0930-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261225T153000Z
+DTEND:20261225T173000Z
+SUMMARY:Option 2: 🚕 Lodge driver Cobán → Lanquín
+LOCATION:Lanquín
+DESCRIPTION:≈ Q500–Q700 for the car (estimate).\n\nGuide: https://toldr
+ y.github.io/guatemala-trip-2026/public-transport/#fri-25-dec--cobán--lanq
+ uín-by-microbus-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-d
+ ec--cobán--lanquín-by-microbus-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-1130@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261225T173000Z
+DTEND:20261225T190000Z
+SUMMARY:🛏 Check in\, lunch
+LOCATION:Lanquín
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#fri-25-dec--cobán--lanquín-by-microbus-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-d
+ ec--cobán--lanquín-by-microbus-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-1300@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261225T190000Z
+DTEND:20261225T220000Z
+SUMMARY:🏊 River tubing
+LOCATION:Río Lanquín
+DESCRIPTION:Via your lodge\; ask if it runs on Christmas Day.\n\nGuide: htt
+ ps://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-dec--co
+ bán--lanquín-by-microbus-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-d
+ ec--cobán--lanquín-by-microbus-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-1700@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261225T230000Z
+DTEND:20261226T003000Z
+SUMMARY:🦇 Grutas de Lanquín: bats at dusk
+LOCATION:Grutas de Lanquín
+DESCRIPTION:Q30 each.\n\nGuide: https://toldry.github.io/guatemala-trip-202
+ 6/public-transport/#fri-25-dec--cobán--lanquín-by-microbus-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-d
+ ec--cobán--lanquín-by-microbus-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-25-1830@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261226T003000Z
+DTEND:20261226T030000Z
+SUMMARY:🍽 Dinner at the lodge
+LOCATION:Lanquín
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#fri-25-dec--cobán--lanquín-by-microbus-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#fri-25-d
+ ec--cobán--lanquín-by-microbus-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-0730@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261226T133000Z
+DTEND:20261226T140000Z
+SUMMARY:🛻 Pickup truck Lanquín → Semuc
+LOCATION:Lanquín
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#sat-26-dec--semuc-champey-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sat-26-d
+ ec--semuc-champey-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-0800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261226T140000Z
+DTEND:20261226T220000Z
+SUMMARY:🏊 Semuc Champey + K'anba cave + El Mirador
+LOCATION:Semuc Champey
+DESCRIPTION:Bring Q110 each for entry. Pools before 10:30 or after 15:00.\n
+ \nGuide: https://toldry.github.io/guatemala-trip-2026/public-transport/#sa
+ t-26-dec--semuc-champey-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sat-26-d
+ ec--semuc-champey-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-26-1600@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261226T220000Z
+DTEND:20261227T030000Z
+SUMMARY:🛌 Free: evening at the lodge\, pack
+LOCATION:Lanquín
+DESCRIPTION:Shuttle to Flores at 08:00 tomorrow.\n\nGuide: https://toldry.g
+ ithub.io/guatemala-trip-2026/public-transport/#sat-26-dec--semuc-champey-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sat-26-d
+ ec--semuc-champey-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-0800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261227T140000Z
+DTEND:20261227T220000Z
+SUMMARY:🚐 Shuttle Lanquín → Flores (~8 h)
+LOCATION:Flores\, Petén
+DESCRIPTION:US$40–45 each. Drop-off at the 'I love Petén' letters.\n\nGu
+ ide: https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-27
+ -dec--lanquín--flores-by-shuttle
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-27-d
+ ec--lanquín--flores-by-shuttle
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-1600@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261227T220000Z
+DTEND:20261227T223000Z
+SUMMARY:🛺 Tuk-tuk to the island\, check in
+LOCATION:Flores\, Petén
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#sun-27-dec--lanquín--flores-by-shuttle
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-27-d
+ ec--lanquín--flores-by-shuttle
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-1630@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261227T223000Z
+DTEND:20261227T234500Z
+SUMMARY:🚶 Free: sunset walk round Flores island\, ATM
+LOCATION:Flores\, Petén
+DESCRIPTION:Draw cash for Tikal (no ATMs there).\n\nGuide: https://toldry.g
+ ithub.io/guatemala-trip-2026/public-transport/#sun-27-dec--lanquín--flore
+ s-by-shuttle
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-27-d
+ ec--lanquín--flores-by-shuttle
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-27-1800@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261228T000000Z
+DTEND:20261228T030000Z
+SUMMARY:🍽 Dinner in Flores
+LOCATION:Flores\, Petén
+DESCRIPTION:Confirm tomorrow's pickup time. Early night.\n\nGuide: https://
+ toldry.github.io/guatemala-trip-2026/public-transport/#sun-27-dec--lanquí
+ n--flores-by-shuttle
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#sun-27-d
+ ec--lanquín--flores-by-shuttle
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-0700-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261228T130000Z
+DTEND:20261229T013000Z
+SUMMARY:Option 1: 🏛 Tikal + 🌅 Yaxhá sunset day tour
+LOCATION:Tikal National Park
+DESCRIPTION:~US$55 each with transport and guide\; entries extra. Times per
+  operator.\n\nGuide: https://toldry.github.io/guatemala-trip-2026/public-t
+ ransport/#mon-28-dec--tikal-with-or-without-yaxhá
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-28-d
+ ec--tikal-with-or-without-yaxhá
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-0430-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261228T103000Z
+DTEND:20261228T120000Z
+SUMMARY:Option 2: 🚐 Early shuttle Flores → Tikal
+LOCATION:Tikal National Park
+DESCRIPTION:Ticket bought online in advance.\n\nGuide: https://toldry.githu
+ b.io/guatemala-trip-2026/public-transport/#mon-28-dec--tikal-with-or-witho
+ ut-yaxhá
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-28-d
+ ec--tikal-with-or-without-yaxhá
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-0600-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261228T120000Z
+DTEND:20261228T183000Z
+SUMMARY:Option 2: 🏛 Tikal (gate opens 06:00)
+LOCATION:Tikal National Park
+DESCRIPTION:Hire a guide at the gate.\n\nGuide: https://toldry.github.io/gu
+ atemala-trip-2026/public-transport/#mon-28-dec--tikal-with-or-without-yaxh
+ á
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-28-d
+ ec--tikal-with-or-without-yaxhá
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-1230-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261228T183000Z
+DTEND:20261228T200000Z
+SUMMARY:Option 2: 🚐 Shuttle Tikal → Flores
+LOCATION:Flores\, Petén
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#mon-28-dec--tikal-with-or-without-yaxhá
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-28-d
+ ec--tikal-with-or-without-yaxhá
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-1400-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261228T200000Z
+DTEND:20261228T233000Z
+SUMMARY:Option 2: 🏊 Free: swim in Lake Petén Itzá
+LOCATION:Flores\, Petén
+DESCRIPTION:Or a lancha ride round the island.\n\nGuide: https://toldry.git
+ hub.io/guatemala-trip-2026/public-transport/#mon-28-dec--tikal-with-or-wit
+ hout-yaxhá
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-28-d
+ ec--tikal-with-or-without-yaxhá
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-28-1930@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T013000Z
+DTEND:20261229T033000Z
+SUMMARY:🍽 Dinner in Flores\, early night
+LOCATION:Flores\, Petén
+DESCRIPTION:Shuttle to Río Dulce at 06:00.\n\nGuide: https://toldry.github
+ .io/guatemala-trip-2026/public-transport/#mon-28-dec--tikal-with-or-withou
+ t-yaxhá
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#mon-28-d
+ ec--tikal-with-or-without-yaxhá
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-0600@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T120000Z
+DTEND:20261229T160000Z
+SUMMARY:🚐 Shuttle Flores → Río Dulce (~4 h)
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:US$23–36 each. Drop-off at Colifato\, Mirador del Río mall.\
+ n\nGuide: https://toldry.github.io/guatemala-trip-2026/public-transport/#t
+ ue-29-dec--flores--río-dulce-by-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1000@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T160000Z
+DTEND:20261229T163000Z
+SUMMARY:⛵ Boat or tuk-tuk to the lodge
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#tue-29-dec--flores--río-dulce-by-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1030@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T163000Z
+DTEND:20261229T180000Z
+SUMMARY:🛏 Check in\, lunch
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#tue-29-dec--flores--río-dulce-by-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1200@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T180000Z
+DTEND:20261229T183000Z
+SUMMARY:🎫 Buy tomorrow's Litegua ticket in town
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:Confirm the departure time (~09:30).\n\nGuide: https://toldry.g
+ ithub.io/guatemala-trip-2026/public-transport/#tue-29-dec--flores--río-du
+ lce-by-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1230@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T183000Z
+DTEND:20261229T193000Z
+SUMMARY:🚐 Colectivo towards El Estor\, to Finca El Paraíso
+LOCATION:Finca El Paraíso\, El Estor road
+DESCRIPTION:From below the bridge\, ~Q15 each.\n\nGuide: https://toldry.git
+ hub.io/guatemala-trip-2026/public-transport/#tue-29-dec--flores--río-dulc
+ e-by-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1330@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T193000Z
+DTEND:20261229T214500Z
+SUMMARY:🏊 Finca El Paraíso hot waterfall
+LOCATION:Finca El Paraíso\, El Estor road
+DESCRIPTION:Q15–Q20\, cash. Closes 17:00.\n\nGuide: https://toldry.github
+ .io/guatemala-trip-2026/public-transport/#tue-29-dec--flores--río-dulce-b
+ y-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1545@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T214500Z
+DTEND:20261229T224500Z
+SUMMARY:🚐 Colectivo back to Río Dulce
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:Last one passes ~16:30–17:00. Don't cut it fine.\n\nGuide: ht
+ tps://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-dec--f
+ lores--río-dulce-by-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-29-1700@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261229T230000Z
+DTEND:20261230T030000Z
+SUMMARY:🛌 Free: evening at the river lodge
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:Swim from the dock\, dinner on the river.\n\nGuide: https://tol
+ dry.github.io/guatemala-trip-2026/public-transport/#tue-29-dec--flores--r
+ ío-dulce-by-shuttle--hot-waterfall-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#tue-29-d
+ ec--flores--río-dulce-by-shuttle--hot-waterfall-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-0730-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T133000Z
+DTEND:20261230T150000Z
+SUMMARY:Option 1: 🏊 Free: morning swim from the dock
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#wed-30-dec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-0800-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T140000Z
+DTEND:20261230T150000Z
+SUMMARY:Option 2: 🏰 Free: Castillo de San Felipe
+LOCATION:Castillo de San Felipe de Lara\, Río Dulce
+DESCRIPTION:Opens 08:00. Tuk-tuk\, 3 km.\n\nGuide: https://toldry.github.io
+ /guatemala-trip-2026/public-transport/#wed-30-dec--río-dulce--guatemala-c
+ ity-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-0900@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T150000Z
+DTEND:20261230T153000Z
+SUMMARY:⛵ To the Litegua stop in town
+LOCATION:Río Dulce\, Izabal
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#wed-30-dec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-0930@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T153000Z
+DTEND:20261230T213000Z
+SUMMARY:🚌 Litegua pullman Río Dulce → Guatemala City (~6 h)
+LOCATION:Guatemala City
+DESCRIPTION:Q120–Q145 each. Fuente del Norte if Litegua is full.\n\nGuide
+ : https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-de
+ c--río-dulce--guatemala-city-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-1530-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T213000Z
+DTEND:20261230T221500Z
+SUMMARY:Option 1: 🚕 Uber to the Hilton Garden Inn (Zona 9)
+LOCATION:Hilton Garden Inn\, Zona 9\, Guatemala City
+DESCRIPTION:≈ Q60.\n\nGuide: https://toldry.github.io/guatemala-trip-2026
+ /public-transport/#wed-30-dec--río-dulce--guatemala-city-by-pullman-fly-a
+ t-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-1615-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T221500Z
+DTEND:20261231T043000Z
+SUMMARY:Option 1: 🛏 Day room and dinner\, Hilton Garden Inn
+LOCATION:Hilton Garden Inn\, Zona 9\, Guatemala City
+DESCRIPTION:Bookable by the hour on HotelsByDay.\n\nGuide: https://toldry.g
+ ithub.io/guatemala-trip-2026/public-transport/#wed-30-dec--río-dulce--gua
+ temala-city-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-2230-opt1@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261231T043000Z
+DTEND:20261231T050000Z
+SUMMARY:Option 1: 🚕 Uber to the airport
+LOCATION:La Aurora International Airport
+DESCRIPTION:≈ Q40–Q80.\n\nGuide: https://toldry.github.io/guatemala-tri
+ p-2026/public-transport/#wed-30-dec--río-dulce--guatemala-city-by-pullman
+ -fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-1530-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T213000Z
+DTEND:20261230T223000Z
+SUMMARY:Option 2: 🚕 Uber to an airport guesthouse (Zona 13)
+LOCATION:Zona 13\, Guatemala City
+DESCRIPTION:E.g. L'Aurora Inn or Casa Aurora.\n\nGuide: https://toldry.gith
+ ub.io/guatemala-trip-2026/public-transport/#wed-30-dec--río-dulce--guatem
+ ala-city-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-1630-opt2@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261230T223000Z
+DTEND:20261231T050000Z
+SUMMARY:Option 2: 🛏 Rest and dinner at the guesthouse
+LOCATION:Zona 13\, Guatemala City
+DESCRIPTION:Free airport shuttle at ~23:00 (L'Aurora Inn).\n\nGuide: https:
+ //toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-dec--río-
+ dulce--guatemala-city-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-30-2330@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261231T053000Z
+DTEND:20261231T055900Z
+SUMMARY:✈ Be at the terminal
+LOCATION:La Aurora International Airport
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#wed-30-dec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#wed-30-d
+ ec--río-dulce--guatemala-city-by-pullman-fly-at-0230
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-0000@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261231T060000Z
+DTEND:20261231T083000Z
+SUMMARY:✈ Airside\, wait at the gate
+LOCATION:La Aurora International Airport
+DESCRIPTION:Guide: https://toldry.github.io/guatemala-trip-2026/public-tran
+ sport/#thu-31-dec--fly-home-at-0230-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-31-d
+ ec--fly-home-at-0230-
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-31-0230@guatemala-trip-2026-no-car
+DTSTAMP:20261126T101146Z
+DTSTART:20261231T083000Z
+DTEND:20261231T090000Z
+SUMMARY:✈ Flight departs
+LOCATION:La Aurora International Airport
+DESCRIPTION:Nothing else planned in Guatemala.\n\nGuide: https://toldry.git
+ hub.io/guatemala-trip-2026/public-transport/#thu-31-dec--fly-home-at-0230-
+URL:https://toldry.github.io/guatemala-trip-2026/public-transport/#thu-31-d
+ ec--fly-home-at-0230-
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
