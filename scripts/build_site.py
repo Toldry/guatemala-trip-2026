@@ -69,6 +69,8 @@ VERSIONS = [
       "Hot springs move to 23 Dec, after the summit; 21 Dec afternoon is free."),
     V("6.10.0", "26 Nov 2026", "Kayak on Atitlán",
       "Optional morning kayak or paddleboard on Lake Atitlán, 18 Dec."),
+    V("6.11.0", "26 Nov 2026", "Day room on 30 Dec",
+      "A day room before the 02:30 flight, with or without the car."),
 ]
 LATEST = VERSIONS[-1]["id"]
 

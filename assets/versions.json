@@ -142,5 +142,11 @@
     "date": "26 Nov 2026",
     "label": "Kayak on Atitlán",
     "summary": "Optional morning kayak or paddleboard on Lake Atitlán, 18 Dec."
+  },
+  {
+    "id": "6.11.0",
+    "date": "26 Nov 2026",
+    "label": "Day room on 30 Dec",
+    "summary": "A day room before the 02:30 flight, with or without the car."
   }
 ]
