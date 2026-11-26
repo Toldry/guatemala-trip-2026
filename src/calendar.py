@@ -103,8 +103,11 @@ TIMED = [
     # Fri 18
     ("2026-12-18", "04:00", "08:00", "🌄 Indian Nose sunrise hike",
      "Rostro Maya, Santa Clara La Laguna", "Only with a community guide or tour. Cash.", D18),
-    ("2026-12-18", "08:00", "12:30", "🛌 Free: breakfast, nap, slow morning in San Juan",
+    ("2026-12-18", "08:00", "12:30", "Option 1: 🛌 Free: breakfast, nap, slow morning",
      "San Juan La Laguna", "Nothing planned.", D18),
+    ("2026-12-18", "09:00", "11:00", "Option 2: 🛶 Kayak or paddleboard on the lake",
+     "San Pedro La Laguna",
+     "Mornings are calmer than afternoons (Xocomil wind). ~US$10/h single, $20 double.", D18),
     ("2026-12-18", "12:30", "13:00", "⛵ Lancha San Juan → San Marcos",
      "San Juan La Laguna dock", "Q20–Q25 each.", D18),
     ("2026-12-18", "13:00", "17:00", "🏊 Cerro Tzankujil, swim",

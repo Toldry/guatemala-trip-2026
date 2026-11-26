@@ -67,6 +67,8 @@ VERSIONS = [
       "Alternative plans shown as Option 1 / Option 2, in the guide and calendar."),
     V("6.9.0", "26 Nov 2026", "Hot springs after Tajumulco",
       "Hot springs move to 23 Dec, after the summit; 21 Dec afternoon is free."),
+    V("6.10.0", "26 Nov 2026", "Kayak on Atitlán",
+      "Optional morning kayak or paddleboard on Lake Atitlán, 18 Dec."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
