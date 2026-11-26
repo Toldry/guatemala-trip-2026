@@ -61,6 +61,8 @@ VERSIONS = [
       "Removed the Atitlán swimwear note."),
     V("6.6.0", "24 Nov 2026", "Works offline",
       "Installable app; guide and calendar links work offline."),
+    V("6.7.0", "26 Nov 2026", "A plan for every day",
+      "Every day 13–31 Dec has its own section and calendar events."),
 ]
 LATEST = VERSIONS[-1]["id"]
 

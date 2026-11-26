@@ -118,5 +118,11 @@
     "date": "24 Nov 2026",
     "label": "Works offline",
     "summary": "Installable app; guide and calendar links work offline."
+  },
+  {
+    "id": "6.7.0",
+    "date": "26 Nov 2026",
+    "label": "A plan for every day",
+    "summary": "Every day 13–31 Dec has its own section and calendar events."
   }
 ]
