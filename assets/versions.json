@@ -154,5 +154,11 @@
     "date": "26 Nov 2026",
     "label": "Lodging blocks as booked",
     "summary": "Calendar lodging blocks run from check-in to check-out day."
+  },
+  {
+    "id": "7.0.0",
+    "date": "26 Nov 2026",
+    "label": "No Chichicastenango",
+    "summary": "Chichi dropped; 20 Dec is a lake morning, then straight to Xela."
   }
 ]

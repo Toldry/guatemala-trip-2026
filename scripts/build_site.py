@@ -73,6 +73,8 @@ VERSIONS = [
       "A day room before the 02:30 flight, with or without the car."),
     V("6.11.1", "26 Nov 2026", "Lodging blocks as booked",
       "Calendar lodging blocks run from check-in to check-out day."),
+    V("7.0.0", "26 Nov 2026", "No Chichicastenango",
+      "Chichi dropped; 20 Dec is a lake morning, then straight to Xela."),
 ]
 LATEST = VERSIONS[-1]["id"]
 

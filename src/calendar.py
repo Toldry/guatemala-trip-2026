@@ -14,11 +14,10 @@ GUIDE = "https://toldry.github.io/guatemala-trip-2026/"
 
 S21 = "#21-antigua--acatenango-1317-dec"
 S22 = "#22-lake-atitlán-1720-dec"
-S23 = "#23-chichicastenango-20-dec"
-S24 = "#24-xela--tajumulco-2024-dec"
-S25 = "#25-cobán-lanquín--semuc-champey-2427-dec"
-S26 = "#26-tikal--yaxhá-2729-dec"
-S27 = "#27-río-dulce--the-drive-home-2931-dec"
+S24 = "#23-xela--tajumulco-2024-dec"
+S25 = "#24-cobán-lanquín--semuc-champey-2427-dec"
+S26 = "#25-tikal--yaxhá-2729-dec"
+S27 = "#26-río-dulce--the-drive-home-2931-dec"
 
 # One anchor per day, 13–31 Dec
 D13 = "#sun-13-dec--land-2125-pick-up-the-car-drive-to-antigua"
@@ -28,7 +27,7 @@ D16 = "#wed-16-dec--acatenango-day-2-summit-at-sunrise-back-to-antigua-"
 D17 = "#thu-17-dec--antigua--lake-atitlán-then-wander-san-juan"
 D18 = "#fri-18-dec--indian-nose-at-sunrise-then-swimming-"
 D19 = "#sat-19-dec--volcán-san-pedro-3020-m-"
-D20 = "#sun-20-dec--lake-atitlán--chichicastenango-market--xela"
+D20 = "#sun-20-dec--a-last-lake-morning-then-drive-to-xela"
 D21 = "#mon-21-dec--laguna-chicabal-then-a-calm-afternoon-in-xela"
 D22 = "#tue-22-dec--tajumulco-day-1-hike-up-to-camp-"
 D23 = "#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-"
@@ -123,13 +122,14 @@ TIMED = [
     ("2026-12-19", "18:00", "21:00", "🧳 Dinner, pay the lodge in cash, pack",
      "San Juan La Laguna", "Check bloqueos on the CA-1. Leave at 07:00.", D19),
     # Sun 20
-    ("2026-12-20", "07:00", "09:30", "🚗 Drive San Juan → Chichicastenango (~2.5 h)",
-     "Chichicastenango", "", D20),
-    ("2026-12-20", "09:30", "13:30", "🛍 Chichicastenango Sunday market",
-     "Chichicastenango", "No photos inside Santo Tomás church.", D20),
-    ("2026-12-20", "13:30", "15:30", "🚗 Drive Chichicastenango → Xela (~2 h)",
-     "Quetzaltenango", "", D20),
-    ("2026-12-20", "15:30", "18:30", "🚶 Free: check in, wander Xela's centre",
+    ("2026-12-20", "08:00", "11:30", "Option 1: 🏊 Free: last lake morning, swim",
+     "San Juan La Laguna", "Or the kayak, if you skipped it on the 18th.", D20),
+    ("2026-12-20", "09:00", "10:30", "Option 2: 🧶 Free: weaving or coffee session",
+     "San Juan La Laguna", "MayAchik' workshops from Q65.", D20),
+    ("2026-12-20", "11:30", "12:30", "🛏 Check out (cash), lunch", "San Juan La Laguna", "", D20),
+    ("2026-12-20", "12:30", "15:00", "🚗 Drive San Juan → Xela (~2.5 h)",
+     "Quetzaltenango", "Check for bloqueos on the CA-1 the evening before.", D20),
+    ("2026-12-20", "15:00", "18:30", "🚶 Free: check in, wander Xela's centre",
      "Parque Centro América, Quetzaltenango", "Optional: visit your Tajumulco operator.", D20),
     ("2026-12-20", "18:30", "21:00", "🍽 Dinner in Xela", "Quetzaltenango", "Taxi after ~21:00.", D20),
     # Mon 21

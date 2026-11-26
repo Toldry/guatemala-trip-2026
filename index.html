@@ -16,21 +16,21 @@
     var v = new URLSearchParams(location.search).get("v");
     if (!v) return;
     if (/^\d+$/.test(v)) v = v + ".0.0";
-    if (/^\d+\.\d+\.\d+$/.test(v) && v !== "6.11.1") {
+    if (/^\d+\.\d+\.\d+$/.test(v) && v !== "7.0.0") {
       location.replace("v" + v + "/" + location.hash);
     }
   })();
 </script>
 </head>
-<body class="" data-version="6.11.1" data-latest="6.11.1" data-prefix="">
-<nav class="version-line" aria-label="Versions">Versions: <a href="v1.0.0/" title="First draft: Driving loop: Antigua, Atitlán, Chichi festival, Xela, Semuc, Tikal.">1.0.0</a> · <a href="v2.0.0/" title="For first-timers, flying to Tikal: An introduction to each place; fly GUA ↔ Flores for Tikal and Yaxhá.">2.0.0</a> · <a href="v3.0.0/" title="Driving to Tikal and back: No flights: Semuc Champey, Tikal and Yaxhá by car, then back to GUA.">3.0.0</a> · <a href="v4.0.0/" title="Flights, swimming, bookings: Fits the 21:25 arrival and 02:30 departure; swimming, operators, maps.">4.0.0</a> · <a href="v5.0.0/" title="€ prices, links, safety: Q + € prices, links, crowd notes, health and safety, new maps.">5.0.0</a> · <a href="v5.0.1/" title="List fix: Nested lists display correctly.">5.0.1</a> · <a href="v5.1.0/" title="Medicine kit explained: Every medicine explained; jargon spelled out.">5.1.0</a> · <a href="v5.1.1/" title="Daily timeline: A gridline for every day on the timeline.">5.1.1</a> · <a href="v5.2.0/" title="Practical notes per stop: Notes box per stop; summary lists link back.">5.2.0</a> · <a href="v5.2.1/" title="Car type: Small SUV, not a 4×4, and why.">5.2.1</a> · <a href="v5.3.0/" title="Car pick-up options: Where to pick up the car; Antigua parking.">5.3.0</a> · <a href="v5.3.1/" title="Dengue: December dengue risk.">5.3.1</a> · <a href="v6.0.0/" title="Car from the airport, new maps: Car picked up on arrival; 30 m terrain maps.">6.0.0</a> · <a href="v6.1.0/" title="Trip cost: Low/high cost estimate.">6.1.0</a> · <a href="v6.2.0/" title="Cycling: Antigua bike ride; two cycling swap options.">6.2.0</a> · <a href="v6.3.0/" title="Daily distances: Walking and cycling km per day, low–high.">6.3.0</a> · <a href="v6.4.0/" title="Calendar feed: trip.ics to subscribe to in Google Calendar.">6.4.0</a> · <a href="v6.5.0/" title="Naturism: Clothing-optional options near the route.">6.5.0</a> · <a href="v6.5.1/" title="Swimwear note removed: Removed the Atitlán swimwear note.">6.5.1</a> · <a href="v6.6.0/" title="Works offline: Installable app; guide and calendar links work offline.">6.6.0</a> · <a href="v6.7.0/" title="A plan for every day: Every day 13–31 Dec has its own section and calendar events.">6.7.0</a> · <a href="v6.8.0/" title="Options side by side: Alternative plans shown as Option 1 / Option 2, in the guide and calendar.">6.8.0</a> · <a href="v6.9.0/" title="Hot springs after Tajumulco: Hot springs move to 23 Dec, after the summit; 21 Dec afternoon is free.">6.9.0</a> · <a href="v6.10.0/" title="Kayak on Atitlán: Optional morning kayak or paddleboard on Lake Atitlán, 18 Dec.">6.10.0</a> · <a href="v6.11.0/" title="Day room on 30 Dec: A day room before the 02:30 flight, with or without the car.">6.11.0</a> · <strong title="Lodging blocks as booked: Calendar lodging blocks run from check-in to check-out day.">6.11.1 (latest)</strong></nav>
+<body class="" data-version="7.0.0" data-latest="7.0.0" data-prefix="">
+<nav class="version-line" aria-label="Versions">Versions: <a href="v1.0.0/" title="First draft: Driving loop: Antigua, Atitlán, Chichi festival, Xela, Semuc, Tikal.">1.0.0</a> · <a href="v2.0.0/" title="For first-timers, flying to Tikal: An introduction to each place; fly GUA ↔ Flores for Tikal and Yaxhá.">2.0.0</a> · <a href="v3.0.0/" title="Driving to Tikal and back: No flights: Semuc Champey, Tikal and Yaxhá by car, then back to GUA.">3.0.0</a> · <a href="v4.0.0/" title="Flights, swimming, bookings: Fits the 21:25 arrival and 02:30 departure; swimming, operators, maps.">4.0.0</a> · <a href="v5.0.0/" title="€ prices, links, safety: Q + € prices, links, crowd notes, health and safety, new maps.">5.0.0</a> · <a href="v5.0.1/" title="List fix: Nested lists display correctly.">5.0.1</a> · <a href="v5.1.0/" title="Medicine kit explained: Every medicine explained; jargon spelled out.">5.1.0</a> · <a href="v5.1.1/" title="Daily timeline: A gridline for every day on the timeline.">5.1.1</a> · <a href="v5.2.0/" title="Practical notes per stop: Notes box per stop; summary lists link back.">5.2.0</a> · <a href="v5.2.1/" title="Car type: Small SUV, not a 4×4, and why.">5.2.1</a> · <a href="v5.3.0/" title="Car pick-up options: Where to pick up the car; Antigua parking.">5.3.0</a> · <a href="v5.3.1/" title="Dengue: December dengue risk.">5.3.1</a> · <a href="v6.0.0/" title="Car from the airport, new maps: Car picked up on arrival; 30 m terrain maps.">6.0.0</a> · <a href="v6.1.0/" title="Trip cost: Low/high cost estimate.">6.1.0</a> · <a href="v6.2.0/" title="Cycling: Antigua bike ride; two cycling swap options.">6.2.0</a> · <a href="v6.3.0/" title="Daily distances: Walking and cycling km per day, low–high.">6.3.0</a> · <a href="v6.4.0/" title="Calendar feed: trip.ics to subscribe to in Google Calendar.">6.4.0</a> · <a href="v6.5.0/" title="Naturism: Clothing-optional options near the route.">6.5.0</a> · <a href="v6.5.1/" title="Swimwear note removed: Removed the Atitlán swimwear note.">6.5.1</a> · <a href="v6.6.0/" title="Works offline: Installable app; guide and calendar links work offline.">6.6.0</a> · <a href="v6.7.0/" title="A plan for every day: Every day 13–31 Dec has its own section and calendar events.">6.7.0</a> · <a href="v6.8.0/" title="Options side by side: Alternative plans shown as Option 1 / Option 2, in the guide and calendar.">6.8.0</a> · <a href="v6.9.0/" title="Hot springs after Tajumulco: Hot springs move to 23 Dec, after the summit; 21 Dec afternoon is free.">6.9.0</a> · <a href="v6.10.0/" title="Kayak on Atitlán: Optional morning kayak or paddleboard on Lake Atitlán, 18 Dec.">6.10.0</a> · <a href="v6.11.0/" title="Day room on 30 Dec: A day room before the 02:30 flight, with or without the car.">6.11.0</a> · <a href="v6.11.1/" title="Lodging blocks as booked: Calendar lodging blocks run from check-in to check-out day.">6.11.1</a> · <strong title="No Chichicastenango: Chichi dropped; 20 Dec is a lake morning, then straight to Xela.">7.0.0 (latest)</strong></nav>
 <div class="layout has-sidebar">
-<aside class="sidebar" aria-label="Contents"><div class="sidebar-inner"><div class="toc-head"><span>Contents</span><span class="toc-progress"><span id="toc-progress-bar"></span></span></div><nav class="toc" id="toc"><span class="toc-marker" id="toc-marker"></span><ul class="toc-l2"><li><a href="#part-1--plan" data-level="2">Part 1 · Plan</a><ul class="toc-l3"><li><a href="#11-the-trip-at-a-glance" data-level="3">1.1 The trip at a glance</a></li><li><a href="#12-guatemala-in-brief" data-level="3">1.2 Guatemala in brief</a></li><li><a href="#13-booking-checklist" data-level="3">1.3 Booking checklist</a></li><li><a href="#14-what-the-trip-costs" data-level="3">1.4 What the trip costs</a><ul class="toc-l4"><li><a href="#what-to-ask-the-rental-company" data-level="4">What to ask the rental company</a></li></ul></li><li><a href="#15-add-the-trip-to-your-calendar" data-level="3">1.5 Add the trip to your calendar</a><ul class="toc-l4"><li><a href="#keep-the-guide-on-your-phones-offline" data-level="4">Keep the guide on your phones, offline</a></li></ul></li></ul></li><li><a href="#part-2--day-by-day" data-level="2">Part 2 · Day by day</a><ul class="toc-l3"><li><a href="#21-antigua--acatenango-1317-dec" data-level="3">2.1 Antigua &amp; Acatenango (13–17 Dec)</a><ul class="toc-l4"><li><a href="#sun-13-dec--land-2125-pick-up-the-car-drive-to-antigua" data-level="4">Sun 13 Dec — land 21:25, pick up the car, drive to Antigua</a></li><li><a href="#mon-14-dec--antigua-with-a-morning-bike-ride-" data-level="4">Mon 14 Dec — Antigua, with a morning bike ride 🚲</a></li><li><a href="#tue-15-dec--acatenango-day-1-hike-up-to-camp-" data-level="4">Tue 15 Dec — Acatenango, day 1: hike up to camp ⛰️</a></li><li><a href="#wed-16-dec--acatenango-day-2-summit-at-sunrise-back-to-antigua-" data-level="4">Wed 16 Dec — Acatenango, day 2: summit at sunrise, back to Antigua ⛰️</a></li></ul></li><li><a href="#22-lake-atitlán-1720-dec" data-level="3">2.2 Lake Atitlán (17–20 Dec)</a><ul class="toc-l4"><li><a href="#thu-17-dec--antigua--lake-atitlán-then-wander-san-juan" data-level="4">Thu 17 Dec — Antigua → Lake Atitlán, then wander San Juan</a></li><li><a href="#fri-18-dec--indian-nose-at-sunrise-then-swimming-" data-level="4">Fri 18 Dec — Indian Nose at sunrise, then swimming 🏊</a></li><li><a href="#sat-19-dec--volcán-san-pedro-3020-m-" data-level="4">Sat 19 Dec — Volcán San Pedro (3,020 m) ⛰️</a></li></ul></li><li><a href="#23-chichicastenango-20-dec" data-level="3">2.3 Chichicastenango (20 Dec)</a><ul class="toc-l4"><li><a href="#is-the-santo-tomás-festival-worth-it-if-the-palo-volador-doesnt-interest-you" data-level="4">Is the Santo Tomás festival worth it if the palo volador doesn't interest you?</a></li><li><a href="#sun-20-dec--lake-atitlán--chichicastenango-market--xela" data-level="4">Sun 20 Dec — Lake Atitlán → Chichicastenango market → Xela</a></li></ul></li><li><a href="#24-xela--tajumulco-2024-dec" data-level="3">2.4 Xela &amp; Tajumulco (20–24 Dec)</a><ul class="toc-l4"><li><a href="#mon-21-dec--laguna-chicabal-then-a-calm-afternoon-in-xela" data-level="4">Mon 21 Dec — Laguna Chicabal, then a calm afternoon in Xela</a></li><li><a href="#tue-22-dec--tajumulco-day-1-hike-up-to-camp-" data-level="4">Tue 22 Dec — Tajumulco, day 1: hike up to camp ⛰️</a></li><li><a href="#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-" data-level="4">Wed 23 Dec — Tajumulco, day 2: summit at sunrise, then hot springs ⛰️♨</a></li><li><a href="#thu-24-dec--xela--cobán-8-h" data-level="4">Thu 24 Dec — Xela → Cobán (~8 h)</a></li></ul></li><li><a href="#25-cobán-lanquín--semuc-champey-2427-dec" data-level="3">2.5 Cobán, Lanquín &amp; Semuc Champey (24–27 Dec)</a><ul class="toc-l4"><li><a href="#fri-25-dec--cobán--lanquín-2-h-" data-level="4">Fri 25 Dec — Cobán → Lanquín (~2 h) 🏊</a></li><li><a href="#sat-26-dec--semuc-champey-" data-level="4">Sat 26 Dec — Semuc Champey 🏊</a></li><li><a href="#where-to-stay-in-lanquín-2526-dec" data-level="4">Where to stay in Lanquín (25–26 Dec)</a></li><li><a href="#sun-27-dec--lanquín--el-remate-65-h-" data-level="4">Sun 27 Dec — Lanquín → El Remate (~6.5 h) 🏊</a></li></ul></li><li><a href="#26-tikal--yaxhá-2729-dec" data-level="3">2.6 Tikal &amp; Yaxhá (27–29 Dec)</a><ul class="toc-l4"><li><a href="#mon-28-dec--tikal-at-opening--yaxhá-at-sunset" data-level="4">Mon 28 Dec — Tikal at opening → Yaxhá at sunset</a></li></ul></li><li><a href="#27-río-dulce--the-drive-home-2931-dec" data-level="3">2.7 Río Dulce &amp; the drive home (29–31 Dec)</a><ul class="toc-l4"><li><a href="#tue-29-dec--yaxhá--río-dulce-45-h--hot-waterfall-" data-level="4">Tue 29 Dec — Yaxhá → Río Dulce (~4.5 h) + hot waterfall 🏊</a></li><li><a href="#where-to-stay-in-río-dulce-29-dec" data-level="4">Where to stay in Río Dulce (29 Dec)</a></li><li><a href="#wed-30-dec--río-dulce--gua-56-h-fly-at-0230" data-level="4">Wed 30 Dec — Río Dulce → GUA (~5–6 h), fly at 02:30</a></li><li><a href="#thu-31-dec--fly-home-at-0230-" data-level="4">Thu 31 Dec — fly home at 02:30 ✈</a></li></ul></li></ul></li><li><a href="#part-3--practical" data-level="2">Part 3 · Practical</a><ul class="toc-l3"><li><a href="#31-getting-by-in-guatemala" data-level="3">3.1 Getting by in Guatemala</a><ul class="toc-l4"><li><a href="#money" data-level="4">Money</a></li><li><a href="#language--people" data-level="4">Language &amp; people</a></li><li><a href="#food--water" data-level="4">Food &amp; water</a></li><li><a href="#everyday-practicalities" data-level="4">Everyday practicalities</a></li></ul></li><li><a href="#32-what-to-avoid" data-level="3">3.2 What to avoid</a></li><li><a href="#33-health" data-level="3">3.3 Health</a><ul class="toc-l4"><li><a href="#vaccines" data-level="4">Vaccines</a></li><li><a href="#mosquitoes-dengue-malaria" data-level="4">Mosquitoes: dengue, malaria</a></li><li><a href="#altitude-sickness-the-real-risk-on-this-trip" data-level="4">Altitude sickness: the real risk on this trip</a></li><li><a href="#suggested-medicine-kit-for-two-people" data-level="4">Suggested medicine kit (for two people)</a></li></ul></li><li><a href="#34-safety--where-to-be-careful-at-night" data-level="3">3.4 Safety &amp; where to be careful at night</a><ul class="toc-l4"><li><a href="#emergency-numbers" data-level="4">Emergency numbers</a></li></ul></li><li><a href="#35-driving" data-level="3">3.5 Driving</a></li><li><a href="#36-swimming-spots-on-the-route" data-level="3">3.6 Swimming spots on the route</a></li><li><a href="#37-cycling" data-level="3">3.7 Cycling</a></li><li><a href="#38-naturism" data-level="3">3.8 Naturism</a></li></ul></li><li><a href="#remote-river-or-waterfall-spots-even-where-nobody-seems-to-be-around-a-farmer-fisher-or-family-can-appear-at-any-time-and-many-water-spots-are-sacred-or-community-owned-id-not-risk-it" data-level="2">Remote river or waterfall spots: even where nobody seems to be around, a farmer, fisher or family can appear at any time, and many water spots are sacred or community-owned. I'd not risk it.</a></li><li><a href="#part-4--changes--credits" data-level="2">Part 4 · Changes &amp; credits</a><ul class="toc-l3"><li><a href="#41-version-history" data-level="3">4.1 Version history</a></li><li><a href="#42-photo--data-credits" data-level="3">4.2 Photo &amp; data credits</a></li></ul></li></ul></nav></div></aside>
+<aside class="sidebar" aria-label="Contents"><div class="sidebar-inner"><div class="toc-head"><span>Contents</span><span class="toc-progress"><span id="toc-progress-bar"></span></span></div><nav class="toc" id="toc"><span class="toc-marker" id="toc-marker"></span><ul class="toc-l2"><li><a href="#part-1--plan" data-level="2">Part 1 · Plan</a><ul class="toc-l3"><li><a href="#11-the-trip-at-a-glance" data-level="3">1.1 The trip at a glance</a></li><li><a href="#12-guatemala-in-brief" data-level="3">1.2 Guatemala in brief</a></li><li><a href="#13-booking-checklist" data-level="3">1.3 Booking checklist</a></li><li><a href="#14-what-the-trip-costs" data-level="3">1.4 What the trip costs</a><ul class="toc-l4"><li><a href="#what-to-ask-the-rental-company" data-level="4">What to ask the rental company</a></li></ul></li><li><a href="#15-add-the-trip-to-your-calendar" data-level="3">1.5 Add the trip to your calendar</a><ul class="toc-l4"><li><a href="#keep-the-guide-on-your-phones-offline" data-level="4">Keep the guide on your phones, offline</a></li></ul></li></ul></li><li><a href="#part-2--day-by-day" data-level="2">Part 2 · Day by day</a><ul class="toc-l3"><li><a href="#21-antigua--acatenango-1317-dec" data-level="3">2.1 Antigua &amp; Acatenango (13–17 Dec)</a><ul class="toc-l4"><li><a href="#sun-13-dec--land-2125-pick-up-the-car-drive-to-antigua" data-level="4">Sun 13 Dec — land 21:25, pick up the car, drive to Antigua</a></li><li><a href="#mon-14-dec--antigua-with-a-morning-bike-ride-" data-level="4">Mon 14 Dec — Antigua, with a morning bike ride 🚲</a></li><li><a href="#tue-15-dec--acatenango-day-1-hike-up-to-camp-" data-level="4">Tue 15 Dec — Acatenango, day 1: hike up to camp ⛰️</a></li><li><a href="#wed-16-dec--acatenango-day-2-summit-at-sunrise-back-to-antigua-" data-level="4">Wed 16 Dec — Acatenango, day 2: summit at sunrise, back to Antigua ⛰️</a></li></ul></li><li><a href="#22-lake-atitlán-1720-dec" data-level="3">2.2 Lake Atitlán (17–20 Dec)</a><ul class="toc-l4"><li><a href="#thu-17-dec--antigua--lake-atitlán-then-wander-san-juan" data-level="4">Thu 17 Dec — Antigua → Lake Atitlán, then wander San Juan</a></li><li><a href="#fri-18-dec--indian-nose-at-sunrise-then-swimming-" data-level="4">Fri 18 Dec — Indian Nose at sunrise, then swimming 🏊</a></li><li><a href="#sat-19-dec--volcán-san-pedro-3020-m-" data-level="4">Sat 19 Dec — Volcán San Pedro (3,020 m) ⛰️</a></li><li><a href="#sun-20-dec--a-last-lake-morning-then-drive-to-xela" data-level="4">Sun 20 Dec — a last lake morning, then drive to Xela</a></li></ul></li><li><a href="#23-xela--tajumulco-2024-dec" data-level="3">2.3 Xela &amp; Tajumulco (20–24 Dec)</a><ul class="toc-l4"><li><a href="#mon-21-dec--laguna-chicabal-then-a-calm-afternoon-in-xela" data-level="4">Mon 21 Dec — Laguna Chicabal, then a calm afternoon in Xela</a></li><li><a href="#tue-22-dec--tajumulco-day-1-hike-up-to-camp-" data-level="4">Tue 22 Dec — Tajumulco, day 1: hike up to camp ⛰️</a></li><li><a href="#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-" data-level="4">Wed 23 Dec — Tajumulco, day 2: summit at sunrise, then hot springs ⛰️♨</a></li><li><a href="#thu-24-dec--xela--cobán-8-h" data-level="4">Thu 24 Dec — Xela → Cobán (~8 h)</a></li></ul></li><li><a href="#24-cobán-lanquín--semuc-champey-2427-dec" data-level="3">2.4 Cobán, Lanquín &amp; Semuc Champey (24–27 Dec)</a><ul class="toc-l4"><li><a href="#fri-25-dec--cobán--lanquín-2-h-" data-level="4">Fri 25 Dec — Cobán → Lanquín (~2 h) 🏊</a></li><li><a href="#sat-26-dec--semuc-champey-" data-level="4">Sat 26 Dec — Semuc Champey 🏊</a></li><li><a href="#where-to-stay-in-lanquín-2526-dec" data-level="4">Where to stay in Lanquín (25–26 Dec)</a></li><li><a href="#sun-27-dec--lanquín--el-remate-65-h-" data-level="4">Sun 27 Dec — Lanquín → El Remate (~6.5 h) 🏊</a></li></ul></li><li><a href="#25-tikal--yaxhá-2729-dec" data-level="3">2.5 Tikal &amp; Yaxhá (27–29 Dec)</a><ul class="toc-l4"><li><a href="#mon-28-dec--tikal-at-opening--yaxhá-at-sunset" data-level="4">Mon 28 Dec — Tikal at opening → Yaxhá at sunset</a></li></ul></li><li><a href="#26-río-dulce--the-drive-home-2931-dec" data-level="3">2.6 Río Dulce &amp; the drive home (29–31 Dec)</a><ul class="toc-l4"><li><a href="#tue-29-dec--yaxhá--río-dulce-45-h--hot-waterfall-" data-level="4">Tue 29 Dec — Yaxhá → Río Dulce (~4.5 h) + hot waterfall 🏊</a></li><li><a href="#where-to-stay-in-río-dulce-29-dec" data-level="4">Where to stay in Río Dulce (29 Dec)</a></li><li><a href="#wed-30-dec--río-dulce--gua-56-h-fly-at-0230" data-level="4">Wed 30 Dec — Río Dulce → GUA (~5–6 h), fly at 02:30</a></li><li><a href="#thu-31-dec--fly-home-at-0230-" data-level="4">Thu 31 Dec — fly home at 02:30 ✈</a></li></ul></li></ul></li><li><a href="#part-3--practical" data-level="2">Part 3 · Practical</a><ul class="toc-l3"><li><a href="#31-getting-by-in-guatemala" data-level="3">3.1 Getting by in Guatemala</a><ul class="toc-l4"><li><a href="#money" data-level="4">Money</a></li><li><a href="#language--people" data-level="4">Language &amp; people</a></li><li><a href="#food--water" data-level="4">Food &amp; water</a></li><li><a href="#everyday-practicalities" data-level="4">Everyday practicalities</a></li></ul></li><li><a href="#32-what-to-avoid" data-level="3">3.2 What to avoid</a></li><li><a href="#33-health" data-level="3">3.3 Health</a><ul class="toc-l4"><li><a href="#vaccines" data-level="4">Vaccines</a></li><li><a href="#mosquitoes-dengue-malaria" data-level="4">Mosquitoes: dengue, malaria</a></li><li><a href="#altitude-sickness-the-real-risk-on-this-trip" data-level="4">Altitude sickness: the real risk on this trip</a></li><li><a href="#suggested-medicine-kit-for-two-people" data-level="4">Suggested medicine kit (for two people)</a></li></ul></li><li><a href="#34-safety--where-to-be-careful-at-night" data-level="3">3.4 Safety &amp; where to be careful at night</a><ul class="toc-l4"><li><a href="#emergency-numbers" data-level="4">Emergency numbers</a></li></ul></li><li><a href="#35-driving" data-level="3">3.5 Driving</a></li><li><a href="#36-swimming-spots-on-the-route" data-level="3">3.6 Swimming spots on the route</a></li><li><a href="#37-cycling" data-level="3">3.7 Cycling</a></li><li><a href="#38-naturism" data-level="3">3.8 Naturism</a></li></ul></li><li><a href="#remote-river-or-waterfall-spots-even-where-nobody-seems-to-be-around-a-farmer-fisher-or-family-can-appear-at-any-time-and-many-water-spots-are-sacred-or-community-owned-id-not-risk-it" data-level="2">Remote river or waterfall spots: even where nobody seems to be around, a farmer, fisher or family can appear at any time, and many water spots are sacred or community-owned. I'd not risk it.</a></li><li><a href="#part-4--changes--credits" data-level="2">Part 4 · Changes &amp; credits</a><ul class="toc-l3"><li><a href="#41-version-history" data-level="3">4.1 Version history</a></li><li><a href="#42-photo--data-credits" data-level="3">4.2 Photo &amp; data credits</a></li></ul></li></ul></nav></div></aside>
 <main class="content">
 <h1 id="guatemala--1331-december-2026">Guatemala · 13–31 December 2026</h1>
 <h3 id="two-hikers-one-rental-car-lots-of-swimming">Two hikers, one rental car, lots of swimming</h3>
 <blockquote>
-<p><strong>Version 6.11.1, 26 November 2026</strong> (<a href="#41-version-history">version history</a>). Prices and opening hours were checked
+<p><strong>Version 7.0.0, 26 November 2026</strong> (<a href="#41-version-history">version history</a>). Prices and opening hours were checked
 online in October–November 2026 and can change. Prices are shown in <strong>quetzales (Q) and euros (€)</strong> at the
 mid-market rate of 15 Nov 2026 (<strong>€1 ≈ Q8.43</strong>). Where an operator lists
 a dollar price, the original is noted. Card and cash rates will be a few
@@ -51,11 +51,10 @@ Photos load from Wikimedia Commons; once you've opened the guide online, they're
 <li><strong><a href="#part-2--day-by-day">Part 2 · Day by day</a></strong><ul>
 <li><a href="#21-antigua--acatenango-1317-dec">2.1 Antigua &amp; Acatenango (13–17 Dec)</a></li>
 <li><a href="#22-lake-atitlán-1720-dec">2.2 Lake Atitlán (17–20 Dec)</a></li>
-<li><a href="#23-chichicastenango-20-dec">2.3 Chichicastenango (20 Dec)</a></li>
-<li><a href="#24-xela--tajumulco-2024-dec">2.4 Xela &amp; Tajumulco (20–24 Dec)</a></li>
-<li><a href="#25-cobán-lanquín--semuc-champey-2427-dec">2.5 Cobán, Lanquín &amp; Semuc Champey (24–27 Dec)</a></li>
-<li><a href="#26-tikal--yaxhá-2729-dec">2.6 Tikal &amp; Yaxhá (27–29 Dec)</a></li>
-<li><a href="#27-río-dulce--the-drive-home-2931-dec">2.7 Río Dulce &amp; the drive home (29–31 Dec)</a></li>
+<li><a href="#23-xela--tajumulco-2024-dec">2.3 Xela &amp; Tajumulco (20–24 Dec)</a></li>
+<li><a href="#24-cobán-lanquín--semuc-champey-2427-dec">2.4 Cobán, Lanquín &amp; Semuc Champey (24–27 Dec)</a></li>
+<li><a href="#25-tikal--yaxhá-2729-dec">2.5 Tikal &amp; Yaxhá (27–29 Dec)</a></li>
+<li><a href="#26-río-dulce--the-drive-home-2931-dec">2.6 Río Dulce &amp; the drive home (29–31 Dec)</a></li>
 </ul>
 </li>
 <li><strong><a href="#part-3--practical">Part 3 · Practical</a></strong><ul>
@@ -78,7 +77,8 @@ Photos load from Wikimedia Commons; once you've opened the guide online, they're
 <hr>
 <h2 id="part-1--plan">Part 1 · Plan</h2>
 <h3 id="11-the-trip-at-a-glance">1.1 The trip at a glance</h3>
-<p><img loading="lazy" alt="Overview map of the route" src="maps/web/map-01-overview.jpg"></p>
+<p><img loading="lazy" alt="Overview map of the route" src="maps/web/map-01-overview.jpg">
+<em>The maps still mark Chichicastenango on 20 Dec; since version 7.0.0 the route goes straight from Lake Atitlán to Xela.</em></p>
 <pre class="mermaid">
 gantt
     title Guatemala, 13–31 December 2026
@@ -89,7 +89,7 @@ gantt
     Land 21h25, drive → Antigua     :a1, 2026-12-13, 2d
     Acatenango overnight            :crit, a2, 2026-12-15, 2d
     Lake Atitlán (swim + 2 hikes)   :a3, 2026-12-17, 3d
-    Chichicastenango → Xela         :a4, 2026-12-20, 1d
+    Lake morning → Xela             :a4, 2026-12-20, 1d
     Laguna Chicabal                 :a5, 2026-12-21, 1d
     Tajumulco + hot springs         :crit, a6, 2026-12-22, 2d
     section North
@@ -191,12 +191,12 @@ gantt
 <tr>
 <td>Sun 20</td>
 <td>Xela</td>
-<td>Chichicastenango market → Xela</td>
+<td>Last lake morning; drive to Xela</td>
+<td>✅ lake</td>
+<td>~2.5 h</td>
+<td>2–5</td>
 <td>–</td>
-<td>~2.5 h + ~2 h</td>
-<td>3–6</td>
-<td>–</td>
-<td><a href="#sun-20-dec--lake-atitlán--chichicastenango-market--xela">§2.3 · 20 Dec</a></td>
+<td><a href="#sun-20-dec--a-last-lake-morning-then-drive-to-xela">§2.2 · 20 Dec</a></td>
 </tr>
 <tr>
 <td>Mon 21</td>
@@ -206,7 +206,7 @@ gantt
 <td>short</td>
 <td>7–10</td>
 <td>–</td>
-<td><a href="#mon-21-dec--laguna-chicabal-then-a-calm-afternoon-in-xela">§2.4 · 21 Dec</a></td>
+<td><a href="#mon-21-dec--laguna-chicabal-then-a-calm-afternoon-in-xela">§2.3 · 21 Dec</a></td>
 </tr>
 <tr>
 <td>Tue 22</td>
@@ -216,7 +216,7 @@ gantt
 <td>(tour transport)</td>
 <td>5–8</td>
 <td>–</td>
-<td><a href="#tue-22-dec--tajumulco-day-1-hike-up-to-camp-">§2.4 · 22 Dec</a></td>
+<td><a href="#tue-22-dec--tajumulco-day-1-hike-up-to-camp-">§2.3 · 22 Dec</a></td>
 </tr>
 <tr>
 <td>Wed 23</td>
@@ -226,7 +226,7 @@ gantt
 <td>short</td>
 <td>6–9</td>
 <td>–</td>
-<td><a href="#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-">§2.4 · 23 Dec</a></td>
+<td><a href="#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-">§2.3 · 23 Dec</a></td>
 </tr>
 <tr>
 <td>Thu 24</td>
@@ -236,7 +236,7 @@ gantt
 <td>~8 h</td>
 <td>0–2</td>
 <td>–</td>
-<td><a href="#thu-24-dec--xela--cobán-8-h">§2.4 · 24 Dec</a></td>
+<td><a href="#thu-24-dec--xela--cobán-8-h">§2.3 · 24 Dec</a></td>
 </tr>
 <tr>
 <td>Fri 25</td>
@@ -246,7 +246,7 @@ gantt
 <td>~2 h</td>
 <td>1–3</td>
 <td>–</td>
-<td><a href="#fri-25-dec--cobán--lanquín-2-h-">§2.5 · 25 Dec</a></td>
+<td><a href="#fri-25-dec--cobán--lanquín-2-h-">§2.4 · 25 Dec</a></td>
 </tr>
 <tr>
 <td>Sat 26</td>
@@ -256,7 +256,7 @@ gantt
 <td>–</td>
 <td>4–7</td>
 <td>–</td>
-<td><a href="#sat-26-dec--semuc-champey-">§2.5 · 26 Dec</a></td>
+<td><a href="#sat-26-dec--semuc-champey-">§2.4 · 26 Dec</a></td>
 </tr>
 <tr>
 <td>Sun 27</td>
@@ -266,7 +266,7 @@ gantt
 <td>~6.5 h</td>
 <td>1–2</td>
 <td>(swap: 10–20)</td>
-<td><a href="#sun-27-dec--lanquín--el-remate-65-h-">§2.5 · 27 Dec</a></td>
+<td><a href="#sun-27-dec--lanquín--el-remate-65-h-">§2.4 · 27 Dec</a></td>
 </tr>
 <tr>
 <td>Mon 28</td>
@@ -276,7 +276,7 @@ gantt
 <td>~1.5 h</td>
 <td>11–17</td>
 <td>–</td>
-<td><a href="#mon-28-dec--tikal-at-opening--yaxhá-at-sunset">§2.6 · 28 Dec</a></td>
+<td><a href="#mon-28-dec--tikal-at-opening--yaxhá-at-sunset">§2.5 · 28 Dec</a></td>
 </tr>
 <tr>
 <td>Tue 29</td>
@@ -286,7 +286,7 @@ gantt
 <td>~4.5 h + 35 min</td>
 <td>1–2</td>
 <td>–</td>
-<td><a href="#tue-29-dec--yaxhá--río-dulce-45-h--hot-waterfall-">§2.7 · 29 Dec</a></td>
+<td><a href="#tue-29-dec--yaxhá--río-dulce-45-h--hot-waterfall-">§2.6 · 29 Dec</a></td>
 </tr>
 <tr>
 <td>Wed 30</td>
@@ -296,7 +296,7 @@ gantt
 <td>~5–6 h</td>
 <td>0–3</td>
 <td>–</td>
-<td><a href="#wed-30-dec--río-dulce--gua-56-h-fly-at-0230">§2.7 · 30 Dec</a></td>
+<td><a href="#wed-30-dec--río-dulce--gua-56-h-fly-at-0230">§2.6 · 30 Dec</a></td>
 </tr>
 <tr>
 <td>Thu 31</td>
@@ -306,7 +306,7 @@ gantt
 <td></td>
 <td>–</td>
 <td>–</td>
-<td><a href="#thu-31-dec--fly-home-at-0230-">§2.7 · 31 Dec</a></td>
+<td><a href="#thu-31-dec--fly-home-at-0230-">§2.6 · 31 Dec</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -326,34 +326,33 @@ gantt
 <ul>
 <li>☐ <strong>Acatenango, 15–16 Dec</strong>: OX / Wicho &amp; Charlie's / Soy Tours (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>)</li>
 <li>☐ <strong>Rental car, 13 → 30 Dec, picked up and returned at GUA airport</strong> (a round trip, so no one-way fee). Kayak quoted <strong>about €170 for a normal small car for 13–31 Dec, without insurance</strong>; see <a href="#14-what-the-trip-costs">§1.4</a> for the full cost and what to ask about cover. National, Alamo and Enterprise, among others, have desks at the airport; compare on <a href="https://www.kayak.com/cars" target="_blank" rel="noopener">Kayak</a> and on the companies' own sites. You pick it up on arrival (~22:00) and drive to Antigua the same night (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>).<ul>
-<li><strong>Car type: a small SUV or crossover</strong> (e.g. Toyota Rush, Suzuki Vitara, Hyundai Creta; this is the extra clearance a 4×4 gives, without the 4×4 price). <strong>A 4×4 isn't needed</strong>: it's the dry season, and you leave the car in Lanquín for the one really rough road, to Semuc (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>). A normal small car would probably manage the whole route, but the extra clearance helps in three places:<ul>
+<li><strong>Car type: a small SUV or crossover</strong> (e.g. Toyota Rush, Suzuki Vitara, Hyundai Creta; this is the extra clearance a 4×4 gives, without the 4×4 price). <strong>A 4×4 isn't needed</strong>: it's the dry season, and you leave the car in Lanquín for the one really rough road, to Semuc (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>). A normal small car would probably manage the whole route, but the extra clearance helps in three places:<ul>
 <li><strong>Speed bumps</strong> (<em>túmulos</em>): high, often unmarked, and in every village. Low cars scrape them (<a href="#35-driving">§3.5</a>).</li>
-<li><strong>The 11 km dirt road into Yaxhá</strong> (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>): potholed, with loose stones.</li>
+<li><strong>The 11 km dirt road into Yaxhá</strong> (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>): potholed, with loose stones.</li>
 <li><strong>The very steep road down to San Juan La Laguna</strong> (<a href="#22-lake-atitlán-1720-dec">§2.2</a>): a small 1.0–1.2 litre engine with two people and luggage will struggle on the climb back out.</li>
 </ul>
 </li>
 <li>Check that the desk is open at <strong>~22:00 on 13 Dec</strong> for the pick-up and at <strong>~21:00 on 30 Dec</strong> for the return (or ask about the after-hours key drop; with Option 2 on 30 Dec you return it at ~16:30 instead), and that <strong>CDW insurance</strong> is included. CDW (collision damage waiver) is the rental company's own cover for damage to the car; they require it unless you show written proof that your credit card covers rental cars in Guatemala.</li>
 </ul>
 </li>
-<li>☐ <strong>Tajumulco, 22–23 Dec</strong>: Quetzaltrekkers or Adrenalina (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>); confirm access</li>
-<li>☐ <strong>Lodging:</strong> Antigua (13, 14 and 16 Dec — keep your bags at the hotel during Acatenango; <a href="#21-antigua--acatenango-1317-dec">§2.1</a>), San Juan La Laguna (17–19; <a href="#22-lake-atitlán-1720-dec">§2.2</a>), Xela (20, 21 and 23 — leave bags at the hotel during Tajumulco; <a href="#24-xela--tajumulco-2024-dec">§2.4</a>), Cobán (24) and Lanquín (25–26; <a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>), El Remate (27) and El Sombrero at Yaxhá (28; <a href="#26-tikal--yaxhá-2729-dec">§2.6</a>), Río Dulce (29; <a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>). Search <a href="https://www.booking.com" target="_blank" rel="noopener">Booking.com</a>, <a href="https://www.hostelworld.com" target="_blank" rel="noopener">Hostelworld</a> or <a href="https://www.airbnb.com" target="_blank" rel="noopener">Airbnb</a>.</li>
+<li>☐ <strong>Tajumulco, 22–23 Dec</strong>: Quetzaltrekkers or Adrenalina (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>); confirm access</li>
+<li>☐ <strong>Lodging:</strong> Antigua (13, 14 and 16 Dec — keep your bags at the hotel during Acatenango; <a href="#21-antigua--acatenango-1317-dec">§2.1</a>), San Juan La Laguna (17–19; <a href="#22-lake-atitlán-1720-dec">§2.2</a>), Xela (20, 21 and 23 — leave bags at the hotel during Tajumulco; <a href="#23-xela--tajumulco-2024-dec">§2.3</a>), Cobán (24) and Lanquín (25–26; <a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>), El Remate (27) and El Sombrero at Yaxhá (28; <a href="#25-tikal--yaxhá-2729-dec">§2.5</a>), Río Dulce (29; <a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>). Search <a href="https://www.booking.com" target="_blank" rel="noopener">Booking.com</a>, <a href="https://www.hostelworld.com" target="_blank" rel="noopener">Hostelworld</a> or <a href="https://www.airbnb.com" target="_blank" rel="noopener">Airbnb</a>.</li>
 </ul>
 <p><strong>Book 1–2 weeks ahead:</strong></p>
 <ul>
 <li>☐ <strong>🚲 Antigua bike ride, 14 Dec morning</strong> with Old Town Outfitters (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>)</li>
-<li>☐ <strong>Tikal ticket for 28 Dec</strong> at <a href="https://boletos.culturaguate.gob.gt/en/" target="_blank" rel="noopener">Ministry of Culture ticket portal</a> (foreigner category) (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>)</li>
-<li>☐ <strong>Yaxhá sunset guide or tour</strong> (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>)</li>
-<li>☐ <strong>Semuc / K'anba</strong> with your Lanquín hostel (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>)</li>
+<li>☐ <strong>Tikal ticket for 28 Dec</strong> at <a href="https://boletos.culturaguate.gob.gt/en/" target="_blank" rel="noopener">Ministry of Culture ticket portal</a> (foreigner category) (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>)</li>
+<li>☐ <strong>Yaxhá sunset guide or tour</strong> (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>)</li>
+<li>☐ <strong>Semuc / K'anba</strong> with your Lanquín hostel (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>)</li>
 <li>☐ <strong>Day room near the airport, afternoon and evening of 30 Dec</strong> (Option 1 or 2; <a href="#wed-30-dec--río-dulce--gua-56-h-fly-at-0230">Wed 30 Dec</a>)</li>
 </ul>
 <p><strong>Pay on the spot, in cash (Spanish helps):</strong></p>
 <ul>
 <li>Lake Atitlán (<a href="#22-lake-atitlán-1720-dec">§2.2</a>): Indian Nose Q25–Q50 (€3.0–€5.9) each + optional guide Q50–Q100 (€5.9–€12); lanchas Q20–Q25 (€2.4–€3.0) each per ride; kayak (optional, 18 Dec) about US$10–20 (≈ Q76–Q153, €9.1–€18) an hour; Cerro Tzankujil Q20 (€2.4); San Pedro volcano Q100 (€12) each + guide Q150–Q200 (€18–€24)</li>
-<li>Chichicastenango (<a href="#23-chichicastenango-20-dec">§2.3</a>): market and <em>parqueo</em>, small notes</li>
-<li>Xela (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>): Laguna Chicabal Q20 (€2.4); Fuentes Georginas Q60 (€7.1) + Q25 (€3.0) parking</li>
-<li>Lanquín (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>): tubing ~Q65–Q100 (€7.7–€12); Grutas de Lanquín Q30 (€3.6); Semuc Champey Q110 (€13); K'anba cave Q100 (€12)</li>
-<li>Petén (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>): Tikal guide Q150–Q300 (€18–€36) per group; Yaxhá entry Q80 (€9.5)</li>
-<li>Río Dulce (<a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>): Finca El Paraíso Q15–Q20 (€1.8–€2.4)</li>
+<li>Xela (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>): Laguna Chicabal Q20 (€2.4); Fuentes Georginas Q60 (€7.1) + Q25 (€3.0) parking</li>
+<li>Lanquín (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>): tubing ~Q65–Q100 (€7.7–€12); Grutas de Lanquín Q30 (€3.6); Semuc Champey Q110 (€13); K'anba cave Q100 (€12)</li>
+<li>Petén (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>): Tikal guide Q150–Q300 (€18–€36) per group; Yaxhá entry Q80 (€9.5)</li>
+<li>Río Dulce (<a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>): Finca El Paraíso Q15–Q20 (€1.8–€2.4)</li>
 </ul>
 <h3 id="14-what-the-trip-costs">1.4 What the trip costs</h3>
 <p>A rough estimate for <strong>the two of you, 13–31 Dec, excluding flights and travel insurance</strong>. The low column is hostels/simple guesthouses, local tour operators and comedores (local eateries); the high column is comfortable mid-range hotels, the premium operators and sit-down restaurants. Prices from the chapters of this guide; my own estimates are marked ≈.</p>
@@ -389,7 +388,7 @@ gantt
 <td><strong>Parking</strong></td>
 <td>Q20 (€2)</td>
 <td>Q200 (€24)</td>
-<td>Free at most hotels; Antigua municipal car park up to Q40 (€4.7) a day; Chichicastenango <em>parqueo</em> (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>, <a href="#23-chichicastenango-20-dec">§2.3</a>)</td>
+<td>Free at most hotels; Antigua municipal car park up to Q40 (€4.7) a day (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>)</td>
 </tr>
 <tr>
 <td><strong>Lodging</strong>, 15 nights</td>
@@ -407,7 +406,7 @@ gantt
 <td><strong>Tajumulco tour</strong>, 2 people</td>
 <td>Q1,600 (€190)</td>
 <td>Q2,220 (€263)</td>
-<td>Quetzaltrekkers → Adrenalina (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>)</td>
+<td>Quetzaltrekkers → Adrenalina (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>)</td>
 </tr>
 <tr>
 <td><strong>Entry fees, boats, local guides</strong></td>
@@ -515,7 +514,7 @@ gantt
 <ul>
 <li>The rental desks are in arrivals; the cars are in a <strong>separate parking building across from the terminal</strong>, which is slow late at night.</li>
 <li><strong>Walk round the car and photograph every scratch</strong> (and the fuel gauge) before you leave, and check the spare tyre and jack.</li>
-<li>Confirm the <strong>return procedure for the evening of 30 Dec</strong>: desk hours, or where to leave the keys (<a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>).</li>
+<li>Confirm the <strong>return procedure for the evening of 30 Dec</strong>: desk hours, or where to leave the keys (<a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>).</li>
 <li>Load the route in <strong>Waze</strong> and download offline maps while you still have airport Wi-Fi.</li>
 </ul>
 <h5 id="the-drive-to-antigua-40-km-about-1-h-at-night">The drive to Antigua (~40 km, about 1 h at night)</h5>
@@ -783,10 +782,30 @@ gantt
 <li><strong>Not suitable:</strong> the descent from Santa Clara down to San Juan (very steep, narrow), and the singletrack mountain-bike tours above the lake.</li>
 </ul>
 <p>🏊 <strong>Swimming in Atitlán:</strong> the water is fresh and cool, probably around 20 °C (I'm about 70 % sure of that figure). Swim at designated spots like Tzankujil, away from village docks; the lake has had algae and pollution problems near towns.</p>
+</blockquote>
+<h4 id="sun-20-dec--a-last-lake-morning-then-drive-to-xela">Sun 20 Dec — a last lake morning, then drive to Xela</h4>
+<p><strong>The day's plan</strong></p>
+<ul>
+<li><strong>08:00–11:30</strong> Free: a last morning at the lake; choose one:<ul>
+<li><strong>Option 1:</strong> 🏊 a slow breakfast and a last swim, or the kayak if you skipped it on the 18th.</li>
+<li><strong>Option 2:</strong> 🧶 a weaving or coffee session in San Juan that you didn't get to on the 17th (MayAchik' workshops from Q65 (€7.7), about an hour).</li>
+</ul>
+</li>
+<li><strong>11:30–12:30</strong> Check out (pay in cash), lunch.</li>
+<li><strong>12:30–15:00</strong> 🚗 Drive San Juan → Xela (~2.5 h): up to Santa Clara, west on the CA-1 past Nahualá to Cuatro Caminos, then into Xela.</li>
+<li><strong>15:00–18:30</strong> 🚶 Free: check in, then wander Xela's centre around Parque Centro América. If you want, drop by your Tajumulco operator's office to confirm details.</li>
+<li><strong>Evening:</strong> dinner in the centre; take a taxi back after ~21:00.</li>
+</ul>
+<blockquote>
+<p><strong>Other ways to use this day</strong> (nothing is booked yet, so either is still open):</p>
+<ul>
+<li><strong>A fourth night at the lake</strong>, then drive to Xela on the 21st. You'd leave San Juan at about 05:30 to reach Laguna Chicabal (open 08:00–13:00) directly, which makes a long, early day before the 18:00 Tajumulco briefing. Worth it only if the lake turns out to be your favourite stop.</li>
+<li><strong>An earlier start to Xela</strong> (leave at 08:00, arrive ~10:30) for a full afternoon there, for example the Las Cumbres sauna or Fuentes Georginas today as well as after Tajumulco.</li>
+</ul>
 <p><strong>📋 Practical notes for this stop</strong>
 <em>The same facts appear in the summary lists and tables of Parts 1 and 3.</em></p>
 <ul>
-<li>🚶 <strong>Distances (estimates):</strong> 17 Dec 1–3 km; 18 Dec 4–8 km (Indian Nose, Tzankujil, village); 19 Dec 8–11 km (San Pedro volcano), or 12–20 km by bike with the swap (<a href="#11-the-trip-at-a-glance">day table</a>).</li>
+<li>🚶 <strong>Distances (estimates):</strong> 17 Dec 1–3 km; 18 Dec 4–8 km (Indian Nose, Tzankujil, village); 19 Dec 8–11 km (San Pedro volcano), or 12–20 km by bike with the swap; 20 Dec 2–5 km (<a href="#11-the-trip-at-a-glance">day table</a>).</li>
 <li>🛏️ <strong>Sleep:</strong> San Juan La Laguna, 3 nights (17, 18 and 19 Dec). <strong>Book now</strong> on <a href="https://www.booking.com" target="_blank" rel="noopener">Booking.com</a>, <a href="https://www.hostelworld.com" target="_blank" rel="noopener">Hostelworld</a> or <a href="https://www.airbnb.com" target="_blank" rel="noopener">Airbnb</a> (<a href="#13-booking-checklist">§1.3</a>).</li>
 <li>💵 <strong>Pay on the spot, in cash; there are no ATMs in San Juan or Santa Clara</strong> (<a href="#13-booking-checklist">§1.3</a>, <a href="#31-getting-by-in-guatemala">§3.1</a>):</li>
 <li>
@@ -818,48 +837,10 @@ gantt
 <li>🚲 <strong>Swap option, 19 Dec:</strong> a lake-villages bike ride instead of San Pedro volcano, US$67 (€61) each guided (<a href="#sat-19-dec--volcán-san-pedro-3020-m-">Sat 19 Dec</a>, <a href="#37-cycling">§3.7</a>).</li>
 <li>🌙 <strong>After dark:</strong> San Juan and the centre of San Pedro are fine in the early evening. <strong>Don't walk the lakeside trails between villages</strong>, by day or night; take the boats. The last lanchas run at about 17:00–18:00. Do Indian Nose only with a community guide or a tour (<a href="#32-what-to-avoid">§3.2</a>, <a href="#34-safety--where-to-be-careful-at-night">§3.4</a>).</li>
 <li>🤢 <strong>Motion sickness:</strong> the roads down to the lake are winding, and the boats can be bumpy; take tablets if you're prone to it, but the driver shouldn't take the drowsy type (<a href="#suggested-medicine-kit-for-two-people">§3.3</a>).</li>
+<li>🚗 <strong>20 Dec drive:</strong> check for <em>bloqueos</em> on the CA-1 the evening before, especially near Nahualá (<a href="#35-driving">§3.5</a>).</li>
 </ul>
 </blockquote>
-<h3 id="23-chichicastenango-20-dec">2.3 Chichicastenango (20 Dec)</h3>
-<p><img loading="lazy" alt="Iglesia de Santo Tomás, Chichicastenango" src="https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_Santo_Tom%C3%A1s_2009.JPG?width=1280">
-<em>Santo Tomás church. Its steps are still used for Maya ceremonies with copal incense.</em></p>
-<p><strong>What it is.</strong> <a href="https://en.wikipedia.org/wiki/Chichicastenango" target="_blank" rel="noopener">Chichicastenango</a> (Chichi) is a K'iche' Maya town with one of Central America's biggest markets every <strong>Thursday and Sunday</strong>. The white <a href="https://en.wikipedia.org/wiki/Iglesia_de_Santo_Tomás" target="_blank" rel="noopener">church of Santo Tomás</a> was built in the 16th century on top of a pre-Hispanic temple platform. Its steps are still sacred: people burn copal incense and leave flower offerings on them.</p>
-<blockquote>
-<p><strong>👥 Crowds &amp; 🚗 traffic here</strong></p>
-<ul>
-<li>👥👥 <strong>This is the most crowded stop on the trip, on purpose.</strong> Sunday market day plus festival week means packed alleys, tour buses from Antigua and Panajachel (they arrive around 10:00–14:00), firecrackers and pickpockets. I'd count it as one of your "special occasion" exceptions. If you'd rather skip it, drive straight from Atitlán to Xela (about 2.5 h) and have a slower morning by the lake.</li>
-<li>🚗 Parking is scarce on market days. Use a guarded <em>parqueo</em> on the edge of town and walk in.</li>
-</ul>
-</blockquote>
-<h4 id="is-the-santo-tomás-festival-worth-it-if-the-palo-volador-doesnt-interest-you">Is the Santo Tomás festival worth it if the <em>palo volador</em> doesn't interest you?</h4>
-<p><strong>It's not worth an overnight stay, but you'll catch it anyway.</strong> The festival runs from 13 to 21 December, and the <em>palo volador</em> (men spinning down from a 30 m pole) is its headline act on the 21st. The rest of it is processions of the saint's image with cofradías (religious brotherhoods), masked dances such as the <em>Baile de la Conquista</em>, and fireworks in the square at night. That is good to see, but it also means bigger crowds, higher room prices and firecrackers all day.</p>
-<p>Your Sunday the 20th falls on a market day <em>and</em> inside the festival week, so a half-day visit gives you the market plus the festival atmosphere at no extra cost. Then you drive on.</p>
-<h4 id="sun-20-dec--lake-atitlán--chichicastenango-market--xela">Sun 20 Dec — Lake Atitlán → Chichicastenango market → Xela</h4>
-<p><strong>The day's plan</strong></p>
-<ul>
-<li><strong>07:00–09:30</strong> 🚗 Drive San Juan → Chichicastenango (~2.5 h).</li>
-<li><strong>09:30–13:30</strong> 🛍 Sunday market, the Santo Tomás church steps and the colourful cemetery; festival atmosphere.</li>
-<li><strong>13:30–15:30</strong> 🚗 Drive Chichicastenango → Xela (~2 h).</li>
-<li><strong>15:30–18:30</strong> 🚶 Free: check in, then wander Xela's centre around Parque Centro América. If you want, drop by your Tajumulco operator's office to confirm details.</li>
-<li><strong>Evening:</strong> dinner in the centre; taxi back after ~21:00.</li>
-</ul>
-<p>Leave San Juan by about 07:00 and <strong>drive ~2.5 h from Lake Atitlán to Chichicastenango</strong>. Spend 09:30–13:30 at the market, church steps and cemetery, then <strong>drive ~2 h from Chichicastenango to Xela</strong>, arriving well before dark.</p>
-<p><img loading="lazy" alt="Chichicastenango market" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chichicastenango_market_2009.JPG?width=1280"></p>
-<blockquote>
-<p><strong>Etiquette:</strong> ask before photographing people, especially during ceremonies, and enter the church only by the main door, never the side doors.</p>
-<p><strong>📋 Practical notes for this stop</strong>
-<em>The same facts appear in the summary lists and tables of Parts 1 and 3.</em></p>
-<ul>
-<li>🚶 <strong>Distance (estimate):</strong> 3–6 km walking, mostly the market and the cemetery (<a href="#11-the-trip-at-a-glance">day table</a>).</li>
-<li>💵 <strong>Cash:</strong> bring small notes for the market stalls and the guarded <em>parqueo</em> (car park). Bargain, but keep it friendly (<a href="#31-getting-by-in-guatemala">§3.1</a>).</li>
-<li>📷 <strong>Photos:</strong> ask before photographing people, and <strong>never photograph inside the Santo Tomás church</strong> (<a href="#31-getting-by-in-guatemala">§3.1</a>).</li>
-<li>🌙 <strong>Safety:</strong> you're here by day only. Watch for pickpockets in the market crowds (<a href="#34-safety--where-to-be-careful-at-night">§3.4</a>).</li>
-<li>🚗 <strong>20 Dec drive:</strong> check for <em>bloqueos</em> on the CA-1 the evening before (<a href="#35-driving">§3.5</a>).</li>
-<li>🛏️ <strong>Sleep:</strong> none here; you sleep in Xela the same night (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>).</li>
-<li>🏊 <strong>Swimming:</strong> none at this stop.</li>
-</ul>
-</blockquote>
-<h3 id="24-xela--tajumulco-2024-dec">2.4 Xela &amp; Tajumulco (20–24 Dec)</h3>
+<h3 id="23-xela--tajumulco-2024-dec">2.3 Xela &amp; Tajumulco (20–24 Dec)</h3>
 <p><img loading="lazy" alt="Map of the highlands section" src="maps/web/map-02-highlands.jpg"></p>
 <p><img loading="lazy" alt="Map of the area around Xela, with San Marcos Department hatched" src="maps/web/map-05-xela.jpg"></p>
 <p><strong>What it is.</strong> <a href="https://en.wikipedia.org/wiki/Quetzaltenango" target="_blank" rel="noopener">Xela</a> ("SHEH-la") is Guatemala's second city, at 2,330 m. It's cooler and much less touristy than Antigua, and full of Spanish schools and serious hiking operators. The nickname comes from its K'iche' name, <em>Xelajú</em>, usually glossed "under the ten (mountains)". Its official name, Quetzaltenango, is Nahuatl (<a href="#12-guatemala-in-brief">§1.2</a>).</p>
@@ -992,7 +973,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <li>🚗 <strong>24 Dec drive:</strong> check for <em>bloqueos</em> on the CA-1 the evening before, and expect heavy Christmas Eve traffic around Guatemala City (<a href="#35-driving">§3.5</a>).</li>
 </ul>
 </blockquote>
-<h3 id="25-cobán-lanquín--semuc-champey-2427-dec">2.5 Cobán, Lanquín &amp; Semuc Champey (24–27 Dec)</h3>
+<h3 id="24-cobán-lanquín--semuc-champey-2427-dec">2.4 Cobán, Lanquín &amp; Semuc Champey (24–27 Dec)</h3>
 <p><img loading="lazy" alt="Map of the north and east section" src="maps/web/map-03-north.jpg"></p>
 <p><strong>What it is.</strong> Alta Verapaz is green, rainy and mountainous. <a href="https://en.wikipedia.org/wiki/Cobán" target="_blank" rel="noopener">Cobán</a> is the hub;
 <strong><a href="https://en.wikipedia.org/wiki/Lanquín" target="_blank" rel="noopener">Lanquín</a></strong> is a small Q'eqchi' town in a river valley, and the base for
@@ -1134,7 +1115,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <li>🤢 <strong>Motion sickness:</strong> the Cobán–Lanquín road is very winding (<a href="#suggested-medicine-kit-for-two-people">§3.3</a>).</li>
 </ul>
 </blockquote>
-<h3 id="26-tikal--yaxhá-2729-dec">2.6 Tikal &amp; Yaxhá (27–29 Dec)</h3>
+<h3 id="25-tikal--yaxhá-2729-dec">2.5 Tikal &amp; Yaxhá (27–29 Dec)</h3>
 <p><img loading="lazy" alt="Temple I at Tikal" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tikal_Temple_I.jpg?width=1280">
 <em>Temple I ("Temple of the Great Jaguar"), the tomb of king Jasaw Chan K'awiil, who died in 734.</em></p>
 <p><strong>What it is.</strong> <a href="https://en.wikipedia.org/wiki/Tikal" target="_blank" rel="noopener">Tikal</a> was one of the greatest Classic Maya cities. Its steep temples rise above the rainforest canopy, and the jungle around them is alive with spider and howler monkeys, toucans and coatis.
@@ -1193,12 +1174,12 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 </ul>
 </li>
 <li>🏊 <strong>Swimming:</strong> Lake Petén Itzá off the docks at El Remate (27 Dec). <strong>Not in Lake Yaxhá</strong>, which reportedly has crocodiles (<a href="#36-swimming-spots-on-the-route">§3.6</a>).</li>
-<li>🚲 <strong>Swap option, 27 Dec:</strong> a 1–2 h flat ride on the lakeshore dirt road, bikes from your hotel at Q35–Q80 (€4.2–€9.5) a day (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">Sun 27 Dec</a>, <a href="#37-cycling">§3.7</a>).</li>
+<li>🚲 <strong>Swap option, 27 Dec:</strong> a 1–2 h flat ride on the lakeshore dirt road, bikes from your hotel at Q35–Q80 (€4.2–€9.5) a day (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">Sun 27 Dec</a>, <a href="#37-cycling">§3.7</a>).</li>
 <li>🌙 <strong>After dark:</strong> Flores island is lively and fine in the evening. El Remate is very quiet, so bring a torch. Be in the parks only with a guide at sunrise or sunset (<a href="#34-safety--where-to-be-careful-at-night">§3.4</a>).</li>
 <li>🦟 <strong>Heat and mosquitoes:</strong> use repellent by day against dengue, drink plenty, and carry oral rehydration salts for the heat (<a href="#suggested-medicine-kit-for-two-people">§3.3</a>).</li>
 </ul>
 </blockquote>
-<h3 id="27-río-dulce--the-drive-home-2931-dec">2.7 Río Dulce &amp; the drive home (29–31 Dec)</h3>
+<h3 id="26-río-dulce--the-drive-home-2931-dec">2.6 Río Dulce &amp; the drive home (29–31 Dec)</h3>
 <p><img loading="lazy" alt="Map of Río Dulce and Lake Izabal" src="maps/web/map-07-izabal.jpg"></p>
 <blockquote>
 <p><strong>👥 Crowds &amp; 🚗 traffic here</strong></p>
@@ -1307,16 +1288,16 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <h4 id="money">Money</h4>
 <ul>
 <li><strong>The currency is the quetzal (Q).</strong> At the time of writing, €1 ≈ Q8.43. Carry <strong>small notes</strong> (Q5–Q50). Tuk-tuks, boats, market stalls and park gates often can't change a Q200 note.</li>
-<li><strong>Cash is essential:</strong> San Juan and Santa Clara have no ATMs (<a href="#22-lake-atitlán-1720-dec">§2.2</a>), Tikal has none (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>), Lanquín may not have a reliable one (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>), and many park gates and lanchas take cash only. Draw money in Antigua (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>), Xela (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>), Cobán (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>) and Flores (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>). Panajachel has ATMs too, but your route only passes near it. I'm about 80 % sure Río Dulce town has bank ATMs (<a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>).</li>
+<li><strong>Cash is essential:</strong> San Juan and Santa Clara have no ATMs (<a href="#22-lake-atitlán-1720-dec">§2.2</a>), Tikal has none (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>), Lanquín may not have a reliable one (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>), and many park gates and lanchas take cash only. Draw money in Antigua (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>), Xela (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>), Cobán (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>) and Flores (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>). Panajachel has ATMs too, but your route only passes near it. I'm about 80 % sure Río Dulce town has bank ATMs (<a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>).</li>
 <li><strong>Use ATMs inside banks or shopping centres</strong> during opening hours, not stand-alone street machines, where card skimming is more common.</li>
-<li><strong>Tipping:</strong> about 10 % in sit-down restaurants (check whether <em>propina</em> is already on the bill). For hiking guides (Acatenango <a href="#21-antigua--acatenango-1317-dec">§2.1</a>, Tajumulco <a href="#24-xela--tajumulco-2024-dec">§2.4</a>), Q50–Q100 (€5.9–€12) per person per day is usual. Round up for drivers.</li>
+<li><strong>Tipping:</strong> about 10 % in sit-down restaurants (check whether <em>propina</em> is already on the bill). For hiking guides (Acatenango <a href="#21-antigua--acatenango-1317-dec">§2.1</a>, Tajumulco <a href="#23-xela--tajumulco-2024-dec">§2.3</a>), Q50–Q100 (€5.9–€12) per person per day is usual. Round up for drivers.</li>
 </ul>
 <h4 id="language--people">Language &amp; people</h4>
 <ul>
 <li>Your Spanish will make a huge difference. Use <em>usted</em> with older people and officials. In the highlands, many people speak Spanish as a second language after a Mayan language, so speak clearly and simply.</li>
 <li>Greet people when you walk into a shop or a room (<em>buenos días</em> / <em>buenas tardes</em>). It matters here.</li>
-<li><strong>Ask before photographing people</strong>, especially women, children and ceremonies, and never photograph inside the Santo Tomás church in Chichicastenango (<a href="#23-chichicastenango-20-dec">§2.3</a>). Some people will ask for a small payment for a photo, which is fair.</li>
-<li><strong>Bargaining:</strong> it's normal in markets (Chichi <a href="#23-chichicastenango-20-dec">§2.3</a>, Antigua's handicraft market <a href="#21-antigua--acatenango-1317-dec">§2.1</a>), but keep it friendly. Don't haggle in shops with fixed prices, or over a few quetzales with a weaver.</li>
+<li><strong>Ask before photographing people</strong>, especially women, children and ceremonies, and never photograph inside churches during a ceremony. Some people will ask for a small payment for a photo, which is fair.</li>
+<li><strong>Bargaining:</strong> it's normal in markets (for example Antigua's handicraft market, <a href="#21-antigua--acatenango-1317-dec">§2.1</a>), but keep it friendly. Don't haggle in shops with fixed prices, or over a few quetzales with a weaver.</li>
 </ul>
 <h4 id="food--water">Food &amp; water</h4>
 <ul>
@@ -1334,7 +1315,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <h3 id="32-what-to-avoid">3.2 What to avoid</h3>
 <ul>
 <li><strong>Driving at night:</strong> see <a href="#35-driving">§3.5</a>.</li>
-<li><strong>Zone 18 of Guatemala City, the city of Villa Nueva and Zone 3</strong> are high-crime areas. Your route never goes there; you're in the city only on the evening of 30 Dec (<a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>).</li>
+<li><strong>Zone 18 of Guatemala City, the city of Villa Nueva and Zone 3</strong> are high-crime areas. Your route never goes there; you're in the city only on the evening of 30 Dec (<a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>).</li>
 <li><strong>Chicken buses and street-hailed white taxis.</strong> They're colourful, but US government staff are banned from using both because of crime and accidents. Use Uber in Guatemala City and Antigua, taxis your hotel calls for you, and tuk-tuks in towns.</li>
 <li><strong>Walking between Lake Atitlán villages on lakeside trails</strong> without a guide: these isolated paths have a history of robberies. Take the boats (<a href="#22-lake-atitlán-1720-dec">§2.2</a>).</li>
 <li><strong>Showing off valuables:</strong> keep your phone away on busy streets, leave jewellery at home, and carry a day's cash in a front pocket.</li>
@@ -1355,11 +1336,11 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 </ul>
 <h4 id="mosquitoes-dengue-malaria">Mosquitoes: dengue, malaria</h4>
 <ul>
-<li><strong>Dengue:</strong> Guatemala had record dengue numbers in 2024. <strong>December is past the peak but not risk-free.</strong> Cases peak in July–October with the rains, and December is the tail end of the higher-risk period (roughly May–December), with the dry season bringing fewer breeding sites. Dengue circulates all year in warm, humid lowlands, and you're there from 25 to 30 Dec. The highlands (Antigua, Atitlán, Xela) are too cool for much transmission. So: repellent by day in the lowlands, and no reason to change the plan. The mosquitoes bite <strong>by day</strong>, mostly in the lowlands and towns: Lanquín and Semuc (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>), Petén (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>), Río Dulce (<a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>). Use DEET or picaridin repellent and wear long sleeves at dusk in the lowlands.</li>
+<li><strong>Dengue:</strong> Guatemala had record dengue numbers in 2024. <strong>December is past the peak but not risk-free.</strong> Cases peak in July–October with the rains, and December is the tail end of the higher-risk period (roughly May–December), with the dry season bringing fewer breeding sites. Dengue circulates all year in warm, humid lowlands, and you're there from 25 to 30 Dec. The highlands (Antigua, Atitlán, Xela) are too cool for much transmission. So: repellent by day in the lowlands, and no reason to change the plan. The mosquitoes bite <strong>by day</strong>, mostly in the lowlands and towns: Lanquín and Semuc (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>), Petén (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>), Río Dulce (<a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>). Use DEET or picaridin repellent and wear long sleeves at dusk in the lowlands.</li>
 <li><strong>Malaria:</strong> CDC says there's no risk in Antigua, Guatemala City or around Lake Atitlán, and only low risk in rural lowlands such as Petén. For your route, CDC advises <strong>bite prevention rather than pills</strong>. Confirm this with your clinic.</li>
 </ul>
 <h4 id="altitude-sickness-the-real-risk-on-this-trip">Altitude sickness: the real risk on this trip</h4>
-<p>Altitude sickness (doctors call the common form <em>acute mountain sickness</em>, or AMS) is <strong>the most likely health problem on your itinerary</strong>, because you sleep at ~3,600 m on Acatenango (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>) and ~4,000 m on Tajumulco or Santa María (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>). Above about 2,500 m, symptoms are common.</p>
+<p>Altitude sickness (doctors call the common form <em>acute mountain sickness</em>, or AMS) is <strong>the most likely health problem on your itinerary</strong>, because you sleep at ~3,600 m on Acatenango (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>) and ~4,000 m on Tajumulco or Santa María (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>). Above about 2,500 m, symptoms are common.</p>
 <p><strong>How much should you worry?</strong> For fit people in their 20s and 30s, expect it to be <strong>a nuisance rather than a danger</strong>: a headache, poor sleep and low appetite at camp, gone after you descend the next morning. Two caveats:</p>
 <ul>
 <li><strong>Fitness doesn't protect you.</strong> It makes the climb easier, but who gets AMS depends mostly on <strong>how fast you gain height</strong> and on personal susceptibility. Fit people who push hard on the way up get it as often as anyone, sometimes more.</li>
@@ -1421,7 +1402,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <tr>
 <td><strong>Motion-sickness tablets</strong> (e.g. <em>dimenhydrinate</em>, brand Dramamine/Travel Gum; or <em>meclizine</em>)</td>
 <td>Prevents nausea from motion. Some types make you drowsy.</td>
-<td>The winding Lanquín (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>) and Atitlán (<a href="#22-lake-atitlán-1720-dec">§2.2</a>) roads, and lancha (boat) rides. The driver shouldn't take the drowsy type.</td>
+<td>The winding Lanquín (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>) and Atitlán (<a href="#22-lake-atitlán-1720-dec">§2.2</a>) roads, and lancha (boat) rides. The driver shouldn't take the drowsy type.</td>
 </tr>
 <tr>
 <td><strong>Antihistamine tablets</strong> (e.g. <em>cetirizine</em>, brand Zyrtec)</td>
@@ -1479,7 +1460,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>Police say most muggings happen <strong>22:00–03:00</strong>. After 22:00, take a tuk-tuk or Uber, even for short trips. Tourist police patrol Cerro de la Cruz by day only.</td>
 </tr>
 <tr>
-<td><strong>Guatemala City</strong> Zones 10, 13 (airport) (<a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>)</td>
+<td><strong>Guatemala City</strong> Zones 10, 13 (airport) (<a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>)</td>
 <td>🟡 Inside venues or cars only</td>
 <td>Don't walk around at night. <strong>Avoid Zone 18, Zone 3 and Villa Nueva entirely.</strong></td>
 </tr>
@@ -1494,32 +1475,27 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>Robberies on the trail have been reported in the past. Guided groups are the norm now.</td>
 </tr>
 <tr>
-<td><strong>Chichicastenango</strong> (<a href="#23-chichicastenango-20-dec">§2.3</a>)</td>
-<td>–</td>
-<td>Daytime only on your plan. Watch for pickpockets in the market crowds.</td>
-</tr>
-<tr>
-<td><strong>Xela</strong> centre (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>)</td>
+<td><strong>Xela</strong> centre (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>)</td>
 <td>🟢 Around Parque Centro América, early evening</td>
 <td>Take a taxi after about 21:00.</td>
 </tr>
 <tr>
-<td><strong>Lanquín / Semuc</strong> (<a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>)</td>
+<td><strong>Lanquín / Semuc</strong> (<a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>)</td>
 <td>🟡 Stay at your lodge</td>
 <td>Dark, unlit roads; nothing to walk to.</td>
 </tr>
 <tr>
-<td><strong>El Remate / Flores</strong> (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>)</td>
+<td><strong>El Remate / Flores</strong> (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>)</td>
 <td>🟢 Flores island is lively and fine in the evening</td>
 <td>El Remate is very quiet. Use a torch.</td>
 </tr>
 <tr>
-<td><strong>Tikal / Yaxhá</strong> (<a href="#26-tikal--yaxhá-2729-dec">§2.6</a>)</td>
+<td><strong>Tikal / Yaxhá</strong> (<a href="#25-tikal--yaxhá-2729-dec">§2.5</a>)</td>
 <td>🟡 With a guide only</td>
 <td>Attacks on visitors in the Petén parks have been reported in the past, including on sunrise tours. Sunrise and sunset entry requires a guide anyway.</td>
 </tr>
 <tr>
-<td><strong>Río Dulce</strong> (<a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a>)</td>
+<td><strong>Río Dulce</strong> (<a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a>)</td>
 <td>🟡 Stay at your lodge</td>
 <td>The town strip under the bridge isn't somewhere to wander at night.</td>
 </tr>
@@ -1538,7 +1514,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 </ul>
 <h3 id="35-driving">3.5 Driving</h3>
 <ul>
-<li><strong>Check for road blockades</strong> (<em>bloqueos</em>) the evening before each long drive, by asking your hotel or searching "bloqueos" with the route name. The UK FCDO has noted a state of emergency in <strong>Nahualá and Santa Catarina Ixtahuacán (Sololá)</strong>, a long-running land dispute next to the <strong>CA-1 highway you use on 17 (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>), 20 (<a href="#23-chichicastenango-20-dec">§2.3</a>) and 24 Dec (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>)</strong>. Ask locally whether that stretch is calm.</li>
+<li><strong>Check for road blockades</strong> (<em>bloqueos</em>) the evening before each long drive, by asking your hotel or searching "bloqueos" with the route name. The UK FCDO has noted a state of emergency in <strong>Nahualá and Santa Catarina Ixtahuacán (Sololá)</strong>, a long-running land dispute next to the <strong>CA-1 highway you use on 17 (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>), 20 (<a href="#22-lake-atitlán-1720-dec">§2.2</a>) and 24 Dec (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>)</strong>. Ask locally whether that stretch is calm.</li>
 <li><strong>Night driving:</strong> unlit roads, unmarked speed bumps, unlit vehicles and the risk of crime are why every drive in this guide ends by about 17:00, except the 1 h arrival drive on 13 Dec on main roads (<a href="#21-antigua--acatenango-1317-dec">§2.1</a>). Sunset is around 17:30.</li>
 <li><strong>Leave nothing visible in a parked car.</strong> Break-ins are the most common problem for drivers. Use guarded parking (<em>parqueo</em>) or your hotel's own car park; for Antigua's costs and street-parking rules, see <a href="#parking-in-antigua-1317-dec">Parking in Antigua</a>.</li>
 <li><strong>Watch for unmarked speed bumps</strong> (<em>túmulos</em>) and aggressive overtaking.</li>
@@ -1587,7 +1563,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>Volcanic hot springs in cloud forest</td>
 <td>Hot</td>
 <td>Q60 (€7.1) + Q25 (€3.0) parking</td>
-<td><a href="#24-xela--tajumulco-2024-dec">§2.4</a></td>
+<td><a href="#23-xela--tajumulco-2024-dec">§2.3</a></td>
 </tr>
 <tr>
 <td>4</td>
@@ -1596,7 +1572,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>River tubing</td>
 <td>Cool</td>
 <td>~Q65–Q100 (€7.7–€12)</td>
-<td><a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a></td>
+<td><a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a></td>
 </tr>
 <tr>
 <td>5</td>
@@ -1605,7 +1581,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>Turquoise limestone pools, cave swim</td>
 <td>Cool, clear</td>
 <td>~Q110 (€13) + Q100 (€12)</td>
-<td><a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a></td>
+<td><a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a></td>
 </tr>
 <tr>
 <td>6</td>
@@ -1614,7 +1590,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>Lake, swim off docks</td>
 <td>Warm</td>
 <td>–</td>
-<td><a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a></td>
+<td><a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a></td>
 </tr>
 <tr>
 <td>7</td>
@@ -1623,7 +1599,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>Hot waterfall into a cool river</td>
 <td>Hot and cold</td>
 <td>~Q15–Q20 (€1.8–€2.4)</td>
-<td><a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a></td>
+<td><a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a></td>
 </tr>
 <tr>
 <td>8</td>
@@ -1632,11 +1608,11 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <td>River or pool</td>
 <td>Warm</td>
 <td>–</td>
-<td><a href="#27-río-dulce--the-drive-home-2931-dec">§2.7</a></td>
+<td><a href="#26-río-dulce--the-drive-home-2931-dec">§2.6</a></td>
 </tr>
 </tbody>
 </table></div>
-<p>🚫 <strong>No swimming:</strong> Laguna Chicabal (sacred to the Mam Maya; <a href="#24-xela--tajumulco-2024-dec">§2.4</a>) and Lake Yaxhá (it reportedly has crocodiles; <a href="#26-tikal--yaxhá-2729-dec">§2.6</a>).</p>
+<p>🚫 <strong>No swimming:</strong> Laguna Chicabal (sacred to the Mam Maya; <a href="#23-xela--tajumulco-2024-dec">§2.3</a>) and Lake Yaxhá (it reportedly has crocodiles; <a href="#25-tikal--yaxhá-2729-dec">§2.5</a>).</p>
 <h3 id="37-cycling">3.7 Cycling</h3>
 <p>You both enjoy easy riding: flat, or descents on wide roads, not technical singletrack. With one car, a one-way descent needs a shuttle, so a guided tour is the practical way.</p>
 <div class="table-wrap"><table>
@@ -1673,7 +1649,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 </tr>
 </tbody>
 </table></div>
-<p>Details are in <a href="#21-antigua--acatenango-1317-dec">§2.1</a>, <a href="#22-lake-atitlán-1720-dec">§2.2</a> and <a href="#25-cobán-lanquín--semuc-champey-2427-dec">§2.5</a>. <strong>Not recommended:</strong> Xela's mountain-bike tours (enduro, technical), the Santa Clara → San Juan descent (steep and narrow), the main road to Tikal (fast traffic; no bikes inside the park), and Cobán → Lanquín (no shuttle, and your car would be left at the top).</p>
+<p>Details are in <a href="#21-antigua--acatenango-1317-dec">§2.1</a>, <a href="#22-lake-atitlán-1720-dec">§2.2</a> and <a href="#24-cobán-lanquín--semuc-champey-2427-dec">§2.4</a>. <strong>Not recommended:</strong> Xela's mountain-bike tours (enduro, technical), the Santa Clara → San Juan descent (steep and narrow), the main road to Tikal (fast traffic; no bikes inside the park), and Cobán → Lanquín (no shuttle, and your car would be left at the top).</p>
 <h3 id="38-naturism">3.8 Naturism</h3>
 <p><strong>Short answer: there are no nudist or clothing-optional beaches in Guatemala, and nude bathing in public places isn't tolerated.</strong> It's a conservative, largely religious country, and the Maya communities around your route are more conservative still. Sandee's overview of Guatemala's nudism rules finds no officially recognised nudist beaches and notes that Lake Atitlán, in particular, doesn't permit nude bathing, with local villages posting signs asking visitors not to walk around undressed. I couldn't confirm which exact legal provision applies, but the penal code has offences against public decency, so treat public nudity as a real risk of a fine or detention, not just disapproval.</p>
 <p><strong>What does work: private spaces.</strong></p>
@@ -1688,7 +1664,7 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Las+Cumbres+Eco-Hotel+Termalismo+y+Spa+Zunil" target="_blank" rel="noopener">Las Cumbres</a>, Zunil</strong> (<a href="#24-xela--tajumulco-2024-dec">§2.4</a>)</td>
+<td><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Las+Cumbres+Eco-Hotel+Termalismo+y+Spa+Zunil" target="_blank" rel="noopener">Las Cumbres</a>, Zunil</strong> (<a href="#23-xela--tajumulco-2024-dec">§2.3</a>)</td>
 <td>23 Dec, after or instead of Fuentes Georginas</td>
 <td>Private rooms with saunas heated by natural volcanic steam, each for up to 4 people, with a cold shower</td>
 <td>about Q75 (€8.9) per person per hour (older report; ask)</td>
@@ -1712,6 +1688,10 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <h2 id="part-4--changes--credits">Part 4 · Changes &amp; credits</h2>
 <h3 id="41-version-history">4.1 Version history</h3>
 <p>Versions follow <a href="https://semver.org" target="_blank" rel="noopener">semantic versioning</a>: the <strong>first number</strong> changes when the plan itself changes (route, stops, how you get around), the <strong>second</strong> when content is added, the <strong>third</strong> for corrections and clarifications. Every version stays readable from the line of links at the top of the page.</p>
+<p><strong>7.x: no Chichicastenango</strong></p>
+<ul>
+<li><strong>7.0.0</strong> · Chichicastenango is dropped from the plan (the festival week means firecrackers all day). On 20 Dec you have a last lake morning, then drive straight to Xela (~2.5 h); §2.3 is gone and the later sections are renumbered. The maps still mark the old Chichi stop.</li>
+</ul>
 <p><strong>6.x: the car from the airport</strong></p>
 <ul>
 <li><strong>6.11.1</strong> · In the calendar, each "where you sleep" block now runs from check-in day to check-out day, so each travel day shows both places (for example, Xela spans 23–24 Dec).</li>
@@ -1754,7 +1734,6 @@ Choose one (decide when you book; read the advisory and access boxes below):</p>
 <li>View from Pacaya (Christopher Crouzet, Featured Picture): <a href="https://commons.wikimedia.org/wiki/File:View_from_Volcano_Pacaya,_Guatemala.jpg" target="_blank" rel="noopener">file page</a></li>
 <li>Volcán San Pedro panorama (Uspn): <a href="https://commons.wikimedia.org/wiki/File:Volcan-San-Pedro-Panorama.JPG" target="_blank" rel="noopener">file page</a></li>
 <li>Lago Atitlán from San Marcos: <a href="https://commons.wikimedia.org/wiki/File:Lago_Atitlan,_seen_from_San_Marcos.jpg" target="_blank" rel="noopener">file page</a></li>
-<li>Iglesia de Santo Tomás and Chichicastenango market (chensiyuan): <a href="https://commons.wikimedia.org/wiki/File:Iglesia_de_Santo_Tom%C3%A1s_2009.JPG" target="_blank" rel="noopener">file page</a> · <a href="https://commons.wikimedia.org/wiki/File:Chichicastenango_market_2009.JPG" target="_blank" rel="noopener">file page</a></li>
 <li>Laguna Chicabal (Avalesco): <a href="https://commons.wikimedia.org/wiki/File:Volcan_y_laguna_chicabal.jpg" target="_blank" rel="noopener">file page</a></li>
 <li>Tajumulco: <a href="https://commons.wikimedia.org/wiki/File:Tajumulco_Volcano.JPG" target="_blank" rel="noopener">file page</a></li>
 <li>Semuc Champey (Christopher Crouzet, Featured Picture): <a href="https://commons.wikimedia.org/wiki/File:Semuc_Champey,_Guatemala.jpg" target="_blank" rel="noopener">file page</a></li>
