@@ -65,6 +65,8 @@ VERSIONS = [
       "Every day 13–31 Dec has its own section and calendar events."),
     V("6.8.0", "26 Nov 2026", "Options side by side",
       "Alternative plans shown as Option 1 / Option 2, in the guide and calendar."),
+    V("6.9.0", "26 Nov 2026", "Hot springs after Tajumulco",
+      "Hot springs move to 23 Dec, after the summit; 21 Dec afternoon is free."),
 ]
 LATEST = VERSIONS[-1]["id"]
 

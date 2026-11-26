@@ -29,9 +29,9 @@ D17 = "#thu-17-dec--antigua--lake-atitlán-then-wander-san-juan"
 D18 = "#fri-18-dec--indian-nose-at-sunrise-then-swimming-"
 D19 = "#sat-19-dec--volcán-san-pedro-3020-m-"
 D20 = "#sun-20-dec--lake-atitlán--chichicastenango-market--xela"
-D21 = "#mon-21-dec--laguna-chicabal--fuentes-georginas-"
+D21 = "#mon-21-dec--laguna-chicabal-then-a-calm-afternoon-in-xela"
 D22 = "#tue-22-dec--tajumulco-day-1-hike-up-to-camp-"
-D23 = "#wed-23-dec--tajumulco-day-2-summit-at-sunrise-back-to-xela-"
+D23 = "#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-"
 D24 = "#thu-24-dec--xela--cobán-8-h"
 D25 = "#fri-25-dec--cobán--lanquín-2-h-"
 D26 = "#sat-26-dec--semuc-champey-"
@@ -134,11 +134,9 @@ TIMED = [
      "San Martín Sacatepéquez", "", D21),
     ("2026-12-21", "08:00", "12:00", "⛰ Laguna Chicabal",
      "Laguna Chicabal, San Martín Sacatepéquez", "Open 08:00–13:00. No swimming (sacred). Q20.", D21),
-    ("2026-12-21", "12:00", "13:30", "🚗 Drive to Zunil, lunch on the way", "Zunil", "", D21),
-    ("2026-12-21", "13:30", "17:00", "Option 1: ♨ Fuentes Georginas hot springs",
-     "Fuentes Georginas, Zunil", "Q60 + Q25 parking, cash.", D21),
-    ("2026-12-21", "13:30", "17:00", "Option 2: ♨ Private steam sauna, Las Cumbres",
-     "Las Cumbres, Zunil", "About Q75 each per hour.", D21),
+    ("2026-12-21", "12:00", "13:00", "🚗 Back to Xela, lunch", "Quetzaltenango", "", D21),
+    ("2026-12-21", "13:00", "17:30", "🛌 Free: calm afternoon in Xela",
+     "Parque Centro América, Quetzaltenango", "Nothing planned. Hot springs are on the 23rd.", D21),
     ("2026-12-21", "18:00", "19:00", "📋 Tajumulco briefing (Quetzaltrekkers)",
      "Quetzaltenango", "Only if booked with Quetzaltrekkers.", D21),
     ("2026-12-21", "19:00", "21:00", "🍽 Dinner; pack for Tajumulco",
@@ -155,8 +153,14 @@ TIMED = [
      "Volcán Tajumulco", "", D23),
     ("2026-12-23", "02:30", "11:00", "Option 2: ⛰ Volcán Santa María sunrise hike",
      "Volcán Santa María, Quetzaltenango", "Start time per operator.", D23),
-    ("2026-12-23", "14:00", "18:00", "🛌 Free: rest in Xela (shower, nap, laundry)",
-     "Quetzaltenango", "Nothing planned.", D23),
+    ("2026-12-23", "14:00", "14:45", "🚗 Shower, then drive Xela → Zunil",
+     "Zunil", "~30–45 min.", D23),
+    ("2026-12-23", "14:45", "17:00", "Option 1: ♨ Fuentes Georginas hot springs",
+     "Fuentes Georginas, Zunil", "Q60 + Q25 parking, cash.", D23),
+    ("2026-12-23", "14:45", "17:00", "Option 2: ♨ Private steam sauna, Las Cumbres",
+     "Las Cumbres, Zunil", "About Q75 each per hour.", D23),
+    ("2026-12-23", "17:00", "17:45", "🚗 Back to Xela before dark",
+     "Quetzaltenango", "Sunset ~17:50.", D23),
     ("2026-12-23", "18:00", "21:00", "🍽 Dinner, fill the tank, check bloqueos",
      "Quetzaltenango", "Leave at 06:00 tomorrow.", D23),
     # Thu 24

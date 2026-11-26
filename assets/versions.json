@@ -130,5 +130,11 @@
     "date": "26 Nov 2026",
     "label": "Options side by side",
     "summary": "Alternative plans shown as Option 1 / Option 2, in the guide and calendar."
+  },
+  {
+    "id": "6.9.0",
+    "date": "26 Nov 2026",
+    "label": "Hot springs after Tajumulco",
+    "summary": "Hot springs move to 23 Dec, after the summit; 21 Dec afternoon is free."
   }
 ]
