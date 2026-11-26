@@ -160,5 +160,11 @@
     "date": "26 Nov 2026",
     "label": "No Chichicastenango",
     "summary": "Chichi dropped; 20 Dec is a lake morning, then straight to Xela."
+  },
+  {
+    "id": "7.0.1",
+    "date": "26 Nov 2026",
+    "label": "Heading fix",
+    "summary": "A naturism paragraph no longer shows as a heading."
   }
 ]
