@@ -1,7 +1,7 @@
 # Guatemala without a car · 13–31 December 2026
 ### The same trip by shuttle, bus, boat and tuk-tuk
 
-> **Car-free version 1.1.0, 27 November 2026** (1.1.0 adds the Atitlán zipline on 18 Dec and [private drivers](#16-hiring-a-private-driver-for-some-regions)). This is an alternative to the [main guide](../), which plans the trip with a rental car. It follows the same route and the same hikes (main guide version 7.2.0, without Chichicastenango). Only the transport changes, plus one lodging swap in Petén. For everything that isn't transport (what each place is, operators, prices, health, safety), follow the links to the main guide.
+> **Car-free version 1.2.0, 27 November 2026** (1.1.0 added the Atitlán zipline on 18 Dec and [private drivers](#16-hiring-a-private-driver-for-some-regions); 1.2.0 adds every shuttle's [daily timetable](#shuttle-timetables-and-the-holidays) and how the holidays affect it). This is an alternative to the [main guide](../), which plans the trip with a rental car. It follows the same route and the same hikes (main guide version 7.2.0, without Chichicastenango). Only the transport changes, plus one lodging swap in Petén. For everything that isn't transport (what each place is, operators, prices, health, safety), follow the links to the main guide.
 > Prices are in **quetzales (Q) and euros (€)** at €1 ≈ Q8.43 (15 Nov 2026); dollar prices are converted at US$1 ≈ Q7.65. Fares were checked online in September–November 2026 and change often; my own estimates are marked ≈.
 > 📅 This version has [its own calendar](#15-calendar-for-this-version).
 
@@ -67,7 +67,7 @@ From the most comfortable to the cheapest:
 
 ### 1.2 What it saves, and what it costs
 
-**In short: going without a car saves about €1,000 for the two of you (anywhere from ≈ €580 to €1,430, depending on which car you'd have rented and which transport options you pick), and costs you about 5–7 extra hours on the road over the trip, plus the night at the Yaxhá lodge.**
+**In short: going without a car saves about €1,000 for the two of you (anywhere from ≈ €580 to €1,420, depending on which car you'd have rented and which transport options you pick), and costs you about 5–7 extra hours on the road over the trip, plus the night at the Yaxhá lodge.**
 
 **What you don't pay** (rental quotes for 17 days from the car-rental research):
 
@@ -84,7 +84,7 @@ From the most comfortable to the cheapest:
 
 | Day | Leg | Low (Q) | High (Q) | How |
 |---|---|---|---|---|
-| 13 Dec | Airport → Antigua, at night | Q245 (€29) | Q550 (€65) | Shared night shuttle, US$16 each, → private transfer, ~US$72 incl. the night surcharge |
+| 13 Dec | Airport → Antigua, at night | Q320 (€38) | Q550 (€65) | Uber or the airport taxi desk, → private transfer, ~US$72 incl. the night surcharge (no shared shuttle runs that late) |
 | 17 Dec | Antigua → San Juan La Laguna | Q350 (€42) | Q430 (€51) | Shared shuttle to San Pedro, US$22–25 each, + a tuk-tuk |
 | 20 Dec | San Juan → Xela | Q520 (€62) | Q630 (€75) | Shared shuttle from San Pedro, US$33–40 each, + a tuk-tuk |
 | 20–24 Dec | Taxis in Xela | Q50 (€6) | Q150 (€18) | To the bus terminal, evenings (my estimate) |
@@ -98,9 +98,9 @@ From the most comfortable to the cheapest:
 | 29 Dec | Finca El Paraíso and back | Q60 (€7) | Q350 (€42) | El Estor colectivo, ~Q15 each way, → a taxi (my estimate) |
 | 30 Dec | Río Dulce → Guatemala City | Q240 (€28) | Q290 (€34) | Litegua pullman, Q120–145 each |
 | 30 Dec | Bus terminal → day room → airport | Q60 (€7) | Q180 (€21) | Uber; the airport guesthouses' shuttle is free |
-| | **Total for two** | **≈ Q3,500 (€415)** | **≈ Q7,300 (€870)** | ≈ €210–435 per person |
+| | **Total for two** | **≈ Q3,600 (€425)** | **≈ Q7,300 (€870)** | ≈ €215–435 per person |
 
-**The balance:** €1,450–1,850 not spent, minus €415–870 spent, leaves **≈ €580–1,430 saved**. If you pair like with like (the cheaper car against the cheap options, or the dearer car against the comfortable ones), it's **about €1,000 either way**. That's about €500 per person, or roughly a quarter of the [trip's total cost](../#14-what-the-trip-costs).
+**The balance:** €1,450–1,850 not spent, minus €425–870 spent, leaves **≈ €580–1,420 saved**. If you pair like with like (the cheaper car against the cheap options, or the dearer car against the comfortable ones), it's **about €1,000 either way**. That's about €500 per person, or roughly a quarter of the [trip's total cost](../#14-what-the-trip-costs).
 
 **Two smaller savings and one extra cost that aren't in the tables:** the day tour on 28 Dec (Option 1) includes a guide, which the car plan pays for separately (≈ Q300–Q600 (€36–€71) for Tikal and Yaxhá). Hotels in Flores cost about the same as El Remate and El Sombrero. On the other side, if you'd rather not take any chicken bus at all, use the "high" column for 21, 23, 25 and 29 Dec; that adds about Q1,400 (€170).
 
@@ -133,12 +133,34 @@ On top of the main guide's [booking checklist](../#13-booking-checklist), minus 
 
 **Book 3–7 days ahead** (through your hotel, an agency, or online), and confirm pickup times the evening before:
 - [ ] Shuttle Antigua → San Pedro La Laguna, **17 Dec, 08:30**
-- [ ] Shuttle San Pedro → Xela, **20 Dec, around midday**
+- [ ] Shuttle San Pedro → Xela, **20 Dec, 11:00** (Monte Verde)
 - [ ] Hot-springs shuttle, **23 Dec, 14:30** (Option 1)
 - [ ] Shuttle Lanquín → Flores, **27 Dec, 08:00**
 - [ ] Tikal + Yaxhá day tour or the early Tikal shuttle, **28 Dec**
 - [ ] Shuttle Flores → Río Dulce, **29 Dec, 06:00**
 - [ ] Pullman Río Dulce → Guatemala City, **30 Dec, ~09:30** (buy at the Litegua office in Río Dulce on the 29th)
+
+#### Shuttle timetables and the holidays
+
+The daily departures each operator lists, for every shuttle on this route. **None of the operators publishes a holiday timetable**, so treat these as normal-day times and confirm yours when you book and again the evening before. "Unverified" means I found it on only one reseller, or sources disagree.
+
+| Day | Shuttle | Daily departures | Takes | Source |
+|---|---|---|---|---|
+| 13 Dec | Airport → Antigua (shared) | 07:30, 09:30, 11:00, 13:30, 14:30, 16:30, 19:00; **none after your 21:25 landing** | 1–1.5 h | [Pelago (Gray Line)](https://www.pelago.com/en/activity/pkzk1rw38-shared-arrival-transfer-guatemala-city-airport-to-antigua-guatemala-city/) |
+| 17 Dec | Antigua → San Pedro La Laguna | **08:30**, 14:00 (Guatemala Transportation); 09:00, 12:00 (Turisteando) | 3–3.5 h | [Living in Guatemala](https://livinginguatemala.com/transport/antigua-to-san-pedro-la-laguna/), [Turisteando](https://turisteando.wetravel.com/trips/shuttle-from-antigua-guatemala-to-san-pedro-la-laguna-turisteando-4577357832) |
+| 20 Dec | San Pedro → Xela | **11:00** (Monte Verde collectivo); 05:00, 09:00–09:30, 14:00–14:30 (Cultourex, San Pedro Spanish School; unverified) | ~2–2.5 h | [Monte Verde](https://monteverdetours.rezdy.com/384143/shuttle-lake-atitlan-san-pedro-san-marcos-to-xela), [Cultourex](https://cultourex.com/transportation/san-pedro-to-xela/), [San Pedro Spanish School](https://sanpedrospanishschool.com/traveling-guatemala/shuttle-service-san-pedro-la-laguna-to-xela/) |
+| 23 Dec | Xela → Fuentes Georginas and back | 09:00, **14:30** | ~40 min each way | [Living in Guatemala](https://livinginguatemala.com/activities/fuentes-georginas/) |
+| 24 Dec | Xela → Cobán → Lanquín (Adrenalina) | **07:00** only | ~10 h to Cobán | [Living in Guatemala](https://livinginguatemala.com/transport/xela-to-lanquin-semuc-champey/) |
+| 27 Dec | Lanquín → Flores | **08:00** only (Adrenalina, Guatemala Transportation, Turisteando) | ~8–9 h | [Living in Guatemala](https://livinginguatemala.com/transport/lanquin-to-flores/), [Turisteando](https://turisteando.wetravel.com/trips/shuttle-shuttle-from-lanquin-to-flores-turisteando-7470215393) |
+| 28 Dec | Flores → Tikal | **04:30**, 06:00, 08:00, 10:00 (and a 03:00 sunrise tour); returns not published, unverified | ~1.5 h | [Universal Traveller](https://universal-traveller.com/flores-to-tikal-guatemala/) |
+| 29 Dec | Flores → Río Dulce | **06:00** (three agencies); one reseller shows 12:00 instead | ~4 h | [Living in Guatemala](https://livinginguatemala.com/transport/flores-to-rio-dulce/), [Bookaway](https://www.bookaway.com/routes/guatemala/flores-1-to-rio-dulce) |
+
+**How the holidays may affect them:**
+- **Christmas week is peak season.** Guatemalans travel home and to the lake and Petén between Christmas and the first week of January, and shuttles that run once a day (24, 27 and 29 Dec) can sell out. Book these 3–7 days ahead, not the day before ([Universal Traveller: getting around Guatemala](https://universal-traveller.com/how-to-get-around-guatemala/)).
+- **24 Dec (Nochebuena):** the day runs normally until early afternoon, then shops close and drivers go home for the family dinner, so evening departures are thin. Your Option 1 shuttle leaves at 07:00 and arrives about 17:00, which is late for that day. Ask Adrenalina whether it runs, and if the answer is vague, take Option 2 or a [driver](#16-hiring-a-private-driver-for-some-regions) (my expectation, ~70 % confident; nothing published).
+- **25 Dec (Christmas Day):** the quietest day of the year: reduced public transport and most shops closed, especially in the morning after the midnight fireworks. This hits the Cobán → Lanquín microbus (Option 1 that day): ask your hotel on the 24th, and keep the lodge-driver option (Option 2) as backup.
+- **20 Dec is a Sunday:** the cheap chicken buses from San Pedro to Xela don't run on Sundays ([Living in Guatemala](https://livinginguatemala.com/transport/san-pedro-la-laguna-to-xela)), so the shuttle is the way. Living in Guatemala also says it found no seller for a San Pedro → Xela shuttle in October 2026 (Xela shuttles then leave from Panajachel, by boat first); Monte Verde still listed one, so book it early and get written confirmation.
+- **30–31 Dec and 1 Jan:** you're on the 30 Dec Litegua bus into the capital during the New Year rush, so buy the ticket the day before (already in the plan). You fly out at 02:30 on the 31st, before the New Year closures.
 
 ### 1.5 Calendar for this version
 
@@ -195,10 +217,11 @@ All times are Guatemala time (UTC−6). For what each place is, crowds, prices o
 - **21:25–22:30** ✈ Land at GUA, immigration and bags.
 - **22:30–00:00** Choose one (book ahead):
   - **Option 1:** 🚐 a **private transfer**, about US$67 plus a ~US$5 night surcharge (≈ Q550, €65) for the car ([Civitatis](https://www.civitatis.com/en/guatemala-city/transfers), [Viator](https://www.viator.com/en-AU/tours/Guatemala-City/Private-Trasport-Guatemala-City-Airport-to-Antigua/d4595-140323P9)). The driver waits in arrivals with your name and leaves as soon as you're out; you're in Antigua by about 23:30.
-  - **Option 2:** 🚐 the **Gray Line shared night shuttle**, about US$16 (≈ Q122, €15) each, minimum 2 at night ([Viator](https://www.viator.com/tours/Guatemala-City/Shared-Arrival-Transfer-Guatemala-City-Airport-to-Antigua/d4595-3022ANTAPTHTL)). It may wait for other flights, so you arrive closer to midnight.
-- **Fallback:** an [Uber](https://www.uber.com/gt/en/) (~Q320 (€38), fewer drivers after midnight) or the 24-hour official taxi desk in arrivals.
+  - **Option 2:** 🚕 an [Uber](https://www.uber.com/gt/en/) (~Q320 (€38); fewer drivers after midnight, so expect a 10–15 min wait) or the 24-hour official taxi desk in arrivals.
 
-I'd take Option 1: after a long flight, a driver who is already waiting is worth the extra ~€35.
+I'd take Option 1: after a long flight, a driver who is already waiting is worth the extra ~€25.
+
+> 🕒 **No shared shuttle at this hour.** Gray Line's shared airport → Antigua transfer is listed at **07:30, 09:30, 11:00, 13:30, 14:30, 16:30 and 19:00** ([Pelago](https://www.pelago.com/en/activity/pkzk1rw38-shared-arrival-transfer-guatemala-city-airport-to-antigua-guatemala-city/)), and another reseller says airport pickups run only 07:00–18:00 ([Veltra](https://www.veltra.com/en/latin_america/guatemala/a/158628)). So none fits a 21:25 landing. The main guide's Plan B mentions a Gray Line night option on Viator with a 2-person minimum; these timetables don't show one, so don't count on it unless Gray Line confirms in writing. Private transfers run around the clock.
 
 #### Mon 14 Dec — Antigua, with a morning bike ride 🚲
 **The day's plan** (the same as the [main guide](../#mon-14-dec--antigua-with-a-morning-bike-ride-); Antigua is walkable, and the bike shop is in town)
@@ -259,15 +282,16 @@ Some shuttles end at Panajachel instead, across the lake; from there a public la
 
 #### Sun 20 Dec — a last lake morning, then shuttle to Xela
 **The day's plan**
-- **08:00–11:30** Free: a last morning at the lake; choose one:
+- **08:00–10:15** Free: a last morning at the lake; choose one:
   - **Option 1:** 🏊 a slow breakfast and a last swim, or the kayak if you skipped it on the 18th.
   - **Option 2:** 🧶 a weaving or coffee session in San Juan (MayAchik' workshops from Q65 (€7.7)).
-- **11:30–12:15** Check out (cash), an early lunch, then a 🛺 tuk-tuk to San Pedro if the shuttle doesn't collect in San Juan.
-- **12:30–15:00** 🚐 **Shared shuttle San Pedro → Xela** (~2–2.5 h), about US$33–40 (≈ Q252–Q306, €30–€36) each ([Monteverde Tours](https://monteverdetours.rezdy.com/384143/shuttle-lake-atitlan-san-pedro-san-marcos-to-xela), [Bookaway](https://www.bookaway.com/routes/guatemala/san-pedro-la-laguna-to-quetzaltenango-xela)). I couldn't confirm departure times: book the one nearest midday, and if only a morning one fits, swap the free morning for an afternoon in Xela.
-- **15:00–18:30** 🚶 Free: check in, then wander Xela's centre around Parque Centro América; drop by your Tajumulco operator's office if you want.
+- **10:15–10:45** Check out (cash), then a 🛺 tuk-tuk to San Pedro if the shuttle doesn't collect in San Juan.
+- **11:00–13:30** 🚐 **Shared shuttle San Pedro → Xela** (~2–2.5 h), about US$33–40 (≈ Q252–Q306, €30–€36) each. Monte Verde Tours' collectivo leaves San Pedro at **11:00** ([Monteverde Tours](https://monteverdetours.rezdy.com/384143/shuttle-lake-atitlan-san-pedro-san-marcos-to-xela)); other sellers list **05:00, 09:00–09:30 and 14:00–14:30** (unverified; [Cultourex](https://cultourex.com/transportation/san-pedro-to-xela/), [San Pedro Spanish School](https://sanpedrospanishschool.com/traveling-guatemala/shuttle-service-san-pedro-la-laguna-to-xela/)). If you only get the 14:00–14:30 one, keep the lake morning longer and arrive ~16:30, still before dark.
+- **13:30–14:30** Lunch and check in.
+- **14:30–18:30** 🚶 Free: wander Xela's centre around Parque Centro America; drop by your Tajumulco operator's office if you want.
 - **Evening:** dinner in the centre; taxi back after ~21:00.
 
-The cheap alternative is the boat to Panajachel and a public bus to Xela, about US$11 each and 3–4 hours with changes ([Universal Traveller](https://www.universal-traveller.com/?p=178025)). With bags, the direct shuttle is worth the difference.
+The cheap alternative is the boat to Panajachel and a public bus to Xela, about US$11 each and 3–4 hours with changes ([Universal Traveller](https://www.universal-traveller.com/?p=178025)). With bags, the direct shuttle is worth the difference, and on a Sunday the direct chicken buses from San Pedro don't run ([holidays and Sundays](#shuttle-timetables-and-the-holidays)).
 
 ### 2.3 Xela & Tajumulco (20–24 Dec)
 
@@ -301,7 +325,7 @@ Choose one (read the advisory and access boxes in the main guide):
   - **Option 2: Volcán Santa María.** ~02:30–11:00, a pre-dawn hike with the operator, who arranges the ride to the trailhead.
 - **14:00–14:30** A quick shower at the hotel.
 - **14:30–18:00** Choose one:
-  - **Option 1:** ♨ **Fuentes Georginas by shuttle.** A collectivo shuttle leaves Xela at 14:30 (another at 09:00) for about US$25 (≈ Q191, €23) each, **entry included** ([Living in Guatemala: Fuentes Georginas](https://livinginguatemala.com/activities/fuentes-georginas/); [Adrenalina's return shuttle](https://www.wetravel.com/trips/from-quetzaltenango-to-the-hot-springs-fuentes-georginas-go-and-return-adrenalina-tours-0203460123) is another). About 2 hours in the pools, back in Xela around dusk.
+  - **Option 1:** ♨ **Fuentes Georginas by shuttle.** A collectivo shuttle leaves Xela daily at **09:00 and 14:30** for about US$25 (≈ Q191, €23) each, **entry included** ([Living in Guatemala: Fuentes Georginas](https://livinginguatemala.com/activities/fuentes-georginas/); [Adrenalina's return shuttle](https://www.wetravel.com/trips/from-quetzaltenango-to-the-hot-springs-fuentes-georginas-go-and-return-adrenalina-tours-0203460123) is another). About 2 hours in the pools, back in Xela around dusk.
   - **Option 2:** ♨ **Las Cumbres private steam sauna, by bus.** A chicken bus to Zunil (~30 min, Q5–Q10 each), then a tuk-tuk or the short walk to [Las Cumbres](https://www.google.com/maps/search/?api=1&query=Las+Cumbres+Eco-Hotel+Termalismo+y+Spa+Zunil), about Q75 (€8.9) each per hour. Back by bus before dark (~17:30).
 - **Evening:** an easy dinner. Confirm tomorrow's shuttle pickup (Option 1, 07:00) or set an alarm for the 05:00 bus (Option 2). Early night.
 
@@ -310,7 +334,7 @@ To reach Fuentes Georginas on your own instead, take the bus to Zunil and a pick
 #### Thu 24 Dec — Xela → Cobán, by shuttle or two buses
 **The day's plan**
 - **The trip's longest travel day.** Choose one:
-  - **Option 1:** 🚐 **the direct shuttle, 07:00–~17:00.** Adrenalina runs a daily Xela → Lanquín shuttle at 07:00 for US$75 (≈ Q574, €68) each, about 10 hours to Cobán ([Living in Guatemala: Xela to Lanquín](https://livinginguatemala.com/transport/xela-to-lanquin-semuc-champey/), Oct 2026). Ask to get off in Cobán. Book 48–72 h ahead, and ask whether it runs on Christmas Eve.
+  - **Option 1:** 🚐 **the direct shuttle, 07:00–~17:00.** Adrenalina runs a daily Xela → Lanquín shuttle, **one departure at 07:00**, for US$75 (≈ Q574, €68) each, about 10 hours to Cobán ([Living in Guatemala: Xela to Lanquín](https://livinginguatemala.com/transport/xela-to-lanquin-semuc-champey/), Oct 2026). Ask to get off in Cobán. Book 48–72 h ahead, and ask whether it runs on Christmas Eve ([holidays](#shuttle-timetables-and-the-holidays)).
   - **Option 2:** 🚌 **two pullman buses through the capital, 05:00–~15:30.**
     - **05:00–09:00** Transportes Álamo, Xela → Guatemala City, about Q105 (€12) each ([Living in Guatemala](https://livinginguatemala.com/transport/guatemala-city-to-quetzaltenango/), Oct 2026).
     - **09:00–10:00** 🚕 Uber across the city to the Monja Blanca terminal (≈ Q50–Q80).
@@ -346,7 +370,7 @@ No direct public bus links Xela and Cobán ([Rome2rio](https://www.rome2rio.com/
 #### Sun 27 Dec — Lanquín → Flores by driver or shuttle
 **The day's plan**
 - **08:00–16:00** Choose one:
-  - **Option 1:** 🚐 **shared shuttle Lanquín → Flores** (~8 h, via the Sayaxché ferry), about US$40–45 (≈ Q306–Q344, €36–€41) each. Adrenalina's leaves at 08:00 and stops at the "I ❤ Petén" letters at the entrance to Flores ([Living in Guatemala: Lanquín to Flores](https://livinginguatemala.com/transport/lanquin-to-flores/)).
+  - **Option 1:** 🚐 **shared shuttle Lanquín → Flores** (~8 h, via the Sayaxché ferry), about US$40–45 (≈ Q306–Q344, €36–€41) each. It's **one departure a day, at 08:00** (Adrenalina, Guatemala Transportation and Turisteando all list it), so book 3+ days ahead in Christmas week. Adrenalina's stops at the "I ❤ Petén" letters at the entrance to Flores ([Living in Guatemala: Lanquín to Flores](https://livinginguatemala.com/transport/lanquin-to-flores/)).
   - **Option 2:** 🚗 **a private driver, 08:00–~15:30**, US$325 (≈ Q2,490, €295) for the car (same source), straight to your hotel. You could also go on to El Remate for the afternoon swim, as in the car plan ([§1.6](#16-hiring-a-private-driver-for-some-regions)).
 - **16:00–16:30** 🛺 Tuk-tuk onto the island, check in (with Option 2 the driver drops you at the hotel).
 - **16:30–17:45** 🚶 Free: walk round the island's lakeside promenade at sunset, and 💵 **draw cash** for Tikal (no ATMs there).
@@ -363,9 +387,9 @@ Without a car, **Flores** is the better base: it's where the shuttles and the to
 - **Choose one** (book either a few days ahead; buy the Tikal ticket online in advance in both cases):
   - **Option 1: 🏛 Tikal + 🌅 Yaxhá at sunset in one day tour, ~07:00–~19:30** (times per operator). Adrenalina Tours runs it from Flores for about US$55 (≈ Q420, €50) each, with transport and a guide ([adrenalinatours.com](https://www.adrenalinatours.com)); entry fees are extra. You reach Tikal after the 06:00 opening, so you'll share the Gran Plaza with more people, but you see both sites and the sunset from Temple 216.
   - **Option 2: 🏛 Tikal at opening, without Yaxhá.**
-    - **~04:30–06:00** 🚐 the early shared shuttle from Flores to Tikal (≈ Q150 (€18) each return, my estimate; Rome2rio lists US$8–50 one way ([Rome2rio](https://www.rome2rio.com/s/Flores-Santa-Elena/Tikal))).
+    - **~04:30–06:00** 🚐 the early shared shuttle from Flores to Tikal; Flores departures are listed at **04:30, 06:00, 08:00 and 10:00** ([Universal Traveller](https://universal-traveller.com/flores-to-tikal-guatemala/)) (≈ Q150 (€18) each return, my estimate; Rome2rio lists US$8–50 one way ([Rome2rio](https://www.rome2rio.com/s/Flores-Santa-Elena/Tikal))).
     - **06:00–12:30** 🏛 Tikal: Temple IV, the Gran Plaza, Mundo Perdido, the Central Acropolis. Hire a guide at the gate.
-    - **12:30–14:00** 🚐 the midday shuttle back to Flores.
+    - **12:30–14:00** 🚐 the midday shuttle back to Flores. Return times aren't published (unverified); agree yours when you book, since most Tikal shuttles are sold as a return.
     - **14:00–17:30** 🏊 Free: a swim off a dock in Lake Petén Itzá, or a lancha ride round the island.
 - **Evening:** dinner in Flores. Early night: the shuttle to Río Dulce leaves at 06:00.
 
@@ -373,7 +397,7 @@ Without a car, **Flores** is the better base: it's where the shuttles and the to
 
 #### Tue 29 Dec — Flores → Río Dulce by shuttle + hot waterfall 🏊
 **The day's plan**
-- **06:00–10:00** 🚐 **Shared shuttle Flores → Río Dulce** (~4 h), US$23–36 (≈ Q176–Q275, €21–€33) each. Living in Guatemala found three agencies with a 06:00 departure, dropping off at the Colifato coffee shop in the Mirador del Río mall ([Living in Guatemala: Flores to Río Dulce](https://livinginguatemala.com/transport/flores-to-rio-dulce/)).
+- **06:00–10:00** 🚐 **Shared shuttle Flores → Río Dulce** (~4 h), US$23–36 (≈ Q176–Q275, €21–€33) each. Living in Guatemala found three agencies with **one daily departure at 06:00** (one reseller shows 12:00 instead, so confirm), dropping off at the Colifato coffee shop in the Mirador del Río mall ([Living in Guatemala: Flores to Río Dulce](https://livinginguatemala.com/transport/flores-to-rio-dulce/)).
 - **10:00–10:30** ⛵ Your lodge's boat or a tuk-tuk to the lodge (many river lodges collect guests from town).
 - **10:30–12:00** Check in, lunch.
 - **12:00** 🎫 On the way back through town, **buy tomorrow's bus ticket** at the Litegua office.
