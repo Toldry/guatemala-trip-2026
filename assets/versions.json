@@ -184,5 +184,11 @@
     "date": "27 Nov 2026",
     "label": "Zipline at Atitlán",
     "summary": "Zipline and butterfly dome at the Reserva Natural Atitlán, 18 Dec."
+  },
+  {
+    "id": "7.3.0",
+    "date": "27 Nov 2026",
+    "label": "Dark mode",
+    "summary": "Light or dark colours, following the device setting."
   }
 ]

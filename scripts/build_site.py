@@ -83,6 +83,8 @@ VERSIONS = [
       "The car-free page no longer hides Part 1 to 22 Dec on wide screens."),
     V("7.2.0", "27 Nov 2026", "Zipline at Atitlán",
       "Zipline and butterfly dome at the Reserva Natural Atitlán, 18 Dec."),
+    V("7.3.0", "27 Nov 2026", "Dark mode",
+      "Light or dark colours, following the device setting."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
@@ -238,7 +240,9 @@ PAGE = """<!doctype html>
 <title>{title}</title>
 <link rel="stylesheet" href="{prefix}assets/site.css">
 <link rel="manifest" href="{prefix}manifest.webmanifest">
-<meta name="theme-color" content="#0f3d3e">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0f3d3e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a2a2b" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="{prefix}assets/icon-192.png">
 <link rel="apple-touch-icon" href="{prefix}assets/icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -264,8 +268,21 @@ PAGE = """<!doctype html>
 
 MERMAID = """<script type="module">
   import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-  mermaid.initialize({ startOnLoad: false, theme: "neutral" });
-  await mermaid.run({ querySelector: "pre.mermaid" });
+  // charts follow the device's light/dark setting, and redraw when it changes
+  const dark = window.matchMedia("(prefers-color-scheme: dark)");
+  const charts = [...document.querySelectorAll("pre.mermaid")];
+  charts.forEach((el) => { el.dataset.source = el.textContent; });
+  async function draw() {
+    charts.forEach((el) => {
+      el.removeAttribute("data-processed");
+      el.textContent = el.dataset.source;
+    });
+    mermaid.initialize({ startOnLoad: false,
+                         theme: dark.matches ? "dark" : "neutral" });
+    await mermaid.run({ nodes: charts });
+  }
+  dark.addEventListener("change", draw);
+  await draw();
 </script>"""
 
 # ?v=6.2.0 (or ?v=5, meaning 5.0.0) on the root page jumps to that version
@@ -282,9 +299,32 @@ REDIRECT = """<script>
 
 CSS = """
 :root {
+  color-scheme: light dark;
   --ink: #1f2937; --muted: #6b7280; --line: #e5e7eb; --paper: #fffdf8;
   --accent: #c2410c; --accent-2: #15803d; --link: #1d4ed8;
   --warn-bg: #fff7ed; --warn-line: #fdba74;
+  --head: #0f3d3e; --h1: #0f3d3e; --h3: #134e4a; --h4: #7c2d12; --h5: #374151;
+  --th-bg: #f1f5f9; --row-alt: #fafaf9; --code-bg: #f1f5f9; --pre-bg: #f8fafc;
+  --surface: #fff; --old-note: #b45309;
+  --toc-link: #475569; --toc-sub: #64748b; --toc-strong: #0f3d3e;
+  --hover-bg: rgba(194,65,12,.06); --flash: rgba(253,230,138,.9);
+  --banner-bg: #fef3c7; --banner-ink: #78350f; --banner-link: #7c2d12;
+  --img-filter: none;
+}
+/* dark theme, picked automatically from the device setting */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e5e7eb; --muted: #a1a8b3; --line: #313a44; --paper: #121619;
+    --accent: #fb923c; --accent-2: #4ade80; --link: #8ab8ff;
+    --warn-bg: #2a2016; --warn-line: #b45309;
+    --head: #0a2a2b; --h1: #7fd8cc; --h3: #5eead4; --h4: #fdba74; --h5: #d1d5db;
+    --th-bg: #1f262e; --row-alt: #171c21; --code-bg: #232b33; --pre-bg: #1a2026;
+    --surface: #121619; --old-note: #fbbf24;
+    --toc-link: #aeb7c2; --toc-sub: #8e99a6; --toc-strong: #7fd8cc;
+    --hover-bg: rgba(251,146,60,.1); --flash: rgba(202,138,4,.45);
+    --banner-bg: #3a2a10; --banner-ink: #fde68a; --banner-link: #fdba74;
+    --img-filter: brightness(.9);
+  }
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
@@ -294,7 +334,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
 }
 .version-line a { color: var(--muted); }
 .version-line strong { color: var(--ink); }
-.version-line .old-note { color: #b45309; }
+.version-line .old-note { color: var(--old-note); }
 body {
   margin: 0; color: var(--ink); background: var(--paper);
   font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -302,7 +342,7 @@ body {
 a { color: var(--link); text-underline-offset: 2px; }
 a:hover { color: var(--accent); }
 .site-header {
-  position: sticky; top: 0; z-index: 10; background: #0f3d3e; color: #fff;
+  position: sticky; top: 0; z-index: 10; background: var(--head); color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
 .bar {
@@ -316,6 +356,7 @@ a:hover { color: var(--accent); }
 select {
   font: inherit; font-size: .9rem; padding: .3rem .5rem; border-radius: 6px;
   border: 1px solid #94a3b8; max-width: 22rem;
+  color: var(--ink); background: var(--surface);
 }
 .button {
   color: #0f3d3e; background: #fde68a; padding: .3rem .75rem;
@@ -323,21 +364,22 @@ select {
 }
 .button.ghost { background: transparent; color: #fff; border: 1px solid #94a3b8; }
 .banner {
-  background: #fef3c7; color: #78350f; text-align: center; padding: .45rem 1rem;
+  background: var(--banner-bg); color: var(--banner-ink); text-align: center; padding: .45rem 1rem;
   font-size: .95rem;
 }
-.banner a { color: #7c2d12; font-weight: 700; }
+.banner a { color: var(--banner-link); font-weight: 700; }
 .content { max-width: 920px; margin: 0 auto; padding: 1.5rem 1.1rem 4rem; }
-h1 { font-size: 2.1rem; line-height: 1.2; margin: .6rem 0 .2rem; color: #0f3d3e; }
+h1 { font-size: 2.1rem; line-height: 1.2; margin: .6rem 0 .2rem; color: var(--h1); }
 h2 {
   font-size: 1.7rem; margin-top: 3rem; padding-bottom: .3rem;
-  border-bottom: 3px solid var(--accent); color: #0f3d3e;
+  border-bottom: 3px solid var(--accent); color: var(--h1);
 }
-h3 { font-size: 1.35rem; margin-top: 2.4rem; color: #134e4a; }
-h4 { font-size: 1.12rem; margin-top: 1.8rem; color: #7c2d12; }
-h5 { font-size: 1rem; margin-top: 1.4rem; color: #374151; text-transform: none; }
+h3 { font-size: 1.35rem; margin-top: 2.4rem; color: var(--h3); }
+h4 { font-size: 1.12rem; margin-top: 1.8rem; color: var(--h4); }
+h5 { font-size: 1rem; margin-top: 1.4rem; color: var(--h5); text-transform: none; }
 h1 + h3 { margin-top: 0; color: var(--muted); font-weight: 500; }
-img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: .6rem auto; }
+img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: .6rem auto;
+  filter: var(--img-filter); }
 p > em:only-child, img + em { display: block; text-align: center; color: var(--muted); font-size: .92rem; }
 blockquote {
   margin: 1.2rem 0; padding: .7rem 1rem; background: var(--warn-bg);
@@ -347,10 +389,10 @@ blockquote p { margin: .35rem 0; }
 .table-wrap { overflow-x: auto; margin: 1rem 0; }
 table { border-collapse: collapse; width: 100%; font-size: .93rem; }
 th, td { border: 1px solid var(--line); padding: .45rem .6rem; vertical-align: top; }
-th { background: #f1f5f9; text-align: left; }
-tr:nth-child(even) td { background: #fafaf9; }
-code { background: #f1f5f9; padding: .05rem .3rem; border-radius: 4px; font-size: .9em; }
-pre { background: #f8fafc; padding: .8rem; border-radius: 8px; overflow-x: auto; line-height: 1.3; }
+th { background: var(--th-bg); text-align: left; }
+tr:nth-child(even) td { background: var(--row-alt); }
+code { background: var(--code-bg); padding: .05rem .3rem; border-radius: 4px; font-size: .9em; }
+pre { background: var(--pre-bg); padding: .8rem; border-radius: 8px; overflow-x: auto; line-height: 1.3; }
 pre code { background: none; padding: 0; }
 pre.mermaid { background: transparent; text-align: center; }
 hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
@@ -364,7 +406,7 @@ body.embed .content { padding-top: .5rem; }
 .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
 .compare-grid iframe {
   width: 100%; height: calc(100vh - 13rem); border: 1px solid var(--line);
-  border-radius: 8px; background: #fff;
+  border-radius: 8px; background: var(--surface);
 }
 body.compare .content { max-width: 1600px; }
 .version-list { padding-left: 1.2rem; }
@@ -412,17 +454,17 @@ body.compare .content { max-width: 1600px; }
 .toc ul { list-style: none; margin: 0; padding: 0; }
 .toc a {
   position: relative; display: block; padding: .22rem .5rem .22rem .9rem;
-  border-radius: 6px; color: #475569; text-decoration: none;
+  border-radius: 6px; color: var(--toc-link); text-decoration: none;
   font-size: .86rem; line-height: 1.35;
   transition: color .2s, background-color .2s;
 }
-.toc a:hover { color: var(--accent); background: rgba(194,65,12,.06); }
+.toc a:hover { color: var(--accent); background: var(--hover-bg); }
 .toc a[data-level="2"] {
-  font-weight: 700; color: #0f3d3e; margin-top: .7rem; font-size: .9rem;
+  font-weight: 700; color: var(--toc-strong); margin-top: .7rem; font-size: .9rem;
 }
 .toc .toc-l2 > li:first-child > a { margin-top: 0; }
 .toc a[data-level="3"] { padding-left: 1.4rem; }
-.toc a[data-level="4"] { padding-left: 2.3rem; font-size: .8rem; color: #64748b; }
+.toc a[data-level="4"] { padding-left: 2.3rem; font-size: .8rem; color: var(--toc-sub); }
 /* day-level entries fold away unless their chapter is the one being read */
 .toc .toc-l4 {
   max-height: 0; overflow: hidden; opacity: 0;
@@ -430,7 +472,7 @@ body.compare .content { max-width: 1600px; }
 }
 .toc li.open > .toc-l4 { max-height: 40rem; opacity: 1; }
 .toc a.active { color: var(--accent); font-weight: 600; }
-.toc a.in-path:not(.active) { color: #0f3d3e; }
+.toc a.in-path:not(.active) { color: var(--toc-strong); }
 .toc-marker {
   position: absolute; left: 0; top: 0; width: 3px; height: 0;
   border-radius: 3px; background: var(--accent); opacity: 0;
@@ -441,7 +483,7 @@ body.compare .content { max-width: 1600px; }
 h2, h3, h4, h5 { scroll-margin-top: 1rem; }
 .flash { animation: flash 1.6s ease; }
 @keyframes flash {
-  0% { background: rgba(253,230,138,.9); }
+  0% { background: var(--flash); }
   100% { background: transparent; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -755,7 +797,7 @@ def build_pwa(latest_html):
         "start_url": "./",
         "scope": "./",
         "display": "standalone",
-        "background_color": "#fffdf7",
+        "background_color": "#fffdf8",
         "theme_color": "#0f3d3e",
         "icons": [
             {"src": "assets/icon-192.png", "sizes": "192x192",
