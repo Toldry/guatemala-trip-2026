@@ -172,5 +172,11 @@
     "date": "26 Nov 2026",
     "label": "Car-free alternative",
     "summary": "A public-transport version of the trip, with its own page and calendar."
+  },
+  {
+    "id": "7.1.1",
+    "date": "27 Nov 2026",
+    "label": "Car-free page fix",
+    "summary": "The car-free page no longer hides Part 1 to 22 Dec on wide screens."
   }
 ]

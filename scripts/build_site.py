@@ -79,6 +79,8 @@ VERSIONS = [
       "A naturism paragraph no longer shows as a heading."),
     V("7.1.0", "26 Nov 2026", "Car-free alternative",
       "A public-transport version of the trip, with its own page and calendar."),
+    V("7.1.1", "27 Nov 2026", "Car-free page fix",
+      "The car-free page no longer hides Part 1 to 22 Dec on wide screens."),
 ]
 LATEST = VERSIONS[-1]["id"]
 
@@ -152,15 +154,36 @@ def render(md_text, depth):
     body = converter.convert(md_text)
     toc_html = sidebar_toc(converter.toc_tokens)
     # the in-page "Contents" list is only needed when there's no sidebar
-    body = re.sub(r"(<p><strong>Contents</strong></p>\s*<ul>.*?</ul>\s*</li>\s*</ul>)",
-                  r'<div class="inline-toc">\1</div>', body, count=1,
-                  flags=re.S)
+    body = wrap_inline_toc(body)
     body = body.replace("<img ", '<img loading="lazy" ')
     body = re.sub(r'<a href="(https?://[^"]+)"',
                   r'<a href="\1" target="_blank" rel="noopener"', body)
     body = body.replace("<table>", '<div class="table-wrap"><table>')
     body = body.replace("</table>", "</table></div>")
     return body, toc_html
+
+
+def wrap_inline_toc(body):
+    """Wrap the "Contents" paragraph and its whole list in .inline-toc.
+
+    The list is matched by counting nested <ul> tags, so it works whether or
+    not the last entry has sub-entries (a lazy regex once swallowed half of
+    the car-free page, hiding it on wide screens).
+    """
+    start = body.find("<p><strong>Contents</strong></p>")
+    if start < 0:
+        return body
+    first = body.find("<ul>", start)
+    depth, pos = 0, first
+    for tag in re.finditer(r"<(/?)ul\b[^>]*>", body[first:]):
+        depth += -1 if tag.group(1) else 1
+        if depth == 0:
+            pos = first + tag.end()
+            break
+    else:
+        return body
+    return (body[:start] + '<div class="inline-toc">' + body[start:pos]
+            + "</div>" + body[pos:])
 
 
 def sidebar_toc(tokens):
