@@ -81,6 +81,8 @@ VERSIONS = [
       "A public-transport version of the trip, with its own page and calendar."),
     V("7.1.1", "27 Nov 2026", "Car-free page fix",
       "The car-free page no longer hides Part 1 to 22 Dec on wide screens."),
+    V("7.2.0", "27 Nov 2026", "Zipline at Atitlán",
+      "Zipline and butterfly dome at the Reserva Natural Atitlán, 18 Dec."),
 ]
 LATEST = VERSIONS[-1]["id"]
 

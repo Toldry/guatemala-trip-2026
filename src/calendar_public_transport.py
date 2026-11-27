@@ -31,7 +31,7 @@ D23 = "#wed-23-dec--tajumulco-day-2-summit-at-sunrise-then-hot-springs-"
 D24 = "#thu-24-dec--xela--cobán-by-shuttle-or-two-buses"
 D25 = "#fri-25-dec--cobán--lanquín-by-microbus-"
 D26 = "#sat-26-dec--semuc-champey-"
-D27 = "#sun-27-dec--lanquín--flores-by-shuttle"
+D27 = "#sun-27-dec--lanquín--flores-by-driver-or-shuttle"
 D28 = "#mon-28-dec--tikal-with-or-without-yaxhá"
 D29 = "#tue-29-dec--flores--río-dulce-by-shuttle--hot-waterfall-"
 D30 = "#wed-30-dec--río-dulce--guatemala-city-by-pullman-fly-at-0230"
@@ -104,8 +104,16 @@ TIMED = [
      "San Juan La Laguna", "Nothing planned.", D18),
     ("2026-12-18", "09:00", "11:00", "Option 2: 🛶 Kayak or paddleboard on the lake",
      "San Pedro La Laguna", "Mornings are calmer. ~US$10/h single, $20 double.", D18),
+    ("2026-12-18", "09:00", "09:45", "Option 3: ⛵ Lancha San Juan → Panajachel",
+     "Panajachel dock", "≈ Q25–Q35 each. Then a tuk-tuk (Q10 each) or 15 min walk.", D18),
+    ("2026-12-18", "10:30", "12:30", "Option 3: 🪢 Zipline + butterfly dome, Reserva Natural Atitlán",
+     "Reserva Natural Atitlán, Panajachel",
+     "Check in 10:30 for the 11:00 group. Q310 (1 h 30) or Q450 (2 h) each, entry included.", D18),
+    ("2026-12-18", "12:30", "13:30", "Option 3: 🍽 Lunch in Panajachel", "Panajachel", "", D18),
+    ("2026-12-18", "13:30", "14:00", "Option 3: ⛵ Lancha Panajachel → San Marcos",
+     "San Marcos La Laguna dock", "Then Cerro Tzankujil until 17:00.", D18),
     ("2026-12-18", "12:30", "13:00", "⛵ Lancha San Juan → San Marcos",
-     "San Juan La Laguna dock", "Q20–Q25 each.", D18),
+     "San Juan La Laguna dock", "Q20–Q25 each. With Option 3, from Panajachel at 13:30 instead.", D18),
     ("2026-12-18", "13:00", "17:00", "🏊 Cerro Tzankujil, swim",
      "Cerro Tzankujil, San Marcos La Laguna", "Q20 each, cash. Last lanchas ~17:00–18:00.", D18),
     ("2026-12-18", "18:00", "21:00", "🍽 Dinner in San Juan", "San Juan La Laguna", "", D18),
@@ -175,6 +183,10 @@ TIMED = [
      "Cobán", "Q105–Q125 each, roughly hourly. Christmas Eve: be early.", D24),
     ("2026-12-24", "15:30", "17:30", "Option 2: 🚶 Free: wander Cobán, El Calvario, ATM",
      "Templo El Calvario, Cobán", "With Option 1, just draw cash on arrival.", D24),
+    ("2026-12-24", "07:00", "15:00", "Option 3: 🚗 Private driver Xela → Cobán (~8 h)",
+     "Cobán", "≈ US$250–400 for the car (estimate). Book a week ahead.", D24),
+    ("2026-12-24", "15:30", "17:30", "Option 3: 🚶 Free: wander Cobán, El Calvario, ATM",
+     "Templo El Calvario, Cobán", "", D24),
     ("2026-12-24", "19:00", "23:59", "🎄 Nochebuena: tamales, midnight fireworks",
      "Cobán", "Ask the hotel ahead about dinner; many places close.", D24),
     # Fri 25
@@ -197,7 +209,9 @@ TIMED = [
     ("2026-12-26", "16:00", "21:00", "🛌 Free: evening at the lodge, pack",
      "Lanquín", "Shuttle to Flores at 08:00 tomorrow.", D26),
     # Sun 27
-    ("2026-12-27", "08:00", "16:00", "🚐 Shuttle Lanquín → Flores (~8 h)",
+    ("2026-12-27", "08:00", "15:30", "Option 2: 🚗 Private driver Lanquín → Flores (~7.5 h)",
+     "Flores, Petén", "US$325 for the car. Door to door.", D27),
+    ("2026-12-27", "08:00", "16:00", "Option 1: 🚐 Shuttle Lanquín → Flores (~8 h)",
      "Flores, Petén", "US$40–45 each. Drop-off at the 'I love Petén' letters.", D27),
     ("2026-12-27", "16:00", "16:30", "🛺 Tuk-tuk to the island, check in", "Flores, Petén", "", D27),
     ("2026-12-27", "16:30", "17:45", "🚶 Free: sunset walk round Flores island, ATM",

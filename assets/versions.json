@@ -178,5 +178,11 @@
     "date": "27 Nov 2026",
     "label": "Car-free page fix",
     "summary": "The car-free page no longer hides Part 1 to 22 Dec on wide screens."
+  },
+  {
+    "id": "7.2.0",
+    "date": "27 Nov 2026",
+    "label": "Zipline at Atitlán",
+    "summary": "Zipline and butterfly dome at the Reserva Natural Atitlán, 18 Dec."
   }
 ]

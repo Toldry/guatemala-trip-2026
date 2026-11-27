@@ -1,7 +1,7 @@
 # Guatemala without a car · 13–31 December 2026
 ### The same trip by shuttle, bus, boat and tuk-tuk
 
-> **Car-free version 1.0.0, 26 November 2026.** This is an alternative to the [main guide](../), which plans the trip with a rental car. It follows the same route and the same hikes (main guide version 7.1.0, without Chichicastenango). Only the transport changes, plus one lodging swap in Petén. For everything that isn't transport (what each place is, operators, prices, health, safety), follow the links to the main guide.
+> **Car-free version 1.1.0, 27 November 2026** (1.1.0 adds the Atitlán zipline on 18 Dec and [private drivers](#16-hiring-a-private-driver-for-some-regions)). This is an alternative to the [main guide](../), which plans the trip with a rental car. It follows the same route and the same hikes (main guide version 7.2.0, without Chichicastenango). Only the transport changes, plus one lodging swap in Petén. For everything that isn't transport (what each place is, operators, prices, health, safety), follow the links to the main guide.
 > Prices are in **quetzales (Q) and euros (€)** at €1 ≈ Q8.43 (15 Nov 2026); dollar prices are converted at US$1 ≈ Q7.65. Fares were checked online in September–November 2026 and change often; my own estimates are marked ≈.
 > 📅 This version has [its own calendar](#15-calendar-for-this-version).
 
@@ -13,6 +13,7 @@
   - [1.3 What changes from the car plan](#13-what-changes-from-the-car-plan)
   - [1.4 What to book](#14-what-to-book)
   - [1.5 Calendar for this version](#15-calendar-for-this-version)
+  - [1.6 Hiring a private driver for some regions](#16-hiring-a-private-driver-for-some-regions)
 - **[Part 2 · Day by day](#part-2--day-by-day)**
   - [2.1 Antigua & Acatenango (13–17 Dec)](#21-antigua--acatenango-1317-dec)
   - [2.2 Lake Atitlán (17–20 Dec)](#22-lake-atitlán-1720-dec)
@@ -147,6 +148,39 @@ This plan has its own calendar feed, built the same way as the [main one](../#15
 
 To add it in Google Calendar: **Other calendars → + → From URL**, paste the address, **Add calendar**. It appears as "Guatemala 2026 (no car)". **Don't subscribe to both feeds at once** unless you want to compare them: they overlap on every day. If you choose this plan, remove the main "Guatemala 2026" calendar.
 
+### 1.6 Hiring a private driver for some regions
+
+A middle way between renting a car and riding shuttles: a **car or minivan with a driver, just for the two of you** (*transporte privado*, *chofer privado*). The driver collects you at your hotel, waits while you stop for a view or lunch, and drops you at the next one. You pay **per vehicle**, not per person. Book through an agency in Antigua, Xela or Flores (Adrenalina and Monteverde Tours both sell private transport), a transfer site such as [Daytrip](https://daytrip.com/en/countries/gt), or your hotel; for a multi-day hire, ask whether the driver's meals and room are included (I'd assume yes in a quote, ~70 % sure). Tip around Q50–Q100 (€5.9–€12) a day.
+
+**Prices I found** (booking-site prices, which include a margin; a driver your hotel knows is often cheaper):
+
+| Route or hire | For the car | Source |
+|---|---|---|
+| Airport → Antigua | US$67, + ~US$5 at night (≈ Q550, €65) | [Civitatis](https://www.civitatis.com/en/guatemala-city/transfers) |
+| Antigua → San Pedro La Laguna | from US$36 each (≈ Q550, €65 for two) | [Daytrip](https://daytrip.com/en/transfers/antigua-gt/san-pedro-la-laguna-gt) |
+| Guatemala City → San Pedro La Laguna, 176 km | from US$44 each (≈ Q675, €80 for two) | [Daytrip](https://daytrip.com/en/transfers/guatemala-city-gt/san-pedro-la-laguna-gt) |
+| Antigua → the lake towns and back, a full private day (~11 h) | €260 for 1–3 people | [Daytrip](https://daytrip.com/en/day-trips/from-antigua/santiago-atitlan-san-pedro-la-laguna) |
+| A custom private day with driver, 8–12 h | US$91–133 each (≈ Q1,390–Q2,030, €165–€240 for two) | [Guatemala personalized private tours](https://www.travelocity.com/things-to-do/guatemala-personalized-private-tours.a1018203.activity-details) |
+| Lanquín → Flores, ~330 km | US$325 (≈ Q2,490, €295) | [Living in Guatemala](https://livinginguatemala.com/transport/lanquin-to-flores/) |
+| Río Dulce → Puerto Quetzal, 381 km | from US$91 each (≈ Q1,390, €165 for two) | [Daytrip](https://daytrip.com/en/transfers/rio-dulce-gt/puerto-quetzal-gt) |
+
+**Rule of thumb from these:** roughly **US$0.5–1.0 a kilometre** for a long one-way transfer for two, and **about US$180–280 (≈ Q1,380–Q2,140, €165–€255) for a full day** with a driver. I found no published quote for Xela → Cobán, Flores → Río Dulce or Río Dulce → Guatemala City, so those below are my estimates from the per-kilometre rate (about 70 % confident in the ranges); ask two agencies for a written quote.
+
+**Where a driver is worth it on this route:**
+
+| Days | What the driver replaces | Driver, for the car | Shared transport, for two | Why |
+|---|---|---|---|---|
+| **24 Dec**, Xela → Cobán (~410 km) | The 10 h shuttle or two buses | ≈ US$250–400 (≈ Q1,900–Q3,060, €225–€365), my estimate | Q500–Q1,150 (€59–€136) | The longest day, on Christmas Eve, when the shuttle may not run. About 8 h door to door, like the car. Now Option 3 on [24 Dec](#thu-24-dec--xela--cobán-by-shuttle-or-two-buses) |
+| **27 Dec**, Lanquín → Flores | The 8 h shuttle | US$325 (≈ Q2,490, €295) | Q610–Q690 (€72–€82) | Leave when you like, stop at the Sayaxché ferry, arrive ~15:30 with time for a swim. Now Option 2 on [27 Dec](#sun-27-dec--lanquín--flores-by-driver-or-shuttle) |
+| **27–29 Dec**, the whole north | Lanquín → El Remate, a day for Tikal at opening and Yaxhá at sunset, then Yaxhá → Río Dulce | ≈ US$700–850 (≈ Q5,350–Q6,500, €635–€770), my estimate | Q1,260–Q2,180 (€150–€260) | Gets back the car plan's best part: Tikal at 06:00, Yaxhá at sunset **and** the night at the Ecolodge El Sombrero. Follow the [main guide's 27–29 Dec](../#25-tikal--yaxhá-2729-dec) instead of this page's. Not in this calendar |
+| **30 Dec**, Río Dulce → day room in Guatemala City (~300 km) | The pullman and two Ubers | ≈ US$150–280 (≈ Q1,150–Q2,140, €135–€255), my estimate | Q300–Q470 (€36–€56) | Door to door on the last day, with no bus terminal. Leave at 10:00 as in the car plan |
+
+**Two ways to combine them:**
+- **Driver only for the long days** (24 and 27 Dec): ≈ €300–530 extra over the shuttles, which still leaves you roughly €500–700 better off than with the rental car (see [§1.2](#12-what-it-saves-and-what-it-costs)).
+- **Driver for the north too** (24 Dec + 27–29 Dec + 30 Dec): ≈ €550–1,150 extra, which uses up between half and all of the ≈ €1,000 saving, though you'd still have no deposit, no damage excess and no driving yourselves.
+
+A driver for the **whole trip** (17 days at US$180–280 a day ≈ €2,800–4,300) costs far more than the rental car, so I've left it out.
+
 ---
 
 ## Part 2 · Day by day
@@ -209,8 +243,9 @@ Some shuttles end at Panajachel instead, across the lake; from there a public la
 - **08:00–12:30** Free; choose one:
   - **Option 1:** 🛌 breakfast, a nap and a slow morning in San Juan.
   - **Option 2:** 🛶 kayak or paddleboard on the lake, ~09:00–11:00, while the water is calm.
-- **12:30–13:00** ⛵ Lancha from San Juan to San Marcos.
-- **13:00–17:00** 🏊 Swim and jump at Cerro Tzankujil.
+  - **Option 3:** 🪢 **zipline and the butterfly dome at the Reserva Natural Atitlán, Panajachel**: 09:00–09:45 lancha to Panajachel (≈ Q25–Q35 each), a tuk-tuk (Q10 each) or 15-minute walk to the reserve, check in 10:30 for the 11:00 group, zipline and butterflies until 12:30, lunch in Panajachel, then a lancha straight to San Marcos at 13:30. **Q310 (€37)** each for the Cables X-Tremos (1 h 30) or **Q450 (€53)** for the Ultra X-Tremos (2 h), entry included. Details in the [main guide](../#fri-18-dec--indian-nose-at-sunrise-then-swimming-).
+- **12:30–13:00** ⛵ Lancha from San Juan to San Marcos (with Option 3, 13:30–14:00 from Panajachel instead).
+- **13:00–17:00** 🏊 Swim and jump at Cerro Tzankujil (from ~14:00 with Option 3).
 - **~17:00** ⛵ Lancha back before the last boats.
 - **Evening:** dinner in San Juan.
 
@@ -280,10 +315,11 @@ To reach Fuentes Georginas on your own instead, take the bus to Zunil and a pick
     - **05:00–09:00** Transportes Álamo, Xela → Guatemala City, about Q105 (€12) each ([Living in Guatemala](https://livinginguatemala.com/transport/guatemala-city-to-quetzaltenango/), Oct 2026).
     - **09:00–10:00** 🚕 Uber across the city to the Monja Blanca terminal (≈ Q50–Q80).
     - **10:00–15:00** Monja Blanca, Guatemala City → Cobán (~4.5–5 h, roughly hourly), Q105–Q125 (€12–€15) each ([Living in Guatemala: Guatemala City to Cobán](https://livinginguatemala.com/transport/guatemala-city-to-coban/)). Christmas Eve buses fill up: be at the terminal early, or buy the ticket by phone.
-- **15:30–17:30** 🚶 Free (Option 2 only): check in, climb the steps to the Templo El Calvario, and 💵 **draw cash** for Lanquín and Semuc. With Option 1, draw cash on arrival and save El Calvario for tomorrow morning.
+  - **Option 3:** 🚗 **a private driver, 07:00–~15:00**, door to door on the car plan's route (~8 h with stops), ≈ US$250–400 (≈ Q1,900–Q3,060, €225–€365) for the car (my estimate; see [§1.6](#16-hiring-a-private-driver-for-some-regions)). Book it a week or more ahead: drivers want to be home for Nochebuena.
+- **15:30–17:30** 🚶 Free (Options 2 and 3): check in, climb the steps to the Templo El Calvario, and 💵 **draw cash** for Lanquín and Semuc. With Option 1, draw cash on arrival and save El Calvario for tomorrow morning.
 - **Evening:** 🎄 **Nochebuena:** tamales and *ponche* if your hotel serves them (ask ahead), then the town-wide fireworks at midnight.
 
-No direct public bus links Xela and Cobán ([Rome2rio](https://www.rome2rio.com/s/Quetzaltenango-Xela/Cob%C3%A1n)). Option 1 is simpler and stays in one seat; Option 2 is about Q650 (€75) cheaper for the two of you and arrives earlier, but involves a change in Guatemala City. I'd pick Option 1 if it runs that day.
+No direct public bus links Xela and Cobán ([Rome2rio](https://www.rome2rio.com/s/Quetzaltenango-Xela/Cob%C3%A1n)). Option 1 is simpler and stays in one seat; Option 2 is about Q650 (€75) cheaper for the two of you and arrives earlier, but involves a change in Guatemala City. I'd pick Option 1 if it runs that day, and Option 3 if it doesn't and the budget allows.
 
 ### 2.4 Cobán, Lanquín & Semuc Champey (24–27 Dec)
 
@@ -307,10 +343,12 @@ No direct public bus links Xela and Cobán ([Rome2rio](https://www.rome2rio.com/
 - **~16:00** 🛻 Pickup back to Lanquín.
 - **Evening:** 🛌 free, at the lodge. Pack; the shuttle leaves at 08:00 tomorrow.
 
-#### Sun 27 Dec — Lanquín → Flores by shuttle
+#### Sun 27 Dec — Lanquín → Flores by driver or shuttle
 **The day's plan**
-- **08:00–16:00** 🚐 **Shared shuttle Lanquín → Flores** (~8 h, via the Sayaxché ferry), about US$40–45 (≈ Q306–Q344, €36–€41) each. Adrenalina's leaves at 08:00 and stops at the "I ❤ Petén" letters at the entrance to Flores ([Living in Guatemala: Lanquín to Flores](https://livinginguatemala.com/transport/lanquin-to-flores/)).
-- **16:00–16:30** 🛺 Tuk-tuk onto the island, check in.
+- **08:00–16:00** Choose one:
+  - **Option 1:** 🚐 **shared shuttle Lanquín → Flores** (~8 h, via the Sayaxché ferry), about US$40–45 (≈ Q306–Q344, €36–€41) each. Adrenalina's leaves at 08:00 and stops at the "I ❤ Petén" letters at the entrance to Flores ([Living in Guatemala: Lanquín to Flores](https://livinginguatemala.com/transport/lanquin-to-flores/)).
+  - **Option 2:** 🚗 **a private driver, 08:00–~15:30**, US$325 (≈ Q2,490, €295) for the car (same source), straight to your hotel. You could also go on to El Remate for the afternoon swim, as in the car plan ([§1.6](#16-hiring-a-private-driver-for-some-regions)).
+- **16:00–16:30** 🛺 Tuk-tuk onto the island, check in (with Option 2 the driver drops you at the hotel).
 - **16:30–17:45** 🚶 Free: walk round the island's lakeside promenade at sunset, and 💵 **draw cash** for Tikal (no ATMs there).
 - **18:00–21:00** 🍽 Dinner in Flores. Confirm tomorrow's pickup time. Early night.
 
